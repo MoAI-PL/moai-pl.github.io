@@ -690,11 +690,27 @@ function createProjectCard(project, { showTags = false, linkLabel = 'Zobacz', sh
 	return card;
 }
 
+function hasMainImage(item) {
+	return typeof item?.image === 'string' && item.image.trim() !== '';
+}
+
+function pickHomepageCards(data, count, random) {
+	if (!random) return data.slice(0, count);
+
+	const withImage = [];
+	const withoutImage = [];
+	data.forEach((item) => {
+		if (hasMainImage(item)) withImage.push(item);
+		else withoutImage.push(item);
+	});
+
+	return [...shuffle(withImage), ...shuffle(withoutImage)].slice(0, count);
+}
+
 function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true } = {}) {
 	const target = qs(`#${targetId}`);
 	if (!target || !data?.length) return;
-	const sourceList = random ? shuffle(data) : [...data];
-	const slice = sourceList.slice(0, count);
+	const slice = pickHomepageCards(data, count, random);
 	target.innerHTML = '';
 	slice.forEach((project) => target.appendChild(createProjectCard(project, { showTags, linkLabel, showCategory })));
 }
