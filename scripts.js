@@ -244,7 +244,8 @@ const events = [
 		title: 'IT Unplugged',
 		category: 'czerwiec 2026',
 		description: 'Konferencja o AI, data engineering, architekturze, cyberbezpieczeństwie i wellbeing. Wymiana doświadczeń ze środowiskiem IT.',
-		cover: 'sky',
+		image: 'images/events/it-unplugged-2026-moai-pl.webp',
+		alt: 'Panel IT Unplugged 2026: trzy osoby na scenie w fotelach, niebieskie oświetlenie i napis IT UNPLUGGED.',
 		tags: ['Konferencja', 'IT', 'Networking']
 	},
 	{
@@ -252,7 +253,8 @@ const events = [
 		title: 'Urban Lab Challenge',
 		category: 'czerwiec 2026',
 		description: '1. miejsce i nagroda główna. Ekosystem brAIdak dla Urzędu Miasta Lublin: zero-cloud RAG, Bielik i dostępność głosowa.',
-		cover: 'pine',
+		image: 'images/events/urban-lab-challenge-2026-moai-pl.webp',
+		alt: 'Zespół MoAI z dyplomem za 1. miejsce w Urban Lab Challenge — Lublin City of Energy.',
 		tags: ['Hackathon', 'GovTech', 'Zwycięstwo']
 	},
 	{
@@ -260,7 +262,8 @@ const events = [
 		title: 'Studencki Festiwal Biznesu IV',
 		category: 'maj 2026',
 		description: 'Trzeci rok z rzędu 1. miejsce MoAI. Trzy zespoły z briefami Starostwa, CEWAR i UniCredit — nagroda główna za wykrywanie zagrożeń i kierowane powiadomienia dla klientów banku.',
-		cover: 'honey',
+		image: 'images/events/studencki-festiwal-biznesu-iv-2026-moai-pl.webp',
+		alt: 'Zespół MoAI i organizatorzy na scenie IV edycji Studenckiego Festiwalu Biznesu z czekiem nagrody 8000 zł.',
 		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
 	},
 	{
@@ -268,7 +271,8 @@ const events = [
 		title: 'Hackology 2',
 		category: 'maj 2026',
 		description: 'Współorganizacja z kołem ATLAS: social media, grafiki, patronat, aranżacja i infrastruktura. Mentor z MoAI, opiekun koła w jury.',
-		cover: 'dusk',
+		image: 'images/events/hackology-2-2026-moai-pl.webp',
+		alt: 'Zdjęcie grupowe uczestników Hackology 2 na scenie, w tle partner strategiczny Asseco.',
 		tags: ['Hackathon', 'Organizacja', 'Partnerstwo']
 	},
 	{
@@ -276,7 +280,8 @@ const events = [
 		title: 'Finał CTF CyberMil',
 		category: 'maj 2026',
 		description: 'Finał Akademii CyberMil w jednostce MON w Warszawie. Najwyższy wynik w drużynie Politechniki Lubelskiej i Lublina.',
-		cover: 'crimson',
+		image: 'images/events/final-ctf-cybermil-2026-moai-pl.webp',
+		alt: 'Uczestnicy finału CTF Akademii CyberMil 6 maja 2026, w tym osoby w mundurach, na tle slajdu wydarzenia.',
 		tags: ['Cybersecurity', 'CTF', 'MON']
 	},
 	{
@@ -284,7 +289,8 @@ const events = [
 		title: 'Erasmus StartUp Projects',
 		category: 'kwiecień 2026',
 		description: 'Inicjatywa MoAI: studenci Erasmusa na międzynarodowym sympozjum WZ. Dwa zespoły startupowe zajęły 1. i 2. miejsce.',
-		cover: 'dawn',
+		image: 'images/events/erasmus-startup-projects-2026-moai-pl.webp',
+		alt: 'Sala wykładowa podczas prezentacji zespołu Erasmus StartUp Projects: slajd Our Team i banery Wydziału Zarządzania.',
 		tags: ['Erasmus', 'Startup', 'Sympozjum']
 	},
 	{
@@ -292,15 +298,17 @@ const events = [
 		title: 'Warsztaty Bielik AI × Google',
 		category: 'kwiecień 2026',
 		description: 'Warsztaty Google for Developers i SpeakLeash o polskim modelu Bielik. LLM w Google Cloud, BigQuery i orkiestracja RAG — poprowadzone przez członka MoAI.',
-		cover: 'frost',
+		image: 'images/events/warsztaty-bielik-ai-google-2026-moai-pl.webp',
+		alt: 'Uczestnicy warsztatów Bielik AI × Google na tle slajdu Eskadra Bielika.',
 		tags: ['LLM', 'Google Cloud', 'RAG']
 	},
 	{
-		id: 'civil42',
-		title: 'Hackathon Civil42',
+		id: 'civil42-2026',
+		title: 'Hackathon Civil42 2026',
 		category: 'kwiecień 2026',
-		description: 'Pierwszy hackathon obrony cywilnej Instytutu 42. Aplikacja webowa wspierająca obywateli i samorządy w scenariuszach kryzysowych.',
-		cover: 'copper',
+		description: 'Hackathon obrony cywilnej Instytutu 42. Aplikacja webowa wspierająca obywateli i samorządy w scenariuszach kryzysowych.',
+		image: 'images/events/hackathon-civil42-2026-moai-pl.webp',
+		alt: 'Powitanie uczestników hackathonu Civil42 w 2026 roku w przestrzeni Instytutu 42.',
 		tags: ['Hackathon', 'Cyber', 'Obrona cywilna']
 	},
 	{
@@ -308,7 +316,8 @@ const events = [
 		title: 'Dni Otwarte Politechniki Lubelskiej 2026',
 		category: 'kwiecień 2026',
 		description: 'Stoisko kierunku Sztuczna Inteligencja w Biznesie. Modele AR, śledzenie gestów, edycja obrazów oraz oprowadzanie kandydatów po kampusie.',
-		cover: 'berry',
+		image: 'images/events/dni-otwarte-politechniki-lubelskiej-2026-moai-pl.webp',
+		alt: 'Członkowie MoAI przy stoisku z monitorami na Dniach Otwartych Politechniki Lubelskiej 2026.',
 		tags: ['Rekrutacja', 'AR', 'Uczelnia']
 	},
 	{
@@ -316,7 +325,8 @@ const events = [
 		title: 'MIT AI Summit',
 		category: 'marzec 2026',
 		description: 'Szczyt MIT AI Summit w Warszawie. Wykłady m.in. prof. Włodzisława Ducha i prof. Piotra Sankowskiego o odpornych systemach AI.',
-		cover: 'lagoon',
+		image: 'images/events/mit-ai-summit-2026-moai-pl.webp',
+		alt: 'Scena MIT AI Summit z panelem From Lab to Market: Rewiring Polish Science for the 21st Century.',
 		tags: ['Konferencja', 'AI', 'Warszawa']
 	},
 	{
@@ -340,7 +350,8 @@ const events = [
 		title: 'Ensemble AI — Warszawa',
 		category: 'marzec 2026',
 		description: '6. miejsce na niemal 50 zespołów i awans do prezentacji finałowych. ML w diagnostyce, biologii molekularnej oraz bezpieczeństwo dużych modeli językowych.',
-		image: 'images/events/hackathon-ensemble.webp',
+		image: 'images/events/ensemble-ai-warszawa-2026-moai-pl.webp',
+		alt: 'Zespół MoAI na scenie Ensemble AI w Warszawie podczas prezentacji finałowej.',
 		tags: ['Hackathon', 'MedTech', 'LLM']
 	},
 	{
@@ -356,7 +367,8 @@ const events = [
 		title: 'II spotkanie Brave Community',
 		category: 'marzec 2026',
 		description: 'Start współpracy z lubelskim Brave Community. Regularny udział w spotkaniach i przygotowanie własnego wystąpienia.',
-		cover: 'amber',
+		image: 'images/events/ii-spotkanie-brave-community-2026-moai-pl.webp',
+		alt: 'Uczestnicy II spotkania Brave Community na stopniach auli, zdjęcie grupowe.',
 		tags: ['Community', 'Lublin', 'Networking']
 	},
 	{
@@ -364,7 +376,8 @@ const events = [
 		title: 'Polska Sięga Gwiazd',
 		category: 'grudzień 2025',
 		description: 'Spotkanie ze Sławoszem Uznańskim, astronautą misji IGNIS. Pytania do załogi i networking z kołami oraz instytucjami partnerskimi.',
-		cover: 'slate',
+		image: 'images/events/polska-siega-gwiazd-2025-moai-pl.webp',
+		alt: 'Sławosz Uznański w kombinezonie lotniczym na scenie spotkania Polska Sięga Gwiazd.',
 		tags: ['Space', 'Spotkanie', 'Networking']
 	},
 	{
@@ -372,7 +385,8 @@ const events = [
 		title: 'Hackathon HackNation',
 		category: 'grudzień 2025',
 		description: 'HackNation w Bydgoszczy (Ministerstwo Cyfryzacji, MF, MON, MNiSW). Prototypy uczenia maszynowego dla obywateli i administracji.',
-		cover: 'merlot',
+		image: 'images/events/hackathon-hacknation-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na scenie HackNation z czerwonymi tablicami układającymi napis HACK NATION.',
 		tags: ['Hackathon', 'GovTech', 'ML']
 	},
 	{
@@ -380,7 +394,8 @@ const events = [
 		title: 'Hackathon Google',
 		category: 'grudzień 2025',
 		description: 'Prototypowanie z mentorami Google w Warszawie. Szybkie iteracje, realne problemy biznesowe i intensywny sprint zespołowy.',
-		image: 'images/events/hackathon-google.webp',
+		image: 'images/events/hackathon-google-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na Hackathonie Google w Warszawie, grudzień 2025.',
 		tags: ['Hackathon', 'AI', 'Google']
 	},
 	{
@@ -388,7 +403,8 @@ const events = [
 		title: '46. Zgromadzenie Akademii Inżynierskiej',
 		category: 'grudzień 2025',
 		description: 'Prezentacja MoAI podczas 46. Zgromadzenia Akademii Inżynierskiej. Reprezentacja Politechniki Lubelskiej w gronie środowiska inżynierskiego.',
-		cover: 'rust',
+		image: 'images/events/46-zgromadzenie-akademii-inzynierskiej-2025-moai-pl.webp',
+		alt: 'Prezentacja koła MoAI z slajdem we are MoAI, LinkedIn i Instagram podczas zgromadzenia Akademii Inżynierskiej.',
 		tags: ['Nauka', 'Prestige', 'Uczelnia']
 	},
 	{
@@ -396,7 +412,8 @@ const events = [
 		title: 'Finał hackathonu BHL',
 		category: 'listopad 2025',
 		description: '3. miejsce w 11. edycji BHL w Warszawie. Prototyp wtyczki JetBrains monitorującej ślad CO₂ kodu i podpowiadającej poprawki z asystentem AI.',
-		cover: 'moss',
+		image: 'images/events/final-hackathonu-bhl-2025-moai-pl.webp',
+		alt: 'Zespół MoAI z dyplomami i torbami na scenie finału hackathonu BHL.',
 		tags: ['Hackathon', 'GreenTech', 'Finał']
 	},
 	{
@@ -404,7 +421,8 @@ const events = [
 		title: 'Hackathon CASSINI',
 		category: 'listopad 2025',
 		description: 'Trzydniowy CASSINI we Wrocławiu. Analiza danych satelitarnych ESA pod kątem rolnictwa, biznesu i administracji.',
-		cover: 'sage',
+		image: 'images/events/hackathon-cassini-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na hackathonie CASSINI we Wrocławiu.',
 		tags: ['Hackathon', 'Space', 'ESA']
 	},
 	{
@@ -412,15 +430,26 @@ const events = [
 		title: 'IV Targi Kół Naukowych PL',
 		category: 'październik 2025',
 		description: 'Pokaz modeli generujących świat gier wideo oraz Stable Diffusion. Promocja AI i ML wśród studentów i uczniów szkół ponadpodstawowych.',
-		cover: 'plum',
+		image: 'images/events/iv-targi-kol-naukowych-pl-2025-moai-pl.webp',
+		alt: 'Stoisko MoAI na IV Targach Kół Naukowych Politechniki Lubelskiej, październik 2025.',
 		tags: ['Uczelnia', 'ML', 'Pokazy']
+	},
+	{
+		id: 'warsztaty-matematyczne',
+		title: 'Warsztaty matematyczne dla nowych studentów',
+		category: 'październik 2025',
+		description: 'Warsztaty MoAI z matematyki dla nowych studentów. Wspólne sesje z podstaw, które ułatwiają start na uczelni i przygotowują do pierwszych kolokwiów.',
+		image: 'images/events/warsztaty-matematyczne-dla-nowych-studentow-2025-moai-pl.webp',
+		alt: 'Warsztaty matematyczne MoAI: studenci przy ławkach, prowadzący przy zielonej tablicy.',
+		tags: ['Warsztaty', 'Matematyka', 'Uczelnia']
 	},
 	{
 		id: 'sfb3',
 		title: 'Studencki Festiwal Biznesu III',
 		category: 'czerwiec 2025',
 		description: '3. edycja SFB: pierwsze miejsce za asystenta Julię oraz równoległy PoC dynamicznego interfejsu. Dwa zespoły MoAI na żywych briefach medycznym i produktowym.',
-		image: 'images/events/sfb3.webp',
+		image: 'images/events/studencki-festiwal-biznesu-iii-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na III edycji Studenckiego Festiwalu Biznesu, na tle napisu Festiwal Biznesu.',
 		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
 	},
 	{
@@ -428,7 +457,8 @@ const events = [
 		title: 'GhostDay 2025',
 		category: 'maj 2025',
 		description: 'Konferencja GhostDay w Poznaniu. Spotkania z ekspertami branży i zderzenie akademickiego AI z praktyką produktową.',
-		cover: 'citrus',
+		image: 'images/events/ghostday-2025-moai-pl.webp',
+		alt: 'Scena GhostDay 2025: prelegent przy slajdzie z wzorami, obok baner Ghost Day.',
 		tags: ['Konferencja', 'AI', 'Networking']
 	},
 	{
@@ -444,15 +474,26 @@ const events = [
 		title: 'Hackathon SpaceShield',
 		category: 'maj 2025',
 		description: 'Finał SpaceShield w Stalowej Woli. Analityka, symulacje i tempo konkursowe na styku technologii i zastosowań kosmicznych.',
-		image: 'images/events/hackathon-spaceshield.webp',
+		image: 'images/events/hackathon-spaceshield-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na finale hackathonu SpaceShield w Stalowej Woli.',
 		tags: ['Hackathon', 'Space', 'Finał']
+	},
+	{
+		id: 'civil42-2025',
+		title: 'Hackathon Civil42 2025',
+		category: 'maj 2025',
+		description: 'Udział MoAI w hackathonie Civil42. Aplikacja webowa wspierająca obywateli i samorządy w scenariuszach kryzysowych.',
+		image: 'images/events/hackathon-civil42-2025-moai-pl.webp',
+		alt: 'Uczestnicy hackathonu Civil42 w maju 2025 w przestrzeni Instytutu 42.',
+		tags: ['Hackathon', 'Cyber', 'Obrona cywilna']
 	},
 	{
 		id: 'dni-otwarte-2025',
 		title: 'Dni Otwarte Politechniki Lubelskiej 2025',
 		category: 'kwiecień 2025',
 		description: 'Stoisko MoAI na Dniach Otwartych. Pokazy projektów, rozmowy z kandydatami i zaproszenie do koła.',
-		image: 'images/events/dni-otwarte-25.webp',
+		image: 'images/events/dni-otwarte-politechniki-lubelskiej-2025-moai-pl.webp',
+		alt: 'Korytarz Politechniki Lubelskiej podczas Dni Otwartych 2025, stoisko i rozmowy z kandydatami.',
 		tags: ['Rekrutacja', 'Uczelnia', 'Pokazy']
 	},
 	{
@@ -460,7 +501,8 @@ const events = [
 		title: 'Ensemble AI — Kraków',
 		category: 'marzec 2025',
 		description: 'Międzynarodowy hackathon Ensemble AI w Krakowie. Zespół MoAI awansował do finału z modelami uczenia maszynowego.',
-		cover: 'cobalt',
+		image: 'images/events/ensemble-ai-krakow-2025-moai-pl.webp',
+		alt: 'Zespół MoAI na międzynarodowym hackathonie Ensemble AI w Krakowie.',
 		tags: ['Hackathon', 'AI', 'Finał']
 	},
 	{
@@ -468,7 +510,8 @@ const events = [
 		title: 'Studencki Festiwal Biznesu II',
 		category: 'maj 2024',
 		description: '2. edycja festiwalu i pierwsze miejsce MoAI z aplikacją fitness OnHelo. Networking z biznesem, żywy brief i scena dla rozwiązań AI.',
-		image: 'images/events/sfb2.webp',
+		image: 'images/events/studencki-festiwal-biznesu-ii-2024-moai-pl.webp',
+		alt: 'Zespół MoAI z czekiem 5000 zł na II edycji Studenckiego Festiwalu Biznesu, 24 maja 2024.',
 		tags: ['Biznes', 'Pitch', 'Współpraca']
 	},
 	{
@@ -476,7 +519,8 @@ const events = [
 		title: 'Konferencja 105-lecia Państwowej Inspekcji Pracy',
 		category: 'październik 2024',
 		description: 'Konferencja z okazji 105-lecia PIP. Zespół MoAI wygłosił referat o AI na rynku pracy: wyzwania regulacyjne, ryzyka i szanse, które ta technologia otwiera przed pracownikami i instytucjami.',
-		image: 'images/events/pip.webp',
+		image: 'images/events/konferencja-105-lecia-pip-2024-moai-pl.webp',
+		alt: 'Wystąpienie zespołu MoAI na konferencji 105-lecia Państwowej Inspekcji Pracy.',
 		tags: ['Konferencja', 'Prawo', 'Rynek pracy']
 	}
 ];
@@ -631,7 +675,7 @@ function appendCardMedia(media, item) {
 	if (item.image) {
 		const img = document.createElement('img');
 		img.src = basePath + item.image;
-		img.alt = item.title;
+		img.alt = item.alt || item.title;
 		img.loading = 'lazy';
 		img.draggable = false;
 		img.setAttribute('data-protect', 'true');
