@@ -206,14 +206,6 @@ const projects = [
 		tags: ['DevTools', 'GreenTech', 'AI']
 	},
 	{
-		id: 'music-school',
-		title: 'Rebranding szkoły muzycznej',
-		category: '2025',
-		description: 'Projekt marketingowy dla pobliskiej szkoły muzycznej. Nowa identyfikacja, spójny przekaz i materiały, które da się realnie wdrożyć.',
-		cover: 'orchid',
-		tags: ['Design', 'Marketing', 'Brand']
-	},
-	{
 		id: 'plant-nn',
 		title: 'Inteligentna uprawa roślin',
 		category: 'czerwiec 2025',
@@ -224,7 +216,7 @@ const projects = [
 	{
 		id: 'dynamic-ui',
 		title: 'Dynamiczny interfejs użytkownika',
-		category: '2025',
+		category: 'czerwiec 2025',
 		description: 'Badanie i PoC dynamicznego interfejsu opartego na inteligentnych systemach, rozwijane równolegle na 3. edycji SFB. Warstwa UX/UI dopasowuje się do użytkownika i wspiera ścieżkę sprzedaży.',
 		cover: 'wine',
 		tags: ['Marketing', 'AI', 'UX/UI', 'Sprzedaż']
@@ -232,7 +224,7 @@ const projects = [
 	{
 		id: 'julia',
 		title: 'Julia — wirtualny asystent pacjenta',
-		category: '2025',
+		category: 'czerwiec 2025',
 		description: 'Inteligentny asystent wirtualny, który wygrał 3. edycję SFB. Julia umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.',
 		cover: 'coral',
 		tags: ['Chatbot', 'MedTech', 'NLP']
@@ -240,7 +232,7 @@ const projects = [
 	{
 		id: 'onhelo',
 		title: 'OnHelo',
-		category: '2024',
+		category: 'maj 2024',
 		description: 'Aplikacja fitness z elementami medtech, która wygrała 2. edycję Studenckiego Festiwalu Biznesu. Modele uczenia maszynowego wspierają poprawne wykonywanie ćwiczeń i zmniejszają ryzyko błędnej techniki.',
 		cover: 'mint',
 		tags: ['Fitness', 'MedTech', 'ML']
@@ -385,6 +377,22 @@ const events = [
 		tags: ['Hackathon', 'GovTech', 'ML']
 	},
 	{
+		id: 'hackathon-google',
+		title: 'Hackathon Google',
+		category: 'grudzień 2025',
+		description: 'Prototypowanie z mentorami Google w Warszawie. Szybkie iteracje, realne problemy biznesowe i intensywny sprint zespołowy.',
+		image: 'images/events/hackathon-google.webp',
+		tags: ['Hackathon', 'AI', 'Google']
+	},
+	{
+		id: 'akademia-inzynierska',
+		title: '46. Zgromadzenie Akademii Inżynierskiej',
+		category: 'grudzień 2025',
+		description: 'Prezentacja MoAI podczas 46. Zgromadzenia Akademii Inżynierskiej. Reprezentacja Politechniki Lubelskiej w gronie środowiska inżynierskiego.',
+		cover: 'rust',
+		tags: ['Nauka', 'Prestige', 'Uczelnia']
+	},
+	{
 		id: 'bhl',
 		title: 'Finał hackathonu BHL',
 		category: 'listopad 2025',
@@ -411,71 +419,55 @@ const events = [
 	{
 		id: 'sfb3',
 		title: 'Studencki Festiwal Biznesu III',
-		category: '2025',
+		category: 'czerwiec 2025',
 		description: '3. edycja SFB: pierwsze miejsce za asystenta Julię oraz równoległy PoC dynamicznego interfejsu. Dwa zespoły MoAI na żywych briefach medycznym i produktowym.',
 		image: 'images/events/sfb3.webp',
 		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
 	},
 	{
-		id: 'dni-otwarte-2025',
-		title: 'Dni Otwarte Politechniki Lubelskiej 2025',
-		category: '2025',
-		description: 'Stoisko MoAI na Dniach Otwartych. Pokazy projektów, rozmowy z kandydatami i zaproszenie do koła.',
-		image: 'images/events/dni-otwarte-25.webp',
-		tags: ['Rekrutacja', 'Uczelnia', 'Pokazy']
-	},
-	{
-		id: 'akademia-inzynierska',
-		title: '46. Zgromadzenie Akademii Inżynierskiej',
-		category: '2025',
-		description: 'Prezentacja MoAI podczas 46. Zgromadzenia Akademii Inżynierskiej. Reprezentacja Politechniki Lubelskiej w gronie środowiska inżynierskiego.',
-		cover: 'rust',
-		tags: ['Nauka', 'Prestige', 'Uczelnia']
-	},
-	{
-		id: 'sympozjum-xxxiii',
-		title: 'XXXIII Sympozjum Naukowe',
-		category: '2025',
-		description: 'Wystąpienie MoAI na XXXIII Sympozjum Naukowym. Prezentacja kompetencji koła i projektów badawczych przed społecznością akademicką.',
-		cover: 'violet',
-		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
-	},
-	{
 		id: 'ghostday',
 		title: 'GhostDay 2025',
-		category: '2025',
+		category: 'maj 2025',
 		description: 'Konferencja GhostDay w Poznaniu. Spotkania z ekspertami branży i zderzenie akademickiego AI z praktyką produktową.',
 		cover: 'citrus',
 		tags: ['Konferencja', 'AI', 'Networking']
 	},
 	{
-		id: 'ensemble-krakow',
-		title: 'Ensemble AI — Kraków',
-		category: '2025',
-		description: 'Międzynarodowy hackathon Ensemble AI w Krakowie. Zespół MoAI awansował do finału z modelami uczenia maszynowego.',
-		cover: 'cobalt',
-		tags: ['Hackathon', 'AI', 'Finał']
+		id: 'sympozjum-xxxiii',
+		title: 'XXXIII Sympozjum Naukowe',
+		category: 'maj 2025',
+		description: 'Wystąpienie MoAI na XXXIII Sympozjum Naukowym. Prezentacja kompetencji koła i projektów badawczych przed społecznością akademicką.',
+		cover: 'violet',
+		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
 	},
 	{
 		id: 'spaceshield',
 		title: 'Hackathon SpaceShield',
-		category: '2025',
+		category: 'maj 2025',
 		description: 'Finał SpaceShield w Stalowej Woli. Analityka, symulacje i tempo konkursowe na styku technologii i zastosowań kosmicznych.',
 		image: 'images/events/hackathon-spaceshield.webp',
 		tags: ['Hackathon', 'Space', 'Finał']
 	},
 	{
-		id: 'hackathon-google',
-		title: 'Hackathon Google',
-		category: '2025',
-		description: 'Prototypowanie z mentorami Google w Warszawie. Szybkie iteracje, realne problemy biznesowe i intensywny sprint zespołowy.',
-		image: 'images/events/hackathon-google.webp',
-		tags: ['Hackathon', 'AI', 'Google']
+		id: 'dni-otwarte-2025',
+		title: 'Dni Otwarte Politechniki Lubelskiej 2025',
+		category: 'kwiecień 2025',
+		description: 'Stoisko MoAI na Dniach Otwartych. Pokazy projektów, rozmowy z kandydatami i zaproszenie do koła.',
+		image: 'images/events/dni-otwarte-25.webp',
+		tags: ['Rekrutacja', 'Uczelnia', 'Pokazy']
+	},
+	{
+		id: 'ensemble-krakow',
+		title: 'Ensemble AI — Kraków',
+		category: 'marzec 2025',
+		description: 'Międzynarodowy hackathon Ensemble AI w Krakowie. Zespół MoAI awansował do finału z modelami uczenia maszynowego.',
+		cover: 'cobalt',
+		tags: ['Hackathon', 'AI', 'Finał']
 	},
 	{
 		id: 'sfb2',
 		title: 'Studencki Festiwal Biznesu II',
-		category: '2024',
+		category: 'maj 2024',
 		description: '2. edycja festiwalu i pierwsze miejsce MoAI z aplikacją fitness OnHelo. Networking z biznesem, żywy brief i scena dla rozwiązań AI.',
 		image: 'images/events/sfb2.webp',
 		tags: ['Biznes', 'Pitch', 'Współpraca']

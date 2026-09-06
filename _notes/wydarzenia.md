@@ -15,63 +15,61 @@ Dopasowanie do obecnych placeholderów w `scripts.js` jest przy każdym wpisie. 
 
 ## Studencki Festiwal Biznesu II
 
-- **Data:** 2024
+- **Data:** maj 2024
 - **Tagi:** Biznes, Pitch, Współpraca
 - **Placeholder:** `sfb2` → `images/events/sfb2.webp`
 - **Opis:** 2. edycja festiwalu i pierwsze miejsce MoAI z aplikacją fitness OnHelo. Networking z biznesem, żywy brief i scena dla rozwiązań AI.
 
 ## Hackathon Google
 
-- **Data:** 2025
+- **Data:** grudzień 2025
 - **Tagi:** Hackathon, AI, Google
 - **Placeholder:** `hackathon-google` → `images/events/hackathon-google.webp`
 - **Opis:** Prototypowanie z mentorami Google w Warszawie. Szybkie iteracje, realne problemy biznesowe i intensywny sprint zespołowy.
 
 ## Hackathon SpaceShield
 
-- **Data:** 2025
+- **Data:** maj 2025
 - **Tagi:** Hackathon, Space, Finał
 - **Placeholder:** `hackathon-spaceshield` → `images/events/hackathon-spaceshield.webp`
 - **Opis:** Finał SpaceShield w Stalowej Woli. Analityka, symulacje i tempo konkursowe na styku technologii i zastosowań kosmicznych.
 
 ## Ensemble AI — Kraków
 
-- **Data:** 2025
+- **Data:** marzec 2025
 - **Tagi:** Hackathon, AI, Finał
 - **Placeholder:** możliwe `hackathon-ensemble` (seria Ensemble; zdjęcie może pasować też do edycji 2026)
 - **Opis:** Międzynarodowy hackathon Ensemble AI w Krakowie. Zespół MoAI awansował do finału z modelami uczenia maszynowego.
 
 ## GhostDay 2025
 
-- **Data:** 2025
+- **Data:** maj 2025
 - **Tagi:** Konferencja, AI, Networking
 - **Placeholder:** brak
 - **Opis:** Konferencja GhostDay w Poznaniu. Spotkania z ekspertami branży i zderzenie akademickiego AI z praktyką produktową.
 
-## XXXIII Sympozjum Naukowe
-
-- **Data:** 2025
+- **Data:** maj 2025
 - **Tagi:** Nauka, Prelekcja, Uczelnia
 - **Placeholder:** brak
 - **Opis:** Wystąpienie MoAI na XXXIII Sympozjum Naukowym. Prezentacja kompetencji koła i projektów badawczych przed społecznością akademicką.
 
 ## 46. Zgromadzenie Akademii Inżynierskiej
 
-- **Data:** 2025
+- **Data:** grudzień 2025
 - **Tagi:** Nauka, Prestige, Uczelnia
 - **Placeholder:** brak
 - **Opis:** Prezentacja MoAI podczas 46. Zgromadzenia Akademii Inżynierskiej. Reprezentacja Politechniki Lubelskiej w gronie środowiska inżynierskiego.
 
 ## Dni Otwarte Politechniki Lubelskiej 2025
 
-- **Data:** 2025
+- **Data:** kwiecień 2025
 - **Tagi:** Rekrutacja, Uczelnia, Pokazy
 - **Placeholder:** `dni-otwarte` → `images/events/dni-otwarte-25.webp`
 - **Opis:** Stoisko MoAI na Dniach Otwartych. Pokazy projektów, rozmowy z kandydatami i zaproszenie do koła.
 
 ## Studencki Festiwal Biznesu III
 
-- **Data:** 2025
+- **Data:** czerwiec 2025
 - **Tagi:** Biznes, Pitch, Zwycięstwo
 - **Placeholder:** `sfb3` → `images/events/sfb3.webp`
 - **Opis:** 3. edycja SFB: pierwsze miejsce za asystenta Julię oraz równoległy PoC dynamicznego interfejsu. Dwa zespoły MoAI na żywych briefach medycznym i produktowym.

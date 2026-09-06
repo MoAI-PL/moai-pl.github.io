@@ -10,21 +10,21 @@ Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`,
 
 ## OnHelo
 
-- **Data:** 2024
+- **Data:** maj 2024
 - **Tagi:** Fitness, MedTech, ML
 - **Powiązane wydarzenie:** Studencki Festiwal Biznesu II
 - **Opis:** Aplikacja fitness z elementami medtech, która wygrała 2. edycję Studenckiego Festiwalu Biznesu. Modele uczenia maszynowego wspierają poprawne wykonywanie ćwiczeń i zmniejszają ryzyko błędnej techniki.
 
 ## Julia — wirtualny asystent pacjenta
 
-- **Data:** 2025
+- **Data:** czerwiec 2025
 - **Tagi:** Chatbot, MedTech, NLP
 - **Powiązane wydarzenie:** Studencki Festiwal Biznesu III
 - **Opis:** Inteligentny asystent wirtualny, który wygrał 3. edycję SFB. Julia umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.
 
 ## Dynamiczny interfejs użytkownika
 
-- **Data:** 2025
+- **Data:** czerwiec 2025
 - **Tagi:** Marketing, AI, UX/UI, Sprzedaż
 - **Powiązane wydarzenie:** Studencki Festiwal Biznesu III
 - **Opis:** Badanie i PoC dynamicznego interfejsu opartego na inteligentnych systemach, rozwijane równolegle na 3. edycji SFB. Warstwa UX/UI dopasowuje się do użytkownika i wspiera ścieżkę sprzedaży.
@@ -35,13 +35,6 @@ Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`,
 - **Tagi:** Research, ML, AgriTech
 - **Powiązane wydarzenie:** brak
 - **Opis:** Projekt badawczy sprzed wakacji: sieci neuronowe sterują parametrami uprawy roślin. Celem jest innowacyjna, powtarzalna hodowla — model dobiera warunki wzrostu zamiast ręcznego strojenia.
-
-## Rebranding szkoły muzycznej
-
-- **Data:** 2025
-- **Tagi:** Design, Marketing, Brand
-- **Powiązane wydarzenie:** brak
-- **Opis:** Projekt marketingowy dla pobliskiej szkoły muzycznej. Nowa identyfikacja, spójny przekaz i materiały, które da się realnie wdrożyć.
 
 ## Monitor CO₂ w JetBrains
 
