@@ -118,117 +118,375 @@ const members = [
 
 const projects = [
 	{
-		id: 'ai-lab',
-		title: 'AI Lab Starter',
-		category: 'Repo',
-		description: 'Placeholder repo dla narzędzi do szybkich eksperymentów AI.',
-		image: 'images/projects/ai-lab.webp',
-		tags: ['AI', 'Tools', 'Starter'],
-		github: 'https://github.com/moai/ai-lab-starter'
+		id: 'braidak',
+		title: 'brAIdak',
+		category: 'czerwiec 2026',
+		description: 'Zwycięski ekosystem dla UM Lublin. Zero-cloud RAG na Bieliku i ChromaDB, głosowa dostępność i mapa POI — suwerenna AI na nieustrukturyzowanych danych miasta.',
+		cover: 'teal',
+		tags: ['GovTech', 'RAG', 'Bielik']
 	},
 	{
-		id: 'bizops-dashboard',
-		title: 'BizOps Dashboard',
-		category: 'Repo',
-		description: 'Placeholder panel KPI i growth z integracją CRM.',
-		image: 'images/projects/bizops-dashboard.webp',
-		tags: ['Biznes', 'Data', 'Growth'],
-		github: 'https://github.com/moai/bizops-dashboard'
+		id: 'banking-innovation',
+		title: 'Banking Innovation',
+		category: 'maj 2026',
+		description: 'Zwycięski projekt 4. edycji SFB. Architektura inteligentnego wykrywania zagrożeń dla klientów banku oraz kierowane powiadomienia do najbardziej narażonych grup.',
+		cover: 'steel',
+		tags: ['FinTech', 'Cybersec', 'AI', 'ML']
 	},
 	{
-		id: 'study-buddy',
-		title: 'Study Buddy',
-		category: 'Repo',
-		description: 'Placeholder aplikacja wspierająca studygroup i quizy.',
-		image: 'images/projects/study-buddy.webp',
-		tags: ['Edu', 'AI', 'Helpers'],
-		github: 'https://github.com/moai/study-buddy'
+		id: 'obrona-cywilna',
+		title: 'Obrona Cywilna Nowej Generacji',
+		category: 'kwiecień 2026',
+		description: 'Aplikacja webowa z Civil42 dla obywateli i samorządów. Jasny interfejs na sytuacje kryzysowe, bez zbędnej złożoności.',
+		cover: 'ember',
+		tags: ['GovTech', 'Web', 'Bezpieczeństwo', 'Dual Use']
 	},
 	{
-		id: 'event-toolkit',
-		title: 'Event Toolkit',
-		category: 'Repo',
-		description: 'Placeholder zestaw narzędzi do obsługi eventów i rejestracji.',
-		image: 'images/projects/event-toolkit.webp',
-		tags: ['Events', 'Ops', 'Automation'],
-		github: 'https://github.com/moai/event-toolkit'
+		id: 'moodify',
+		title: 'Moodify',
+		category: 'marzec 2026',
+		description: 'Tworzy spersonalizowaną playlistę na podstawie opisu uczuć i wybranego gatunku. Mood i gatunek idą w model, na wyjściu jest zestaw utworów dopasowany do chwili.',
+		cover: 'magenta',
+		tags: ['Muzyka', 'NLP', 'Recsys']
 	},
 	{
-		id: 'partner-portal',
-		title: 'Partner Portal',
-		category: 'Repo',
-		description: 'Placeholder przestrzeń do współpracy z partnerami i sponsorami.',
-		image: 'images/projects/partner-portal.webp',
-		tags: ['Partnerships', 'Web', 'Security'],
-		github: 'https://github.com/moai/partner-portal'
+		id: 'inticheck',
+		title: 'IntiCheck',
+		category: 'marzec 2026',
+		description: 'Bezpieczny system triage\'u dermatologicznego oparty na sieciach neuronowych. Segreguje przypadki ze zdjęć skóry i zostawia decyzję kliniczną po stronie lekarza.',
+		cover: 'rose',
+		tags: ['MedTech', 'Sieci neuronowe', 'Bezpieczeństwo']
 	},
 	{
-		id: 'outreach-site',
-		title: 'Outreach Site',
-		category: 'Repo',
-		description: 'Placeholder minisite z formularzem kontaktowym i showcase.',
-		image: 'images/projects/outreach-site.webp',
-		tags: ['Web', 'Landing', 'UI'],
-		github: 'https://github.com/moai/outreach-site'
+		id: 'taxifleet',
+		title: 'TaxiFleet',
+		category: 'marzec 2026',
+		description: 'Platforma do analizy i monitoringu pracy kierowców floty taxi. Zbiera sygnały z kursów i pokazuje, co dzieje się w zespole, zanim problem widać w rozliczeniach.',
+		cover: 'gold',
+		tags: ['Mobility', 'Data', 'ML']
+	},
+	{
+		id: 'planet-twin',
+		title: 'Cyfrowy bliźniak planety',
+		category: 'marzec 2026',
+		description: 'Zwycięska aplikacja Hack4Sages. Na danych NASA liczy potencjał planety do podtrzymania życia; interaktywny bliźniak przelicza ekstremalny klimat i szanse pod lodem.',
+		cover: 'indigo',
+		tags: ['Space', 'NASA', 'Symulacja']
+	},
+	{
+		id: 'promo-wz',
+		title: 'Promocja Wydziału Zarządzania',
+		category: 'styczeń 2026',
+		description: 'Zespół ds. promocji WZ powołany przez prezesa MoAI: studenci wszystkich kierunków i pracownicy. Start od profilu w Google Maps, dalej Instagram, TikTok i Facebook wydziału.',
+		cover: 'peach',
+		tags: ['Marketing', 'Community', 'Uczelnia']
+	},
+	{
+		id: 'ml-admin',
+		title: 'ML dla administracji publicznej',
+		category: 'grudzień 2025',
+		description: 'Prototypy uczenia maszynowego w służbie obywateli i urzędów. Narzędzia, które skracają ścieżkę między danymi państwa a konkretną decyzją.',
+		cover: 'azure',
+		tags: ['GovTech', 'ML', 'Prototyp']
+	},
+	{
+		id: 'esa-agri',
+		title: 'Dane satelitarne ESA dla rolnictwa',
+		category: 'listopad 2025',
+		description: 'Analiza zobrazowań Europejskiej Agencji Kosmicznej pod decyzje rolników, firm i administracji. AI wyciąga z satelity to, czego nie widać z pola.',
+		cover: 'ocean',
+		tags: ['Space', 'ML', 'AgriTech']
+	},
+	{
+		id: 'jetbrains-co2',
+		title: 'Monitor CO₂ w JetBrains',
+		category: 'listopad 2025',
+		description: 'Wtyczka do IDE JetBrains z 3. miejsca BHL. W czasie rzeczywistym liczy emisję CO₂ kodu, wykrywa nieoptymalne wzorce i sugeruje poprawki z asystentem AI.',
+		cover: 'lime',
+		tags: ['DevTools', 'GreenTech', 'AI']
+	},
+	{
+		id: 'music-school',
+		title: 'Rebranding szkoły muzycznej',
+		category: '2025',
+		description: 'Projekt marketingowy dla pobliskiej szkoły muzycznej. Nowa identyfikacja, spójny przekaz i materiały, które da się realnie wdrożyć.',
+		cover: 'orchid',
+		tags: ['Design', 'Marketing', 'Brand']
+	},
+	{
+		id: 'plant-nn',
+		title: 'Inteligentna uprawa roślin',
+		category: 'czerwiec 2025',
+		description: 'Projekt badawczy sprzed wakacji: sieci neuronowe sterują parametrami uprawy roślin. Celem jest innowacyjna, powtarzalna hodowla — model dobiera warunki wzrostu zamiast ręcznego strojenia.',
+		cover: 'forest',
+		tags: ['Research', 'ML', 'AgriTech']
+	},
+	{
+		id: 'dynamic-ui',
+		title: 'Dynamiczny interfejs użytkownika',
+		category: '2025',
+		description: 'Badanie i PoC dynamicznego interfejsu opartego na inteligentnych systemach, rozwijane równolegle na 3. edycji SFB. Warstwa UX/UI dopasowuje się do użytkownika i wspiera ścieżkę sprzedaży.',
+		cover: 'wine',
+		tags: ['Marketing', 'AI', 'UX/UI', 'Sprzedaż']
+	},
+	{
+		id: 'julia',
+		title: 'Julia — wirtualny asystent pacjenta',
+		category: '2025',
+		description: 'Inteligentny asystent wirtualny, który wygrał 3. edycję SFB. Julia umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.',
+		cover: 'coral',
+		tags: ['Chatbot', 'MedTech', 'NLP']
+	},
+	{
+		id: 'onhelo',
+		title: 'OnHelo',
+		category: '2024',
+		description: 'Aplikacja fitness z elementami medtech, która wygrała 2. edycję Studenckiego Festiwalu Biznesu. Modele uczenia maszynowego wspierają poprawne wykonywanie ćwiczeń i zmniejszają ryzyko błędnej techniki.',
+		cover: 'mint',
+		tags: ['Fitness', 'MedTech', 'ML']
 	}
 ];
 
 const events = [
 	{
-		id: 'sfb2',
-		title: 'Studencki Festiwal Biznesu II',
-		category: 'Wydarzenie',
-		description: 'Scena dla innowacyjnych pomysłów, networking z biznesem i AI w praktyce.',
-		image: 'images/events/sfb2.webp'
+		id: 'it-unplugged',
+		title: 'IT Unplugged',
+		category: 'czerwiec 2026',
+		description: 'Konferencja o AI, data engineering, architekturze, cyberbezpieczeństwie i wellbeing. Wymiana doświadczeń ze środowiskiem IT.',
+		cover: 'sky',
+		tags: ['Konferencja', 'IT', 'Networking']
+	},
+	{
+		id: 'urban-lab',
+		title: 'Urban Lab Challenge',
+		category: 'czerwiec 2026',
+		description: '1. miejsce i nagroda główna. Ekosystem brAIdak dla Urzędu Miasta Lublin: zero-cloud RAG, Bielik i dostępność głosowa.',
+		cover: 'pine',
+		tags: ['Hackathon', 'GovTech', 'Zwycięstwo']
+	},
+	{
+		id: 'sfb4',
+		title: 'Studencki Festiwal Biznesu IV',
+		category: 'maj 2026',
+		description: 'Trzeci rok z rzędu 1. miejsce MoAI. Trzy zespoły z briefami Starostwa, CEWAR i UniCredit — nagroda główna za wykrywanie zagrożeń i kierowane powiadomienia dla klientów banku.',
+		cover: 'honey',
+		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
+	},
+	{
+		id: 'hackology-2',
+		title: 'Hackology 2',
+		category: 'maj 2026',
+		description: 'Współorganizacja z kołem ATLAS: social media, grafiki, patronat, aranżacja i infrastruktura. Mentor z MoAI, opiekun koła w jury.',
+		cover: 'dusk',
+		tags: ['Hackathon', 'Organizacja', 'Partnerstwo']
+	},
+	{
+		id: 'cybermil',
+		title: 'Finał CTF CyberMil',
+		category: 'maj 2026',
+		description: 'Finał Akademii CyberMil w jednostce MON w Warszawie. Najwyższy wynik w drużynie Politechniki Lubelskiej i Lublina.',
+		cover: 'crimson',
+		tags: ['Cybersecurity', 'CTF', 'MON']
+	},
+	{
+		id: 'erasmus-startup',
+		title: 'Erasmus StartUp Projects',
+		category: 'kwiecień 2026',
+		description: 'Inicjatywa MoAI: studenci Erasmusa na międzynarodowym sympozjum WZ. Dwa zespoły startupowe zajęły 1. i 2. miejsce.',
+		cover: 'dawn',
+		tags: ['Erasmus', 'Startup', 'Sympozjum']
+	},
+	{
+		id: 'bielik-google',
+		title: 'Warsztaty Bielik AI × Google',
+		category: 'kwiecień 2026',
+		description: 'Warsztaty Google for Developers i SpeakLeash o polskim modelu Bielik. LLM w Google Cloud, BigQuery i orkiestracja RAG — poprowadzone przez członka MoAI.',
+		cover: 'frost',
+		tags: ['LLM', 'Google Cloud', 'RAG']
+	},
+	{
+		id: 'civil42',
+		title: 'Hackathon Civil42',
+		category: 'kwiecień 2026',
+		description: 'Pierwszy hackathon obrony cywilnej Instytutu 42. Aplikacja webowa wspierająca obywateli i samorządy w scenariuszach kryzysowych.',
+		cover: 'copper',
+		tags: ['Hackathon', 'Cyber', 'Obrona cywilna']
+	},
+	{
+		id: 'dni-otwarte-2026',
+		title: 'Dni Otwarte Politechniki Lubelskiej 2026',
+		category: 'kwiecień 2026',
+		description: 'Stoisko kierunku Sztuczna Inteligencja w Biznesie. Modele AR, śledzenie gestów, edycja obrazów oraz oprowadzanie kandydatów po kampusie.',
+		cover: 'berry',
+		tags: ['Rekrutacja', 'AR', 'Uczelnia']
+	},
+	{
+		id: 'mit-ai-summit',
+		title: 'MIT AI Summit',
+		category: 'marzec 2026',
+		description: 'Szczyt MIT AI Summit w Warszawie. Wykłady m.in. prof. Włodzisława Ducha i prof. Piotra Sankowskiego o odpornych systemach AI.',
+		cover: 'lagoon',
+		tags: ['Konferencja', 'AI', 'Warszawa']
+	},
+	{
+		id: 'seminarium',
+		title: 'Międzywydziałowe Seminarium Naukowe',
+		category: 'marzec 2026',
+		description: 'Prezentacja TaxiFleet, IntiCheck i Moodify. Seminarium międzywydziałowe na PL.',
+		cover: 'lilac',
+		tags: ['Nauka', 'Prelekcja', 'AI']
+	},
+	{
+		id: 'pollubmy-marketing',
+		title: 'Pollubmy Marketing',
+		category: 'marzec 2026',
+		description: 'Wystąpienie o upstream modeling i inferencji kauzalnej. Jak modele ML obniżają koszt kampanii i odpowiadają na realne potrzeby agencji.',
+		cover: 'blush',
+		tags: ['Konferencja', 'Marketing', 'Causal ML']
+	},
+	{
+		id: 'ensemble-warsaw',
+		title: 'Ensemble AI — Warszawa',
+		category: 'marzec 2026',
+		description: '6. miejsce na niemal 50 zespołów i awans do prezentacji finałowych. ML w diagnostyce, biologii molekularnej oraz bezpieczeństwo dużych modeli językowych.',
+		image: 'images/events/hackathon-ensemble.webp',
+		tags: ['Hackathon', 'MedTech', 'LLM']
+	},
+	{
+		id: 'hack4sages',
+		title: 'Hack4Sages',
+		category: 'marzec 2026',
+		description: '1. miejsce w międzynarodowym Hack4Sages. Aplikacja na danych NASA oceniająca potencjał planety do podtrzymania życia — przed zespołami z Harvardu i Cambridge.',
+		cover: 'ice',
+		tags: ['Hackathon', 'Space', 'Zwycięstwo']
+	},
+	{
+		id: 'brave-community',
+		title: 'II spotkanie Brave Community',
+		category: 'marzec 2026',
+		description: 'Start współpracy z lubelskim Brave Community. Regularny udział w spotkaniach i przygotowanie własnego wystąpienia.',
+		cover: 'amber',
+		tags: ['Community', 'Lublin', 'Networking']
+	},
+	{
+		id: 'polska-siega-gwiazd',
+		title: 'Polska Sięga Gwiazd',
+		category: 'grudzień 2025',
+		description: 'Spotkanie ze Sławoszem Uznańskim, astronautą misji IGNIS. Pytania do załogi i networking z kołami oraz instytucjami partnerskimi.',
+		cover: 'slate',
+		tags: ['Space', 'Spotkanie', 'Networking']
+	},
+	{
+		id: 'hacknation',
+		title: 'Hackathon HackNation',
+		category: 'grudzień 2025',
+		description: 'HackNation w Bydgoszczy (Ministerstwo Cyfryzacji, MF, MON, MNiSW). Prototypy uczenia maszynowego dla obywateli i administracji.',
+		cover: 'merlot',
+		tags: ['Hackathon', 'GovTech', 'ML']
+	},
+	{
+		id: 'bhl',
+		title: 'Finał hackathonu BHL',
+		category: 'listopad 2025',
+		description: '3. miejsce w 11. edycji BHL w Warszawie. Prototyp wtyczki JetBrains monitorującej ślad CO₂ kodu i podpowiadającej poprawki z asystentem AI.',
+		cover: 'moss',
+		tags: ['Hackathon', 'GreenTech', 'Finał']
+	},
+	{
+		id: 'cassini',
+		title: 'Hackathon CASSINI',
+		category: 'listopad 2025',
+		description: 'Trzydniowy CASSINI we Wrocławiu. Analiza danych satelitarnych ESA pod kątem rolnictwa, biznesu i administracji.',
+		cover: 'sage',
+		tags: ['Hackathon', 'Space', 'ESA']
+	},
+	{
+		id: 'targi-kol',
+		title: 'IV Targi Kół Naukowych PL',
+		category: 'październik 2025',
+		description: 'Pokaz modeli generujących świat gier wideo oraz Stable Diffusion. Promocja AI i ML wśród studentów i uczniów szkół ponadpodstawowych.',
+		cover: 'plum',
+		tags: ['Uczelnia', 'ML', 'Pokazy']
 	},
 	{
 		id: 'sfb3',
 		title: 'Studencki Festiwal Biznesu III',
-		category: 'Wydarzenie',
-		description: 'Kolejna odsłona festiwalu z większą liczbą warsztatów i pitchy.',
-		image: 'images/events/sfb3.webp'
+		category: '2025',
+		description: '3. edycja SFB: pierwsze miejsce za asystenta Julię oraz równoległy PoC dynamicznego interfejsu. Dwa zespoły MoAI na żywych briefach medycznym i produktowym.',
+		image: 'images/events/sfb3.webp',
+		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
+	},
+	{
+		id: 'dni-otwarte-2025',
+		title: 'Dni Otwarte Politechniki Lubelskiej 2025',
+		category: '2025',
+		description: 'Stoisko MoAI na Dniach Otwartych. Pokazy projektów, rozmowy z kandydatami i zaproszenie do koła.',
+		image: 'images/events/dni-otwarte-25.webp',
+		tags: ['Rekrutacja', 'Uczelnia', 'Pokazy']
+	},
+	{
+		id: 'akademia-inzynierska',
+		title: '46. Zgromadzenie Akademii Inżynierskiej',
+		category: '2025',
+		description: 'Prezentacja MoAI podczas 46. Zgromadzenia Akademii Inżynierskiej. Reprezentacja Politechniki Lubelskiej w gronie środowiska inżynierskiego.',
+		cover: 'rust',
+		tags: ['Nauka', 'Prestige', 'Uczelnia']
+	},
+	{
+		id: 'sympozjum-xxxiii',
+		title: 'XXXIII Sympozjum Naukowe',
+		category: '2025',
+		description: 'Wystąpienie MoAI na XXXIII Sympozjum Naukowym. Prezentacja kompetencji koła i projektów badawczych przed społecznością akademicką.',
+		cover: 'violet',
+		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
+	},
+	{
+		id: 'ghostday',
+		title: 'GhostDay 2025',
+		category: '2025',
+		description: 'Konferencja GhostDay w Poznaniu. Spotkania z ekspertami branży i zderzenie akademickiego AI z praktyką produktową.',
+		cover: 'citrus',
+		tags: ['Konferencja', 'AI', 'Networking']
+	},
+	{
+		id: 'ensemble-krakow',
+		title: 'Ensemble AI — Kraków',
+		category: '2025',
+		description: 'Międzynarodowy hackathon Ensemble AI w Krakowie. Zespół MoAI awansował do finału z modelami uczenia maszynowego.',
+		cover: 'cobalt',
+		tags: ['Hackathon', 'AI', 'Finał']
+	},
+	{
+		id: 'spaceshield',
+		title: 'Hackathon SpaceShield',
+		category: '2025',
+		description: 'Finał SpaceShield w Stalowej Woli. Analityka, symulacje i tempo konkursowe na styku technologii i zastosowań kosmicznych.',
+		image: 'images/events/hackathon-spaceshield.webp',
+		tags: ['Hackathon', 'Space', 'Finał']
 	},
 	{
 		id: 'hackathon-google',
 		title: 'Hackathon Google',
-		category: 'Hackathon',
-		description: 'Szybkie prototypowanie z mentorami, AI i rozwiązania dla realnych problemów.',
-		image: 'images/events/hackathon-google.webp'
+		category: '2025',
+		description: 'Prototypowanie z mentorami Google w Warszawie. Szybkie iteracje, realne problemy biznesowe i intensywny sprint zespołowy.',
+		image: 'images/events/hackathon-google.webp',
+		tags: ['Hackathon', 'AI', 'Google']
 	},
 	{
-		id: 'hackathon-ensemble',
-		title: 'Hackathon EnsembleAI',
-		category: 'Hackathon',
-		description: 'Zespół tworzy modele AI i prezentuje je przed jury branżowym.',
-		image: 'images/events/hackathon-ensemble.webp'
-	},
-	{
-		id: 'hackathon-spaceshield',
-		title: 'Hackathon SpaceShield',
-		category: 'Hackathon',
-		description: 'Obrona kosmiczna? Budujemy analitykę i symulacje w ekspresowym tempie.',
-		image: 'images/events/hackathon-spaceshield.webp'
-	},
-	{
-		id: 'dni-otwarte',
-		title: 'Dni Otwarte 2025',
-		category: 'Wydarzenie',
-		description: 'Prowadzimy prezentacje, pokazujemy projekty i zachęcamy nowych członków.',
-		image: 'images/events/dni-otwarte-25.webp'
-	},
-	{
-		id: 'math',
-		title: 'Studygroup: matematyka',
-		category: 'Warsztat',
-		description: 'Seria wspólnych sesji przygotowujących do kolokwiów i egzaminów.',
-		image: 'images/events/math.webp'
+		id: 'sfb2',
+		title: 'Studencki Festiwal Biznesu II',
+		category: '2024',
+		description: '2. edycja festiwalu i pierwsze miejsce MoAI z aplikacją fitness OnHelo. Networking z biznesem, żywy brief i scena dla rozwiązań AI.',
+		image: 'images/events/sfb2.webp',
+		tags: ['Biznes', 'Pitch', 'Współpraca']
 	},
 	{
 		id: 'pip',
-		title: 'Projekt PIP',
-		category: 'Projekt społeczny',
-		description: 'Wspieramy inicjatywy społeczne i biznesowe z wykorzystaniem AI.',
-		image: 'images/events/pip.webp'
+		title: 'Konferencja 105-lecia Państwowej Inspekcji Pracy',
+		category: 'październik 2024',
+		description: 'Konferencja z okazji 105-lecia PIP. Zespół MoAI wygłosił referat o AI na rynku pracy: wyzwania regulacyjne, ryzyka i szanse, które ta technologia otwiera przed pracownikami i instytucjami.',
+		image: 'images/events/pip.webp',
+		tags: ['Konferencja', 'Prawo', 'Rynek pracy']
 	}
 ];
 
@@ -345,19 +603,42 @@ function renderMembers(targetId, {
 	}
 }
 
+function appendCardMedia(media, item) {
+	if (item.image) {
+		const img = document.createElement('img');
+		img.src = basePath + item.image;
+		img.alt = item.title;
+		img.loading = 'lazy';
+		img.draggable = false;
+		img.setAttribute('data-protect', 'true');
+		media.appendChild(img);
+		return;
+	}
+
+	const cover = document.createElement('div');
+	cover.className = 'project-card__cover';
+	cover.dataset.cover = item.cover || 'azure';
+	cover.setAttribute('aria-hidden', 'true');
+
+	['a', 'b', 'c'].forEach((key) => {
+		const blob = document.createElement('span');
+		blob.className = `project-card__blob project-card__blob--${key}`;
+		cover.appendChild(blob);
+	});
+
+	const sheen = document.createElement('span');
+	sheen.className = 'project-card__cover-glass';
+	cover.appendChild(sheen);
+	media.appendChild(cover);
+}
+
 function createProjectCard(project, { showTags = false, linkLabel = 'Zobacz', showCategory = true } = {}) {
 	const card = document.createElement('article');
 	card.className = 'project-card fade-in';
 
 	const media = document.createElement('div');
 	media.className = 'project-card__media';
-	const img = document.createElement('img');
-	img.src = basePath + project.image;
-	img.alt = project.title;
-	img.loading = 'lazy';
-	img.draggable = false;
-	img.setAttribute('data-protect', 'true');
-	media.appendChild(img);
+	appendCardMedia(media, project);
 
 	const body = document.createElement('div');
 	body.className = 'project-card__body';
@@ -509,7 +790,7 @@ function updateFooterYear() {
 	});
 }
 
-const gapAlignedNavHashes = new Set(['#projects', '#events', '#join']);
+const gapAlignedNavHashes = new Set(['#events', '#projects', '#join']);
 
 function clampScrollTop(top) {
 	const maxTop = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
@@ -625,6 +906,31 @@ function isMobileMembersViewport() {
 	return window.matchMedia('(max-width: 720px)').matches;
 }
 
+function renderIndexMembers() {
+	const isMobileMembers = isMobileMembersViewport();
+	renderMembers('members-grid', {
+		limit: getIndexMembersLimit(),
+		includeCta: false,
+		randomize: true,
+		pinInviteLast: !isMobileMembers,
+		includeInvite: !isMobileMembers
+	});
+}
+
+function setupIndexMembersViewportSync() {
+	if (typeof window.matchMedia !== 'function') return;
+	const mq = window.matchMedia('(max-width: 720px)');
+	const onChange = () => {
+		renderIndexMembers();
+		requestAnimationFrame(observeFadeIns);
+	};
+	if (typeof mq.addEventListener === 'function') {
+		mq.addEventListener('change', onChange);
+	} else if (typeof mq.addListener === 'function') {
+		mq.addListener(onChange);
+	}
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const page = document.body.dataset.page;
 
@@ -632,16 +938,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	updateFooterYear();
 
 	if (page === 'index') {
-		const isMobileMembers = isMobileMembersViewport();
-		renderMembers('members-grid', {
-			limit: getIndexMembersLimit(),
-			includeCta: false,
-			randomize: true,
-			pinInviteLast: !isMobileMembers,
-			includeInvite: !isMobileMembers
-		});
-		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true, linkLabel: 'GitHub' });
-		renderProjects('events-grid', events, { count: 3, random: true, showCategory: false });
+		renderIndexMembers();
+		setupIndexMembersViewportSync();
+		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true });
+		renderProjects('events-grid', events, { count: 3, random: true, showCategory: true });
 	}
 
 	if (page === 'members') {
@@ -649,11 +949,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	if (page === 'projects') {
-		renderProjects('projects-grid', projects, { showTags: true, linkLabel: 'GitHub' });
+		renderProjects('projects-grid', projects, { showTags: true });
 	}
 
 	if (page === 'events') {
-		renderProjects('projects-grid', events, { showCategory: false });
+		renderProjects('projects-grid', events, { showTags: true, showCategory: true });
 	}
 
 	// Delay observer to ensure nodes are in DOM

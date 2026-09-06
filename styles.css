@@ -86,6 +86,7 @@ html {
 	scrollbar-width: thin;
 	scrollbar-color: rgba(255, 255, 255, 0.2) var(--bg-primary);
 	overflow-x: hidden;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -102,6 +103,9 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 	user-select: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
 }
 
 a {
@@ -118,12 +122,47 @@ p {
 	margin: 0;
 }
 
-p, h1, h2, h3, h4, .lead, .muted, .display, .eyebrow, .member-card__name, .project-card__title, .project-card__desc, .project-card__meta, .tag, .social-card__handle, .social-card__content, .hero__meta, .footer__link, .footer__inner span {
+p, h1, h2, h3, h4, .lead, .muted, .display, .eyebrow, .member-card__name, .project-card__title, .project-card__desc, .project-card__meta, .social-card__handle, .social-card__content, .hero__meta, .selectable, .selectable-text {
 	user-select: text;
+	-webkit-user-select: text;
+	-webkit-touch-callout: default;
 }
 
-.nav, .btn, .pill, .card, .nav__link {
+.nav,
+.nav__link,
+.btn,
+.pill,
+.tag,
+.card,
+.footer,
+.footer__link,
+.footer__inner span,
+.footer__logo,
+.member-card__link {
 	user-select: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+}
+
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
+
+a[href^="mailto:"] {
+	user-select: text;
+	-webkit-user-select: text;
+	-webkit-touch-callout: default;
+}
+
+:focus {
+	outline: none;
+}
+
+:focus-visible {
+	outline: 2px solid rgba(255, 243, 207, 0.7);
+	outline-offset: 2px;
 }
 
 .sr-only {
@@ -454,14 +493,16 @@ body[data-page="events"] .card--intro .display {
 	justify-content: center;
 	z-index: 10;
 	pointer-events: none;
+	padding-inline: var(--space-lg);
 }
 
 .nav {
 	pointer-events: auto;
 	display: flex;
 	align-items: center;
-	gap: var(--space-lg);
-	padding: var(--space-sm) var(--space-lg);
+	width: fit-content;
+	max-width: 100%;
+	padding: 0.5rem clamp(0.65rem, 1.2vw, 1.5rem);
 	background: var(--surface-1);
 	backdrop-filter: blur(16px);
 	-webkit-backdrop-filter: blur(16px);
@@ -472,15 +513,21 @@ body[data-page="events"] .card--intro .display {
 
 .nav__links {
 	display: flex;
-	gap: var(--space-md);
 	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	gap: clamp(0.35rem, 1.1vw, 1rem);
 }
 
 .nav__link {
-	padding: 0.65rem 0.9rem;
+	flex: 0 1 auto;
+	min-width: 0;
+	padding: 0.65rem clamp(0.45rem, 1vw, 0.9rem);
 	border-radius: var(--radius-pill);
 	color: var(--text-secondary);
 	font-weight: 500;
+	white-space: nowrap;
+	text-align: center;
 	transition: background var(--transition), color var(--transition);
 }
 
@@ -492,13 +539,13 @@ body[data-page="events"] .card--intro .display {
 .masonry {
 	display: grid;
 	gap: var(--segment-grid-gap-desktop);
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
-@media (min-width: 1200px) {
-	.masonry {
-		grid-template-columns: repeat(6, minmax(0, 1fr));
-	}
+.member-card,
+.project-card,
+.social-card {
+	-webkit-tap-highlight-color: transparent;
 }
 
 .member-card {
@@ -654,17 +701,127 @@ body[data-page="events"] .card--intro .display {
 
 .project-card__media {
 	position: relative;
+	width: 100%;
 	aspect-ratio: 4 / 3;
 	overflow: hidden;
 }
 
 .project-card__media img,
 .project-card picture img {
+	position: absolute;
+	inset: 0;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
 	display: block;
 }
+
+.project-card__cover {
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	background: linear-gradient(148deg, var(--cover-a) 0%, var(--cover-b) 82%);
+}
+
+.project-card__blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(38px);
+	pointer-events: none;
+	transition: transform 600ms ease;
+}
+
+.project-card__blob--a {
+	width: 78%;
+	height: 82%;
+	top: -34%;
+	left: -22%;
+	background: var(--cover-a);
+	opacity: 0.95;
+}
+
+.project-card__blob--b {
+	width: 70%;
+	height: 76%;
+	right: -26%;
+	bottom: -36%;
+	background: var(--cover-b);
+	opacity: 0.92;
+}
+
+.project-card__blob--c {
+	width: 48%;
+	height: 52%;
+	left: 28%;
+	top: 32%;
+	background: color-mix(in srgb, var(--cover-a) 58%, var(--cover-b));
+	opacity: 0.7;
+}
+
+.project-card:hover .project-card__blob--a {
+	transform: translate(6%, 8%) scale(1.06);
+}
+
+.project-card:hover .project-card__blob--b {
+	transform: translate(-8%, -6%) scale(1.08);
+}
+
+.project-card:hover .project-card__blob--c {
+	transform: translate(4%, -10%) scale(1.12);
+}
+
+.project-card__cover-glass {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(160deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05) 38%, rgba(20, 10, 42, 0.22)),
+		linear-gradient(120deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	border: 1px solid rgba(255, 255, 255, 0.16);
+	border-radius: inherit;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.project-card__cover[data-cover="azure"] { --cover-a: #7eb6ff; --cover-b: #1e4b9e; }
+.project-card__cover[data-cover="ice"] { --cover-a: #9ae6ff; --cover-b: #0e7490; }
+.project-card__cover[data-cover="cobalt"] { --cover-a: #6ea8ff; --cover-b: #1e3a8a; }
+.project-card__cover[data-cover="violet"] { --cover-a: #c4b5fd; --cover-b: #5b21b6; }
+.project-card__cover[data-cover="lilac"] { --cover-a: #e9d5ff; --cover-b: #6d28d9; }
+.project-card__cover[data-cover="rose"] { --cover-a: #f9a8d4; --cover-b: #9d174d; }
+.project-card__cover[data-cover="blush"] { --cover-a: #fecdd3; --cover-b: #be185d; }
+.project-card__cover[data-cover="coral"] { --cover-a: #fb7185; --cover-b: #9a3412; }
+.project-card__cover[data-cover="ember"] { --cover-a: #fb923c; --cover-b: #9f1239; }
+.project-card__cover[data-cover="amber"] { --cover-a: #fcd34d; --cover-b: #b45309; }
+.project-card__cover[data-cover="gold"] { --cover-a: #fde68a; --cover-b: #92400e; }
+.project-card__cover[data-cover="honey"] { --cover-a: #facc15; --cover-b: #a16207; }
+.project-card__cover[data-cover="lime"] { --cover-a: #bef264; --cover-b: #3f6212; }
+.project-card__cover[data-cover="forest"] { --cover-a: #86efac; --cover-b: #14532d; }
+.project-card__cover[data-cover="mint"] { --cover-a: #5eead4; --cover-b: #115e59; }
+.project-card__cover[data-cover="sage"] { --cover-a: #bbf7d0; --cover-b: #166534; }
+.project-card__cover[data-cover="pine"] { --cover-a: #4ade80; --cover-b: #064e3b; }
+.project-card__cover[data-cover="moss"] { --cover-a: #a3e635; --cover-b: #365314; }
+.project-card__cover[data-cover="ocean"] { --cover-a: #67e8f9; --cover-b: #155e75; }
+.project-card__cover[data-cover="teal"] { --cover-a: #2dd4bf; --cover-b: #134e4a; }
+.project-card__cover[data-cover="sky"] { --cover-a: #7dd3fc; --cover-b: #1d4ed8; }
+.project-card__cover[data-cover="frost"] { --cover-a: #e0f2fe; --cover-b: #0369a1; }
+.project-card__cover[data-cover="indigo"] { --cover-a: #a5b4fc; --cover-b: #312e81; }
+.project-card__cover[data-cover="orchid"] { --cover-a: #e9d5ff; --cover-b: #7e22ce; }
+.project-card__cover[data-cover="magenta"] { --cover-a: #f0abfc; --cover-b: #701a75; }
+.project-card__cover[data-cover="plum"] { --cover-a: #d8b4fe; --cover-b: #6b21a8; }
+.project-card__cover[data-cover="wine"] { --cover-a: #f9a8d4; --cover-b: #6b21a8; }
+.project-card__cover[data-cover="dusk"] { --cover-a: #c4b5fd; --cover-b: #4c1d95; }
+.project-card__cover[data-cover="dawn"] { --cover-a: #fda4af; --cover-b: #9f1239; }
+.project-card__cover[data-cover="crimson"] { --cover-a: #fb7185; --cover-b: #881337; }
+.project-card__cover[data-cover="berry"] { --cover-a: #f43f5e; --cover-b: #4c0519; }
+.project-card__cover[data-cover="peach"] { --cover-a: #fdba74; --cover-b: #c2410c; }
+.project-card__cover[data-cover="copper"] { --cover-a: #e7a56b; --cover-b: #7c2d12; }
+.project-card__cover[data-cover="rust"] { --cover-a: #fca5a5; --cover-b: #7f1d1d; }
+.project-card__cover[data-cover="steel"] { --cover-a: #cbd5e1; --cover-b: #1e293b; }
+.project-card__cover[data-cover="slate"] { --cover-a: #94a3b8; --cover-b: #0f172a; }
+.project-card__cover[data-cover="merlot"] { --cover-a: #f9a8d4; --cover-b: #831843; }
+.project-card__cover[data-cover="lagoon"] { --cover-a: #bae6fd; --cover-b: #075985; }
+.project-card__cover[data-cover="citrus"] { --cover-a: #fde047; --cover-b: #854d0e; }
 
 .project-card__body {
 	padding: var(--space-md);
@@ -930,29 +1087,28 @@ body[data-page="events"] .card--intro .display {
 
 @media (max-width: 960px) {
 	.nav-shell {
-		inset: var(--space-md) var(--space-md) auto;
+		inset: var(--space-md) 0 auto;
+		padding-inline: var(--space-md);
 	}
+
 	.nav {
-		width: 100%;
-		justify-content: center;
-		padding: var(--space-xs);
+		width: fit-content;
+		max-width: 100%;
+		padding: 0.4rem 0.7rem;
 	}
+
 	.nav__links {
-		display: flex;
-		width: 100%;
-		justify-content: center;
-		flex-wrap: nowrap;
-		gap: 0.2rem;
+		width: auto;
+		gap: 0.45rem;
 	}
+
 	.nav__link {
-		flex: 1 1 0;
-		min-width: 0;
-		text-align: center;
-		padding: 0.52rem 0.35rem;
-		font-size: 0.85rem;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
+		padding: 0.5rem 0.55rem;
+		font-size: 0.9rem;
+	}
+
+	.masonry {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
 	}
 
 	body[data-page="members"] .card--intro,
@@ -975,20 +1131,27 @@ body[data-page="events"] .card--intro .display {
 	}
 
 	.nav-shell {
-		inset: var(--space-sm) var(--space-sm) auto;
+		inset: var(--space-sm) 0 auto;
+		padding-inline: var(--space-sm);
 	}
 
 	.nav {
-		padding: 0.35rem;
+		width: 100%;
+		padding: 0.35rem 0.7rem;
 	}
 
 	.nav__links {
-		gap: 0.1rem;
+		width: 100%;
+		justify-content: space-between;
+		gap: 0;
 	}
 
 	.nav__link {
+		flex: 0 1 auto;
 		padding: 0.5rem 0.15rem;
 		font-size: 0.78rem;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.card {
@@ -997,10 +1160,14 @@ body[data-page="events"] .card--intro .display {
 
 	.cards--three,
 	.cards--social,
-	.masonry,
 	.list-grid {
 		grid-template-columns: 1fr;
 		gap: var(--segment-grid-gap-mobile);
+	}
+
+	.masonry,
+	#members-grid {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 
 	#follow .cards--social {
@@ -1052,6 +1219,13 @@ body[data-page="events"] .card--intro .display {
 	}
 	.page {
 		padding: var(--space-3xl) var(--space-md) var(--space-3xl);
+	}
+
+	body[data-page="events"] .page,
+	body[data-page="projects"] .page,
+	body[data-page="members"] .page,
+	body[data-page="thanks"] .page {
+		padding-top: calc(var(--nav-offset) + var(--space-xl));
 	}
 
 	body[data-page="index"] #hero {
