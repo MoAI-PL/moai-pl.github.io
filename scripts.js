@@ -3,67 +3,67 @@ const members = [
 		name: 'Aleksandra Reja',
 		image: 'images/member-profiles/ola.webp',
 		linkedin: 'https://www.linkedin.com/in/aleksandra-reja-a736353a8/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Frontend', 'Web', 'Design']
 	},
 	{
 		name: 'Damian Cybula',
 		image: 'images/member-profiles/damian.webp',
 		linkedin: 'https://www.linkedin.com/in/damian-cybula/',
-		tags: ['AI', 'Hardware']
+		tags: ['AI', 'Hardware', 'Bioinżynieria']
 	},
 	{
 		name: 'Jakub Goleman',
 		image: 'images/member-profiles/kuba.webp',
 		linkedin: 'https://www.linkedin.com/in/jakubgoleman/',
-		tags: ['Biznes', 'Partnerships']
+		tags: ['Biznes', 'Partnerships', 'Pitch']
 	},
 	{
 		name: 'Jan Domański',
 		image: 'images/member-profiles/janek.webp',
 		linkedin: 'https://www.linkedin.com/in/jandomanski77/',
-		tags: ['Biznes', 'Product']
+		tags: ['Biznes', 'Product', 'FinTech']
 	},
 	{
 		name: 'Kacper Gałan',
 		image: 'images/member-profiles/kacper.webp',
 		linkedin: 'https://www.linkedin.com/in/kacpergalan/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Data Science', 'ML', 'Analytics']
 	},
 	{
 		name: 'Kamila Bąk',
 		image: 'images/member-profiles/kamila.webp',
 		linkedin: 'https://www.linkedin.com/in/kamila-b%C4%85k-376b69397/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Community', 'Content', 'Social Media']
 	},
 	{
 		name: 'Karol Kowal',
 		image: 'images/member-profiles/karol.webp',
 		linkedin: 'https://www.linkedin.com/in/kowal-karol/',
-		tags: ['Ops', 'Events']
+		tags: ['Data Science', 'ML Ops', 'Events']
 	},
 	{
 		name: 'Kasia Kuczyńska',
 		image: 'images/member-profiles/kasiak.webp',
 		linkedin: 'https://www.linkedin.com/in/katarzyna-kuczy%C5%84ska/',
-		tags: ['Research', 'Community']
+		tags: ['Research', 'Community', 'Marketing']
 	},
 	{
 		name: 'Katarzyna Widłak',
 		image: 'images/member-profiles/kasiaw.webp',
 		linkedin: 'https://www.linkedin.com/in/katarzyna--wid%C5%82ak/',
-		tags: ['AI', 'Community', 'Research']
+		tags: ['AI', 'Community', 'Research', 'Elektrotechnika']
 	},
 	{
 		name: 'Krystian Góźdź',
 		image: 'images/member-profiles/krystian.webp',
 		linkedin: 'https://www.linkedin.com/in/krystian-gozdz/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Cloud', 'Backend', 'LLM']
 	},
 	{
 		name: 'Maja Sykuła',
 		image: 'images/member-profiles/maja.webp',
 		linkedin: 'https://www.linkedin.com/in/maja-syku%C5%82a-6a24493b7/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Events', 'Community', 'Organizacja']
 	},
 	{
 		name: 'Maks Kozieł',
@@ -75,43 +75,42 @@ const members = [
 		name: 'Mikołaj Krzywicki',
 		image: 'images/member-profiles/mikolaj.webp',
 		linkedin: 'https://www.linkedin.com/in/miko%C5%82aj-krzywicki/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Cybersec', 'ML', 'Space']
 	},
 	{
 		name: 'Nadia Klimek',
 		image: 'images/member-profiles/nadia.webp',
 		linkedin: 'https://www.linkedin.com/in/nadia-klimek-a15652390/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['NLP', 'MedTech', 'Chatbot']
 	},
 	{
 		name: 'Piotr Niemiec',
 		image: 'images/member-profiles/piotrek.webp',
 		linkedin: 'https://www.linkedin.com/in/piotrniemiec/',
-		tags: ['Data', 'Operations']
+		tags: ['Data', 'Operations', 'Mobility']
 	},
 	{
 		name: 'Sandra Zaremba',
 		image: 'images/member-profiles/sandra.webp',
 		linkedin: 'https://www.linkedin.com/in/sandra-zaremba-4466a4389/',
-		tags: ['Design', 'Communications']
+		tags: ['Design', 'Communications', 'Brand']
 	},
 	{
 		name: 'Szymon Gazdowicz',
 		image: 'images/member-profiles/szymon.webp',
 		linkedin: 'https://www.linkedin.com/in/szymon-gazdowicz/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['Data Science', 'AgriTech', 'Satellite']
 	},
 	{
 		name: 'Zuzanna Marciniak',
 		image: 'images/member-profiles/zuzia.webp',
 		linkedin: 'https://www.linkedin.com/in/zuzanna-marciniak-54391938a/',
-		tags: ['Zespół', 'Profil w budowie']
+		tags: ['UX/UI', 'Product', 'Accessibility']
 	},
 	{
 		name: 'Dołącz do nas',
-		image: 'images/mics/czekamy_na_ciebie.webp',
 		linkedin: '/thanks/',
-		tags: ['Nowy członek', 'Otwarta rekrutacja'],
+		tags: [],
 		invite: true
 	}
 ];
@@ -496,6 +495,31 @@ function shuffle(array) {
 	return copy;
 }
 
+function createInviteCover() {
+	const cover = document.createElement('div');
+	cover.className = 'member-card__invite-cover';
+	cover.setAttribute('aria-hidden', 'true');
+	cover.innerHTML = `
+		<span class="member-card__invite-blob member-card__invite-blob--a"></span>
+		<span class="member-card__invite-blob member-card__invite-blob--b"></span>
+		<span class="member-card__invite-blob member-card__invite-blob--c"></span>
+		<span class="member-card__invite-glass"></span>
+		<svg class="invite-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+			<g class="invite-icon__avatar">
+				<path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+				<path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+			</g>
+			<g transform="translate(12.05 11.85) scale(0.62)">
+				<g class="invite-icon__q">
+					<path class="invite-icon__q-mark" pathLength="1" stroke-width="2.9" d="M8 8a3.5 3 0 0 1 3.5 -3h1a3.5 3 0 0 1 3.5 3a3 3 0 0 1 -2 3a3 4 0 0 0 -2 4" />
+					<path class="invite-icon__q-dot" pathLength="1" stroke-width="3.6" d="M12 19l0 .01" />
+				</g>
+			</g>
+		</svg>
+	`;
+	return cover;
+}
+
 function renderMembers(targetId, {
 	limit = members.length,
 	includeCta = false,
@@ -531,14 +555,6 @@ function renderMembers(targetId, {
 		const media = document.createElement('div');
 		media.className = 'member-card__media';
 
-		const img = document.createElement('img');
-		img.className = 'member-card__photo';
-		img.src = basePath + member.image;
-		img.alt = member.name;
-		img.loading = 'lazy';
-		img.draggable = false;
-		img.setAttribute('data-protect', 'true');
-
 		const body = document.createElement('div');
 		body.className = 'member-card__body';
 
@@ -546,16 +562,19 @@ function renderMembers(targetId, {
 		name.className = 'member-card__name';
 		name.textContent = member.name;
 
-		const tagsWrap = document.createElement('div');
-		tagsWrap.className = 'tags';
-		member.tags.forEach((tag) => {
-			const chip = document.createElement('span');
-			chip.className = 'tag';
-			chip.textContent = tag;
-			tagsWrap.appendChild(chip);
-		});
+		body.appendChild(name);
 
-		body.append(name, tagsWrap);
+		if (member.tags?.length) {
+			const tagsWrap = document.createElement('div');
+			tagsWrap.className = 'tags';
+			member.tags.forEach((tag) => {
+				const chip = document.createElement('span');
+				chip.className = 'tag';
+				chip.textContent = tag;
+				tagsWrap.appendChild(chip);
+			});
+			body.appendChild(tagsWrap);
+		}
 
 		const overlay = document.createElement('a');
 		overlay.className = 'member-card__link';
@@ -566,10 +585,23 @@ function renderMembers(targetId, {
 		overlay.innerHTML = `<span><img class="member-card__link-icon" src="${basePath}icons/linkedin.svg" alt="" aria-hidden="true"> LinkedIn</span>`;
 
 		if (member.invite) {
+			card.classList.add('member-card--invite');
+			overlay.removeAttribute('target');
+			overlay.removeAttribute('rel');
+			overlay.ariaLabel = 'Dołącz do nas';
 			overlay.innerHTML = '<span>Dołącz do nas</span>';
+			media.append(createInviteCover(), overlay);
+		} else {
+			const img = document.createElement('img');
+			img.className = 'member-card__photo';
+			img.src = basePath + member.image;
+			img.alt = member.name;
+			img.loading = 'lazy';
+			img.draggable = false;
+			img.setAttribute('data-protect', 'true');
+			media.append(img, overlay);
 		}
 
-		media.append(img, overlay);
 		card.append(media, body);
 		target.appendChild(card);
 	});

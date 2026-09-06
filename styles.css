@@ -584,6 +584,151 @@ body[data-page="events"] .card--intro .display {
 	transition: transform var(--transition), filter var(--transition);
 }
 
+.member-card__invite-cover {
+	position: relative;
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+	display: grid;
+	place-items: center;
+	background: linear-gradient(148deg, #fff3cf 0%, #4c1d95 82%);
+}
+
+.member-card__invite-blob {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(38px);
+	pointer-events: none;
+	transition: transform 600ms ease;
+}
+
+.member-card__invite-blob--a {
+	width: 78%;
+	height: 82%;
+	top: -34%;
+	left: -22%;
+	background: #fff3cf;
+	opacity: 0.9;
+}
+
+.member-card__invite-blob--b {
+	width: 70%;
+	height: 76%;
+	right: -26%;
+	bottom: -36%;
+	background: #5b21b6;
+	opacity: 0.92;
+}
+
+.member-card__invite-blob--c {
+	width: 48%;
+	height: 52%;
+	left: 28%;
+	top: 32%;
+	background: color-mix(in srgb, #fff3cf 55%, #6d28d9);
+	opacity: 0.7;
+}
+
+.member-card--invite:hover .member-card__invite-blob--a {
+	transform: translate(6%, 8%) scale(1.06);
+}
+
+.member-card--invite:hover .member-card__invite-blob--b {
+	transform: translate(-8%, -6%) scale(1.08);
+}
+
+.member-card--invite:hover .member-card__invite-blob--c {
+	transform: translate(4%, -10%) scale(1.12);
+}
+
+.member-card__invite-glass {
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(160deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.05) 38%, rgba(20, 10, 42, 0.22)),
+		linear-gradient(120deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+	backdrop-filter: blur(18px);
+	-webkit-backdrop-filter: blur(18px);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.32);
+}
+
+.invite-icon {
+	position: relative;
+	z-index: 1;
+	width: 5.75rem;
+	height: 5.75rem;
+	margin-bottom: 1.35rem;
+	color: var(--accent-ivory);
+	overflow: visible;
+	pointer-events: none;
+	filter: drop-shadow(0 8px 18px rgba(20, 10, 42, 0.35));
+}
+
+.invite-icon__avatar {
+	transform-box: fill-box;
+	transform-origin: center;
+	transition: transform 250ms ease-out;
+}
+
+.member-card--invite:hover .invite-icon__avatar,
+.member-card--invite:focus-within .invite-icon__avatar {
+	transform: translateY(-1px) scale(1.05);
+}
+
+.invite-icon__q {
+	transform-box: fill-box;
+	transform-origin: center;
+}
+
+.invite-icon__q-mark,
+.invite-icon__q-dot {
+	stroke-dasharray: 1;
+	stroke-dashoffset: 0;
+}
+
+.member-card--invite:hover .invite-icon__q-mark,
+.member-card--invite:focus-within .invite-icon__q-mark {
+	animation: invite-q-draw 0.4s ease-in-out;
+}
+
+.member-card--invite:hover .invite-icon__q-dot,
+.member-card--invite:focus-within .invite-icon__q-dot {
+	animation: invite-q-dot 0.3s ease-out 0.32s both;
+}
+
+.member-card--invite:hover .invite-icon__q,
+.member-card--invite:focus-within .invite-icon__q {
+	animation: invite-q-pop 0.22s ease-out 0.58s both;
+}
+
+@keyframes invite-q-draw {
+	from { stroke-dashoffset: 1; }
+	to { stroke-dashoffset: 0; }
+}
+
+@keyframes invite-q-dot {
+	0% { stroke-dashoffset: 1; transform: translateY(0); }
+	45% { stroke-dashoffset: 0; transform: translateY(-2.5px); }
+	100% { stroke-dashoffset: 0; transform: translateY(0); }
+}
+
+@keyframes invite-q-pop {
+	0%, 100% { transform: scale(1); }
+	50% { transform: scale(1.12); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.member-card--invite .invite-icon__q-mark,
+	.member-card--invite .invite-icon__q-dot,
+	.member-card--invite .invite-icon__q,
+	.member-card--invite .invite-icon__avatar,
+	.member-card--invite .member-card__invite-blob {
+		animation: none !important;
+		transition: none;
+	}
+}
+
 .member-card__body {
 	padding: var(--space-md);
 	display: flex;
@@ -625,6 +770,12 @@ body[data-page="events"] .card--intro .display {
 .member-card:hover .member-card__link,
 .member-card:focus-within .member-card__link {
 	opacity: 1;
+}
+
+.member-card--invite .member-card__link {
+	place-items: end center;
+	padding-bottom: 0.7rem;
+	background: linear-gradient(180deg, transparent 58%, rgba(41, 22, 80, 0.8));
 }
 
 .member-card__link span {
@@ -1197,8 +1348,15 @@ body[data-page="events"] .card--intro .display {
 		gap: var(--space-md);
 	}
 
-	#members-grid .member-card .member-card__photo {
+	#members-grid .member-card .member-card__photo,
+	#members-grid .member-card--invite .member-card__invite-cover {
 		height: 150px;
+	}
+
+	#members-grid .invite-icon {
+		width: 4.25rem;
+		height: 4.25rem;
+		margin-bottom: 0.7rem;
 	}
 
 	#members-grid .member-card__body {
@@ -1214,9 +1372,15 @@ body[data-page="events"] .card--intro .display {
 		padding: 0.16rem 0.32rem;
 	}
 
-	.member-card .member-card__photo {
+	.member-card .member-card__photo,
+	.member-card--invite .member-card__invite-cover {
 		height: 180px;
 	}
+
+	.member-card--invite .member-card__link {
+		padding-bottom: 0.45rem;
+	}
+
 	.page {
 		padding: var(--space-3xl) var(--space-md) var(--space-3xl);
 	}
