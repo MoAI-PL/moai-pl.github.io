@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /assets/Statut_MoAI.pdf
+
+Sitemap: https://moai-pl.github.io/sitemap.xml

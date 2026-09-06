@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MoAI - Członkowie</title>
+  <link rel="icon" type="image/x-icon" href="../icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../icons/favicon.ico">
+  <link rel="manifest" href="../icons/site.webmanifest">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body data-page="members">
+  <div id="top"></div>
+  <div id="preloader" class="preloader" aria-label="Trwa ładowanie strony" role="status">
+    <div class="preloader__glass">
+      <span class="preloader__dot">M</span>
+      <span class="preloader__dot">o</span>
+      <span class="preloader__dot">A</span>
+      <span class="preloader__dot">I</span>
+    </div>
+  </div>
+
+  <svg class="sr-only" aria-hidden="true" focusable="false">
+    <symbol id="icon-linkedin" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19 0H5C2.24 0 0 2.24 0 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5V5c0-2.76-2.24-5-5-5zM8.34 19H5.67V9.67h2.67V19zM7 8.45A1.56 1.56 0 1 1 7 5.34a1.56 1.56 0 0 1 0 3.11zM19 19h-2.67v-5.6c0-1.33-.48-2.24-1.68-2.24-.92 0-1.47.62-1.71 1.22-.09.22-.11.52-.11.82V19h-2.67V9.67h2.67v1.28c.35-.54 1.23-1.32 2.9-1.32 2.12 0 3.26 1.38 3.26 4.06V19z" />
+    </symbol>
+  </svg>
+
+  <header class="nav-shell">
+    <nav class="nav">
+      <div class="nav__links">
+        <a href="/#top" class="nav__link">MoAI</a>
+        <a href="/#projects" class="nav__link">Projekty</a>
+        <a href="/#events" class="nav__link">Wydarzenia</a>
+        <a href="/#join" class="nav__link">Dołącz</a>
+        <a href="/#bottom" class="nav__link">Kontakt</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="section" aria-labelledby="members-hero-title">
+      <div class="glass card card--intro">
+        <div class="stack stack--lg">
+          <h1 id="members-hero-title" class="display">Poznaj wszystkich członków MoAI</h1>
+          <p class="muted">Każdy wnosi unikalne kompetencje: AI, biznes, design, operacje i społeczność.</p>
+          <div class="stack stack--row">
+            <a class="btn btn--primary" href="#members-grid">Przejdź do listy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="members-list-title">
+      <div class="section__header">
+        <div>
+          <h2 id="members-list-title">Pełna lista</h2>
+          <p class="muted">Kliknij, aby przejść do profilu na LinkedIn.</p>
+        </div>
+      </div>
+      <div id="members-grid" class="masonry" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <span>MoAI © <span data-current-year>2026</span></span>
+      <a class="footer__link" href="../assets/Statut_MoAI.pdf" target="_blank">Regulamin</a>
+      <a class="footer__link" href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>
+      <a class="footer__logo" href="https://wz.pollub.pl/" target="_blank" rel="noopener">
+        <img src="../icons/logo_wz.webp" alt="Wydział Zarządzania Politechniki Lubelskiej" loading="lazy">
+      </a>
+    </div>
+  </footer>
+  <script src="../scripts.js" defer></script>
+  <script data-goatcounter="https://moai-pl.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>
