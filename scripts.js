@@ -1014,6 +1014,18 @@ function clearLocationHash() {
 	}
 }
 
+function setupNavScrollAppearance() {
+	const nav = qs('.nav');
+	if (!nav) return;
+
+	const update = () => {
+		nav.classList.toggle('is-scrolled', window.scrollY > 8);
+	};
+
+	update();
+	window.addEventListener('scroll', update, { passive: true });
+}
+
 function setupNavScrollHandling(page) {
 	if (page !== 'index') return;
 
@@ -1110,6 +1122,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	requestAnimationFrame(observeFadeIns);
 	blockInteractions();
 	setPrettyUrl();
+	setupNavScrollAppearance();
 	setupNavScrollHandling(page);
 	handleInitialHashScroll(page);
 });
