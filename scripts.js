@@ -121,7 +121,8 @@ const projects = [
 		title: 'brAIdak',
 		category: 'czerwiec 2026',
 		description: 'Zwycięski projekt asystenta AI dla Urzędu Miasta Lublin. Zero-cloud RAG na modelu Bielik, ChromaDB, funkcjonalność TTS i czytelna mapa POI — suwerenna AI na nieustrukturyzowanych danych miasta.',
-		cover: 'teal',
+		image: 'images/projects/braidak-moai-pl.webp',
+		alt: 'Grafika projektu brAIdak: asystent AI dla Urzędu Miasta Lublin.',
 		tags: ['GovTech', 'RAG', 'Bielik']
 	},
 	{
@@ -129,7 +130,8 @@ const projects = [
 		title: 'Banking Innovation',
 		category: 'maj 2026',
 		description: 'Zwycięski projekt 4. edycji SFB. Architektura inteligentnego systemu wykrywania zagrożeń dla klientów banku oraz kierowania celowanych powiadomień do najbardziej narażonych grup.',
-		cover: 'steel',
+		image: 'images/projects/banking-innovation-moai-pl.webp',
+		alt: 'Grafika projektu Banking Innovation: system wykrywania zagrożeń i powiadomień dla klientów banku.',
 		tags: ['FinTech', 'Cybersec', 'AI', 'ML']
 	},
 	{
@@ -178,7 +180,8 @@ const projects = [
 		title: 'Promocja Wydziału Zarządzania',
 		category: 'styczeń 2026',
 		description: 'Prezes MoAI zapoczątkował Zespół ds. promocji Wydziału Zarządzania, złożony ze studentów i pracowników wydziału. Zespół stworzył strategię promocji, kampanie marketingowe i zaktualizuje kanały dotarcia do studentów.',
-		cover: 'peach',
+		image: 'images/projects/promo-wz-moai-pl.webp',
+		alt: 'Materiały zespołu promocji Wydziału Zarządzania Politechniki Lubelskiej.',
 		tags: ['Marketing', 'Community', 'Uczelnia']
 	},
 	{
@@ -239,7 +242,8 @@ const projects = [
 		title: 'Julia — wirtualny asystent pacjenta',
 		category: 'czerwiec 2025',
 		description: 'Julia — wirtualny asystent pacjenta i zwycięski projekt 3. edycji SFB, zrealizowany dla Luxmedu. Umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.',
-		cover: 'coral',
+		image: 'images/projects/julia-moai-pl.webp',
+		alt: 'Grafika Julii, wirtualnego asystenta pacjenta zrealizowanego dla Luxmedu.',
 		tags: ['Chatbot', 'MedTech', 'NLP']
 	},
 	{
@@ -807,12 +811,14 @@ function hasMainImage(item) {
 	return typeof item?.image === 'string' && item.image.trim() !== '';
 }
 
-function pickHomepageCards(data, count, random) {
-	if (!random) return data.slice(0, count);
+function pickHomepageCards(data, count, random, requireImage = false) {
+	const pool = requireImage ? data.filter(hasMainImage) : data;
+	if (!random) return pool.slice(0, count);
+	if (requireImage) return shuffle(pool).slice(0, count);
 
 	const withImage = [];
 	const withoutImage = [];
-	data.forEach((item) => {
+	pool.forEach((item) => {
 		if (hasMainImage(item)) withImage.push(item);
 		else withoutImage.push(item);
 	});
@@ -820,10 +826,10 @@ function pickHomepageCards(data, count, random) {
 	return [...shuffle(withImage), ...shuffle(withoutImage)].slice(0, count);
 }
 
-function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true } = {}) {
+function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true, requireImage = false } = {}) {
 	const target = qs(`#${targetId}`);
 	if (!target || !data?.length) return;
-	const slice = pickHomepageCards(data, count, random);
+	const slice = pickHomepageCards(data, count, random, requireImage);
 	target.innerHTML = '';
 	slice.forEach((project) => target.appendChild(createProjectCard(project, { showTags, linkLabel, showCategory })));
 }
@@ -1084,7 +1090,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (page === 'index') {
 		renderIndexMembers();
 		setupIndexMembersViewportSync();
-		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true });
+		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true, requireImage: true });
 		renderProjects('events-grid', events, { count: 3, random: true, showCategory: true });
 	}
 
