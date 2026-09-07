@@ -934,8 +934,6 @@ function scrollByHash(hash, { updateHistory = false } = {}) {
 
 	if (hash === '#top') {
 		smoothScrollToPosition(0);
-	} else if (hash === '#bottom') {
-		smoothScrollToPosition(document.documentElement.scrollHeight);
 	} else {
 		const section = getSectionFromHash(hash);
 		if (!section) return;
