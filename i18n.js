@@ -490,7 +490,7 @@ const MoAI = (() => {
 	function updateToggles() {
 		const label = lang === 'pl' ? t('lang.toEn') : t('lang.toPl');
 		document.querySelectorAll('[data-lang-toggle]').forEach((btn) => {
-			btn.textContent = lang === 'pl' ? 'PL' : 'EN';
+			btn.textContent = lang === 'pl' ? 'EN' : 'PL';
 			btn.setAttribute('aria-label', label);
 			btn.setAttribute('title', label);
 		});
