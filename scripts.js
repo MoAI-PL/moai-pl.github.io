@@ -137,7 +137,8 @@ const projects = [
 		title: 'Obrona Cywilna Nowej Generacji',
 		category: 'kwiecień 2026',
 		description: 'Aplikacja webowa LubSHIELD z warstwą dla obywateli i dashbordem zarządzania kryzysowego dla samorządów. Jasny interfejs na czas pokoju i zagrożenia.',
-		cover: 'ember',
+		image: 'images/projects/obrona-cywilna-moai-pl.webp',
+		alt: 'Grafika projektu LubShield: inteligentny geospatial decision dashboard dla Marszałka Województwa Lubelskiego.',
 		tags: ['GovTech', 'Web', 'Bezpieczeństwo', 'Dual Use']
 	},
 	{
@@ -185,7 +186,8 @@ const projects = [
 		title: 'ML dla administracji publicznej',
 		category: 'grudzień 2025',
 		description: 'Prototypy programów uczenia maszynowego w służbie obywateli i jednostek administracji publicznej. Narzędzia, które skracają ścieżkę między danymi urzędu a konkretną decyzją.',
-		cover: 'azure',
+		image: 'images/projects/ml-admin-moai-pl.webp',
+		alt: 'Makieta aplikacji BydGO: mapa Bydgoszczy, trasy i statystyki zwiedzania.',
 		tags: ['GovTech', 'ML', 'Prototyp']
 	},
 	{
@@ -193,15 +195,26 @@ const projects = [
 		title: 'Dane satelitarne ESA dla rolnictwa',
 		category: 'listopad 2025',
 		description: 'Model analizujący zobrazowania satelitarne Europejskiej Agencji Kosmicznej na potrzeby rolników, firm i agencji rządowych. Wydobywa z danych orbitalnych to, czego nie widać z poziomu pola.',
-		cover: 'ocean',
+		image: 'images/projects/esa-agri-moai-pl.webp',
+		alt: 'Slajd projektu AgrAI: wskaźnik NDVI na danych Sentinel-2 i makieta aplikacji z mapą pola.',
 		tags: ['Space', 'ML', 'AgriTech']
+	},
+	{
+		id: 'slower',
+		title: 'slower',
+		category: 'listopad 2025',
+		description: 'Aplikacja z hackathonu CASSINI: nawigacja slow travellingu na danych Copernicus. Szuka trasy o najniższej emisji CO₂ i mapuje „zielone oazy” zamiast iść wyłącznie najszybszą drogą.',
+		image: 'images/projects/slower-moai-pl.webp',
+		alt: 'Makiety aplikacji slower: mapa oaz i eco-route na danych Copernicus wokół Wrocławia.',
+		tags: ['Space', 'ESA', 'Mobility']
 	},
 	{
 		id: 'jetbrains-co2',
 		title: 'Monitor CO₂ w JetBrains',
 		category: 'listopad 2025',
 		description: 'Wtyczka do środowiska JetBrains, nagrodzona na hackathonie BHL. W czasie rzeczywistym śledzi emisję CO₂ generowaną przez kod, wykrywa nieoptymalne wzorce w Pythonie i podsuwa poprawki z pomocą asystenta AI, zanim energochłonny kod trafi na produkcję.',
-		cover: 'lime',
+		image: 'images/projects/jetbrains-co2-moai-pl.webp',
+		alt: 'Demo wtyczki codeGreen w PyCharm: analiza efektywności kodu i śladu węglowego.',
 		tags: ['DevTools', 'GreenTech', 'AI']
 	},
 	{
@@ -209,7 +222,8 @@ const projects = [
 		title: 'Inteligentna uprawa roślin',
 		category: 'czerwiec 2025',
 		description: 'Model sieci neuronowej sterujący parametrami uprawy roślin. Zamiast ręcznego strojenia warunków wzrostu, sieć dobiera je samodzielnie na podstawie danych z uprawy — krok w stronę powtarzalnej, innowacyjnej hodowli.',
-		cover: 'forest',
+		image: 'images/projects/plant-nn-moai-pl.webp',
+		alt: 'Kompozycja projektu inteligentnej uprawy: stanowisko z kodem i uprawa bazylii pod lampą LED.',
 		tags: ['Research', 'ML', 'AgriTech']
 	},
 	{
@@ -233,8 +247,36 @@ const projects = [
 		title: 'OnHelo',
 		category: 'maj 2024',
 		description: 'Aplikacja fitness z elementami medtech, zwyciężczyni 2. edycji Studenckiego Festiwalu Biznesu. Modele uczenia maszynowego pilnują poprawnej techniki wykonywania ćwiczeń i ograniczają ryzyko urazu.',
-		cover: 'mint',
+		image: 'images/projects/onhelo-moai-pl.webp',
+		alt: 'Makiety aplikacji OnHelo: konfiguracja profilu, kontakt ze specjalistą, treningi i postępy.',
 		tags: ['Fitness', 'MedTech', 'ML']
+	},
+	{
+		id: 'legis',
+		title: 'Legis 2.0',
+		category: 'projekt',
+		description: 'Suwerenna AI, która tłumaczy przepisy na prosty język i pomaga chronić biznes przed zmianami prawa — z logowaniem przez Węzeł Krajowy.',
+		image: 'images/projects/legis-moai-pl.webp',
+		alt: 'Ekran logowania Legis 2.0: prawo, które Cię rozumie, wejście przez Węzeł Krajowy.',
+		tags: ['GovTech', 'NLP', 'Prawo']
+	},
+	{
+		id: 'ledger',
+		title: 'Secure Enclave Wallets',
+		category: 'projekt',
+		description: 'Portfele pre-seedowane i konsola transakcji offline pod scenariusze kryzysowe oraz logistykę terenową, z trybem online, partycji i awaryjnym.',
+		image: 'images/projects/ledger-moai-pl.webp',
+		alt: 'Dashboard Secure Enclave Wallets: portfele kryzysowe i konsola transakcji offline.',
+		tags: ['GovTech', 'Bezpieczeństwo', 'FinTech']
+	},
+	{
+		id: 'cardioscan',
+		title: 'CardioScan 8000',
+		category: 'projekt',
+		description: 'Narzędzie do analizy szmerów serca na zbiorze CirCor DigiScope — model diagnostyczny z czułością i swoistością rzędu 90%.',
+		image: 'images/projects/cardioscan-moai-pl.webp',
+		alt: 'Interfejs CardioScan 8000: terminal diagnostyczny z przykładami przypadków osłuchowych.',
+		tags: ['MedTech', 'ML', 'Audio']
 	}
 ];
 
@@ -334,15 +376,17 @@ const events = [
 		title: 'Międzywydziałowe Seminarium Naukowe',
 		category: 'marzec 2026',
 		description: 'Zaprezentowaliśmy na Międzywydziałowym Seminarium Naukowym trzy projekty: TaxiFleet do zarządzania flotą, IntiCheck do diagnozy zmian skórnych na zdjęciach oraz Moodify do sugerowania treści na podstawie nastroju.',
-		cover: 'lilac',
+		image: 'images/events/miedzywydzialowe-seminarium-naukowe-2026-moai-pl.webp',
+		alt: 'Sala podczas Międzywydziałowego Seminarium Naukowego: publiczność i prelegent przy ekranie.',
 		tags: ['Nauka', 'Prelekcja', 'AI']
 	},
 	{
 		id: 'pollubmy-marketing',
 		title: 'Pollubmy Marketing',
 		category: 'marzec 2026',
-		description: 'Wystąpiliśmy na konferencji Pollubmy Marketing z prelekcją o upstream modelingu z rodziny metod inferencji kauzalnej — jak modele ML pomagają agencjom trafiać w potrzeby biznesowe i ograniczać koszt kampanii.',
-		cover: 'blush',
+		description: 'Wystąpiliśmy na konferencji Pollubmy Marketing z prelekcją o upstream modelingu z rodziny metod inferencji kauzalnej — jak modele ML pomagają agencjom trafiać w potrzeby biznesowe i ograniczają koszt kampanii.',
+		image: 'images/events/iv-konferencja-pollubmy-marketing-2026-moai-pl.webp',
+		alt: 'Aula IV Konferencji Naukowej Marketing Okiem Młodych Naukowców: publiczność i ekran z tytułem wydarzenia.',
 		tags: ['Konferencja', 'Marketing', 'Causal ML']
 	},
 	{
@@ -462,14 +506,6 @@ const events = [
 		tags: ['Konferencja', 'AI', 'Networking']
 	},
 	{
-		id: 'sympozjum-xxxiii',
-		title: 'XXXIII Sympozjum Naukowe',
-		category: 'maj 2025',
-		description: 'Wystąpiliśmy na XXXIII Sympozjum Naukowym, prezentując kompetencje koła i nasze projekty badawcze przed społecznością akademicką Politechniki Lubelskiej.',
-		cover: 'violet',
-		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
-	},
-	{
 		id: 'spaceshield',
 		title: 'Hackathon SpaceShield',
 		category: 'maj 2025',
@@ -513,6 +549,15 @@ const events = [
 		image: 'images/events/studencki-festiwal-biznesu-ii-2024-moai-pl.webp',
 		alt: 'Zespół MoAI z czekiem 5000 zł na II edycji Studenckiego Festiwalu Biznesu, 24 maja 2024.',
 		tags: ['Biznes', 'Pitch', 'Współpraca']
+	},
+	{
+		id: 'sympozjum-xxxii',
+		title: 'XXXII Sympozjum Naukowe',
+		category: 'maj 2024',
+		description: 'Wystąpiliśmy na XXXII Międzynarodowym Sympozjum Naukowym „AI – szansa czy zagrożenie?”, prezentując kompetencje koła i nasze projekty badawcze przed społecznością akademicką Politechniki Lubelskiej.',
+		image: 'images/events/xxxii-miedzynarodowe-sympozjum-naukowe-2024-moai-pl.webp',
+		alt: 'Aula XXXII Międzynarodowego Sympozjum Naukowego na Politechnice Lubelskiej, 15–17 maja 2024: ekran z tytułem AI – szansa czy zagrożenie?',
+		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
 	},
 	{
 		id: 'pip',
