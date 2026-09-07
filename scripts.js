@@ -954,13 +954,25 @@ function scrollByHash(hash, { updateHistory = false } = {}) {
 	}
 }
 
+function clearLocationHash() {
+	if (!location.hash) return;
+	try {
+		history.replaceState(null, '', location.pathname + location.search);
+	} catch {
+		// Ignore history updates in restricted environments.
+	}
+}
+
 function setupNavScrollHandling(page) {
 	if (page !== 'index') return;
 
 	qsa('.nav__link[href^="#"]').forEach((link) => {
 		link.addEventListener('click', (event) => {
 			event.preventDefault();
-			scrollByHash(link.getAttribute('href'), { updateHistory: true });
+			// Scroll within the homepage without ever writing a #hash into
+			// the address bar (there is nothing to link back to directly,
+			// so keep the URL clean).
+			scrollByHash(link.getAttribute('href'), { updateHistory: false });
 		});
 	});
 
@@ -973,8 +985,13 @@ function setupNavScrollHandling(page) {
 function handleInitialHashScroll(page) {
 	if (page !== 'index' || !location.hash) return;
 
+	const hash = location.hash;
 	requestAnimationFrame(() => {
-		scrollByHash(location.hash);
+		scrollByHash(hash);
+		// The hash was only needed to carry the target section across the
+		// page load (e.g. a link from /events/ back to the homepage). Once
+		// we've scrolled to it, drop it from the visible URL.
+		clearLocationHash();
 	});
 }
 
