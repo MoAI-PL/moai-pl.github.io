@@ -144,6 +144,15 @@ const projects = [
 		tags: ['GovTech', 'Web', 'Bezpieczeństwo', 'Dual Use']
 	},
 	{
+		id: 'ledger',
+		title: 'Secure Enclave Wallets',
+		category: 'kwiecień 2026',
+		description: 'Projekt z hackathonu Civil42 2026: portfele pre-seedowane i konsola transakcji offline pod scenariusze kryzysowe oraz logistykę terenową — z trybem online, partycji sieci i awaryjnym.',
+		image: 'images/projects/ledger-moai-pl.webp',
+		alt: 'Dashboard Secure Enclave Wallets: portfele kryzysowe i konsola transakcji offline.',
+		tags: ['GovTech', 'Bezpieczeństwo', 'FinTech']
+	},
+	{
 		id: 'moodify',
 		title: 'Moodify',
 		category: 'marzec 2026',
@@ -185,13 +194,22 @@ const projects = [
 		tags: ['Marketing', 'Community', 'Uczelnia']
 	},
 	{
+		id: 'bydgo',
+		title: 'BydGO',
+		category: 'grudzień 2025',
+		description: 'Interaktywny przewodnik po Bydgoszczy, przygotowany na HackNation dla Ministerstwa Sportu i Turystyki. Mapa, trasy i statystyki zwiedzania pomagają odkrywać miasto we własnym tempie.',
+		image: 'images/projects/bydgo-moai-pl.webp',
+		alt: 'Makieta aplikacji BydGO: mapa Bydgoszczy, trasy i statystyki zwiedzania.',
+		tags: ['GovTech', 'Turystyka', 'HackNation']
+	},
+	{
 		id: 'ml-admin',
 		title: 'ML dla administracji publicznej',
 		category: 'grudzień 2025',
-		description: 'Prototypy programów uczenia maszynowego w służbie obywateli i jednostek administracji publicznej. Narzędzia, które skracają ścieżkę między danymi urzędu a konkretną decyzją.',
-		image: 'images/projects/ml-admin-moai-pl.webp',
-		alt: 'Makieta aplikacji BydGO: mapa Bydgoszczy, trasy i statystyki zwiedzania.',
-		tags: ['GovTech', 'ML', 'Prototyp']
+		description: 'Legis 2.0 z HackNation: modele ML do analizowania aktów prawnych i pilnowania ich spójności, z warstwą dla urzędnika i obywatela — tłumaczenie przepisów na prosty język bez oddawania danych w obcą chmurę.',
+		image: 'images/projects/legis-moai-pl.webp',
+		alt: 'Ekran logowania Legis 2.0: prawo, które Cię rozumie, wejście przez Węzeł Krajowy.',
+		tags: ['GovTech', 'NLP', 'Prawo']
 	},
 	{
 		id: 'esa-agri',
@@ -219,6 +237,15 @@ const projects = [
 		image: 'images/projects/jetbrains-co2-moai-pl.webp',
 		alt: 'Demo wtyczki codeGreen w PyCharm: analiza efektywności kodu i śladu węglowego.',
 		tags: ['DevTools', 'GreenTech', 'AI']
+	},
+	{
+		id: 'cardioscan',
+		title: 'CardioScan',
+		category: 'listopad 2025',
+		description: 'Narzędzie do analizy szmerów serca na zbiorze CirCor DigiScope — model diagnostyczny z czułością i swoistością rzędu 90%.',
+		image: 'images/projects/cardioscan-moai-pl.webp',
+		alt: 'Interfejs CardioScan: terminal diagnostyczny z przykładami przypadków osłuchowych.',
+		tags: ['MedTech', 'ML', 'Audio']
 	},
 	{
 		id: 'plant-nn',
@@ -254,33 +281,6 @@ const projects = [
 		image: 'images/projects/onhelo-moai-pl.webp',
 		alt: 'Makiety aplikacji OnHelo: konfiguracja profilu, kontakt ze specjalistą, treningi i postępy.',
 		tags: ['Fitness', 'MedTech', 'ML']
-	},
-	{
-		id: 'legis',
-		title: 'Legis 2.0',
-		category: 'projekt',
-		description: 'Suwerenna AI, która tłumaczy przepisy na prosty język i pomaga chronić biznes przed zmianami prawa — z logowaniem przez Węzeł Krajowy.',
-		image: 'images/projects/legis-moai-pl.webp',
-		alt: 'Ekran logowania Legis 2.0: prawo, które Cię rozumie, wejście przez Węzeł Krajowy.',
-		tags: ['GovTech', 'NLP', 'Prawo']
-	},
-	{
-		id: 'ledger',
-		title: 'Secure Enclave Wallets',
-		category: 'projekt',
-		description: 'Portfele pre-seedowane i konsola transakcji offline pod scenariusze kryzysowe oraz logistykę terenową, z trybem online, partycji i awaryjnym.',
-		image: 'images/projects/ledger-moai-pl.webp',
-		alt: 'Dashboard Secure Enclave Wallets: portfele kryzysowe i konsola transakcji offline.',
-		tags: ['GovTech', 'Bezpieczeństwo', 'FinTech']
-	},
-	{
-		id: 'cardioscan',
-		title: 'CardioScan 8000',
-		category: 'projekt',
-		description: 'Narzędzie do analizy szmerów serca na zbiorze CirCor DigiScope — model diagnostyczny z czułością i swoistością rzędu 90%.',
-		image: 'images/projects/cardioscan-moai-pl.webp',
-		alt: 'Interfejs CardioScan 8000: terminal diagnostyczny z przykładami przypadków osłuchowych.',
-		tags: ['MedTech', 'ML', 'Audio']
 	}
 ];
 
@@ -432,7 +432,7 @@ const events = [
 		id: 'hacknation',
 		title: 'Hackathon HackNation',
 		category: 'grudzień 2025',
-		description: 'Zmierzyliśmy się z 16 zadaniami w 24 godziny na HackNation w Bydgoszczy, organizowanym przez Ministerstwo Cyfryzacji, MF, MON i MNiSW. Zbudowaliśmy prototypy ML w służbie obywateli i poznaliśmy liderów cyfryzacji z całej Polski.',
+		description: 'Zmierzyliśmy się z 16 zadaniami w 24 godziny na HackNation w Bydgoszczy, organizowanym przez Ministerstwo Cyfryzacji, MF, MON i MNiSW. Powstały m.in. BydGO dla Ministerstwa Sportu i Turystyki oraz Legis 2.0 do analizy aktów prawnych.',
 		image: 'images/events/hackathon-hacknation-2025-moai-pl.webp',
 		alt: 'Zespół MoAI na scenie HackNation z czerwonymi tablicami układającymi napis HACK NATION.',
 		tags: ['Hackathon', 'GovTech', 'ML']
