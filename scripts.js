@@ -653,7 +653,11 @@ function renderMembers(targetId, {
 
 		const name = document.createElement('p');
 		name.className = 'member-card__name';
-		name.textContent = member.invite ? MoAI.t('invite.name') : member.name;
+		if (member.invite) {
+			name.innerHTML = MoAI.t('invite.name');
+		} else {
+			name.textContent = member.name;
+		}
 
 		body.appendChild(name);
 

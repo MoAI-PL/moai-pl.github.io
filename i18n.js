@@ -156,7 +156,7 @@ const MoAI = (() => {
 			'contact.body': 'Got an idea? Want to set up a meeting or visit us on campus? Send us a message — we’ll reply as soon as we can.',
 			'footer.rules': 'Statute',
 			'footer.wz': 'Faculty of Management, Lublin University of Technology',
-			'invite.name': 'We’re waiting for you',
+			'invite.name': 'We’re waiting <span class="member-card__name-break">for you</span>',
 			'invite.cta': 'Join us',
 			'members.ctaTitle': 'All members',
 			'members.ctaCopy': 'Meet the full team and visit their LinkedIn profiles.',
