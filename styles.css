@@ -492,8 +492,9 @@ body[data-page="events"] .card--intro .display {
 .nav-shell {
 	position: fixed;
 	inset: var(--space-lg) 0 auto;
-	display: flex;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
+	align-items: stretch;
 	z-index: 10;
 	pointer-events: none;
 	padding-inline: var(--space-lg);
@@ -501,6 +502,7 @@ body[data-page="events"] .card--intro .display {
 
 .nav {
 	--nav-gutter: clamp(0.7rem, 1.4vw, 1.15rem);
+	grid-column: 2;
 	pointer-events: auto;
 	display: flex;
 	align-items: center;
@@ -513,10 +515,11 @@ body[data-page="events"] .card--intro .display {
 	border: 1px solid var(--glass-border);
 	border-radius: var(--radius-pill);
 	box-shadow: var(--shadow-2);
-	transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+	transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, color 220ms ease;
 }
 
-.nav.is-scrolled {
+.nav.is-scrolled,
+.nav-shell.is-scrolled .lang-toggle--corner {
 	background: rgba(10, 4, 26, 0.82);
 	border-color: rgba(255, 255, 255, 0.22);
 	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
@@ -542,11 +545,55 @@ body[data-page="events"] .card--intro .display {
 	transition: background var(--transition), color var(--transition);
 }
 
-.nav.is-scrolled .nav__link {
+.nav.is-scrolled .nav__link,
+.nav-shell.is-scrolled .lang-toggle--corner {
 	color: #ffffff;
 }
 
 .nav__link:hover {
+	color: var(--accent-ivory);
+	background: var(--surface-hover);
+}
+
+button.nav__link {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 500;
+}
+
+.lang-toggle--nav {
+	display: none;
+}
+
+.lang-toggle--corner {
+	pointer-events: auto;
+	grid-column: 3;
+	justify-self: end;
+	align-self: stretch;
+	aspect-ratio: 1 / 1;
+	display: grid;
+	place-items: center;
+	height: auto;
+	width: auto;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	border: 1px solid var(--glass-border);
+	background: var(--surface-1);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	box-shadow: var(--shadow-2);
+	color: rgba(255, 255, 255, 0.92);
+	font: inherit;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	cursor: pointer;
+	transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease, color 220ms ease;
+}
+
+.lang-toggle--corner:hover {
 	color: var(--accent-ivory);
 	background: var(--surface-hover);
 }
@@ -1299,12 +1346,26 @@ body[data-page="events"] .card--intro .display {
 	.nav-shell {
 		inset: var(--space-sm) 0 auto;
 		padding-inline: var(--space-md);
+		display: flex;
+		justify-content: center;
+		grid-template-columns: none;
 	}
 
 	.nav {
+		grid-column: auto;
 		width: 100%;
 		max-width: 100%;
 		padding: 0.35rem 0;
+	}
+
+	.lang-toggle--corner {
+		display: none;
+	}
+
+	.lang-toggle--nav {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.nav__links {
@@ -1412,7 +1473,8 @@ body[data-page="events"] .card--intro .display {
 		padding-top: var(--space-xl);
 	}
 
-	body[data-page="index"] #hero .display .hero-title__line {
+	body[data-page="index"] #hero .display .hero-title__line,
+	body[data-page="index"] #hero .hero-lead__line {
 		display: block;
 	}
 

@@ -35,6 +35,20 @@
 	<link rel="manifest" href="/icons/site.webmanifest">
 	<link rel="canonical" href="https://moai-pl.github.io">
 	<link rel="stylesheet" href="styles.css">
+	<script>
+		(function () {
+			var lang = 'en';
+			try {
+				var saved = localStorage.getItem('moai-lang');
+				if (saved === 'pl' || saved === 'en') lang = saved;
+				else if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Warsaw') lang = 'pl';
+			} catch (e) {
+				lang = 'pl';
+			}
+			document.documentElement.lang = lang;
+			document.documentElement.setAttribute('data-lang', lang);
+		})();
+	</script>
 
     <script type="application/ld+json">
 		{
@@ -68,9 +82,9 @@
 </head>
 <body data-page="index">
 	<div id="top"></div>
-	<noscript class="selectable">Ta strona wymaga JavaScript do animacji i losowania projektów.</noscript>
+	<noscript class="selectable" data-i18n="noscript">Ta strona wymaga JavaScript do animacji i losowania projektów.</noscript>
 
-	<div id="preloader" class="preloader" aria-label="Trwa ładowanie strony" role="status">
+	<div id="preloader" class="preloader" data-i18n-aria="preloader" aria-label="Trwa ładowanie strony" role="status">
 		<div class="preloader__glass">
 			<span class="preloader__dot">M</span>
 			<span class="preloader__dot">o</span>
@@ -84,23 +98,25 @@
 		<nav class="nav">
 			<div class="nav__links">
 				<a href="#top" class="nav__link">MoAI</a>
-				<a href="#events" class="nav__link">Wydarzenia</a>
-				<a href="#projects" class="nav__link">Projekty</a>
-				<a href="#join" class="nav__link">Dołącz</a>
-				<a href="#contact" class="nav__link">Kontakt</a>
+				<a href="#events" class="nav__link" data-i18n="nav.events">Wydarzenia</a>
+				<a href="#projects" class="nav__link" data-i18n="nav.projects">Projekty</a>
+				<a href="#join" class="nav__link" data-i18n="nav.join">Dołącz</a>
+				<a href="#contact" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+				<button type="button" class="nav__link lang-toggle lang-toggle--nav" data-lang-toggle aria-label="Switch to English">PL</button>
 			</div>
 		</nav>
+		<button type="button" class="lang-toggle lang-toggle--corner" data-lang-toggle aria-label="Switch to English">PL</button>
 	</header>
 
 	<main class="page">
 		<section id="hero" class="section hero no-select" aria-labelledby="hero-title">
 			<div class="grid grid--hero">
 				<div class="stack stack--lg stack--center">
-					<h1 id="hero-title" class="display">Twój start <span class="hero-title__line">w tworzeniu</span> <span class="hero-title__line">technologii jutra</span></h1>
-					<p class="lead">Koło Naukowe Sztucznej Inteligencji MoAI na Politechnice Lubelskiej.</p>
+					<h1 id="hero-title" class="display" data-i18n-html="hero.title">Twój start <span class="hero-title__line">w tworzeniu</span> <span class="hero-title__line">technologii jutra</span></h1>
+					<p class="lead" data-i18n-html="hero.lead">Koło Naukowe Sztucznej Inteligencji MoAI <span class="hero-lead__line">na Politechnice Lubelskiej.</span></p>
 					<div class="stack stack--row stack--row-center">
-						<a class="btn btn--primary" href="/thanks/">Dołącz do MoAI</a>
-						<a class="btn btn--ghost" href="#contact">Napisz do nas</a>
+						<a class="btn btn--primary" href="/thanks/" data-i18n="hero.join">Dołącz do MoAI</a>
+						<a class="btn btn--ghost" href="#contact" data-i18n="hero.write">Napisz do nas</a>
 					</div>
 				</div>
 			</div>
@@ -109,49 +125,49 @@
 		<section id="who" class="section" aria-labelledby="who-title">
 			<div class="section__header section__header--centered">
 				<div>
-					<h2 id="who-title">Kim jesteśmy?</h2>
-					<p class="muted">Cześć! Tu Zespół MoAI z Politechniki Lubelskiej. Jesteśmy pasjonatami Sztucznej Inteligencji w praktycznym wydaniu. Skupiamy się na aktywnym promowaniu umiejętności i wiedzy na temat AI. Zrzeszamy najlepszych studentów z czterech wydziałów Poltechniki Lubelskiej.</p>
+					<h2 id="who-title" data-i18n="who.title">Kim jesteśmy?</h2>
+					<p class="muted" data-i18n="who.body">Cześć! Tu Zespół MoAI z Politechniki Lubelskiej. Jesteśmy pasjonatami Sztucznej Inteligencji w praktycznym wydaniu. Skupiamy się na aktywnym promowaniu umiejętności i wiedzy na temat AI. Zrzeszamy najlepszych studentów z czterech wydziałów Poltechniki Lubelskiej.</p>
 				</div>
 			</div>
 			<div id="members-grid" class="masonry" aria-live="polite"></div>
 			<div class="section__actions section__actions--center section__actions--members">
-				<a class="btn btn--primary" href="/members/">Zobacz wszystkich</a>
+				<a class="btn btn--primary" href="/members/" data-i18n="members.seeAll">Zobacz wszystkich</a>
 			</div>
 		</section>
 
 		<section id="events" class="section" aria-labelledby="events-title">
 			<div class="section__header section__header--centered">
 				<div>
-					<h2 id="events-title">Wydarzenia</h2>
-					<p class="muted">Bierzemy udział w konkursach, hackathonach, konferencjach naukowych, spotkaniach z biznesem, seminariach i imprezach uczelnianych. <br> Orgnizujemy własne wydarzenia zgodne z misją MoAI.</p>
+					<h2 id="events-title" data-i18n="events.title">Wydarzenia</h2>
+					<p class="muted" data-i18n-html="events.body">Bierzemy udział w konkursach, hackathonach, konferencjach naukowych, spotkaniach z biznesem, seminariach i imprezach uczelnianych. <br> Orgnizujemy własne wydarzenia zgodne z misją MoAI.</p>
 				</div>
 			</div>
 			<div id="events-grid" class="cards cards--three" aria-live="polite"></div>
 			<div class="section__actions section__actions--center">
-				<a class="btn btn--primary" href="/events/">Pełna lista wydarzeń</a>
+				<a class="btn btn--primary" href="/events/" data-i18n="events.all">Pełna lista wydarzeń</a>
 			</div>
 		</section>
 
 		<section id="projects" class="section" aria-labelledby="projects-title">
 			<div class="section__header section__header--centered">
 				<div>
-					<h2 id="projects-title">Projekty</h2>
-					<p class="muted">Zajmujemy się sztuczną inteligencją, uczeniem maszynowym, programowaniem, sieciami komputerowymi, cyberbezpieczeństwem, projektami biznesowymi, marketingiem oraz badaniami i popularyzacją nauki.</p>
+					<h2 id="projects-title" data-i18n="projects.title">Projekty</h2>
+					<p class="muted" data-i18n="projects.body">Zajmujemy się sztuczną inteligencją, uczeniem maszynowym, programowaniem, sieciami komputerowymi, cyberbezpieczeństwem, projektami biznesowymi, marketingiem oraz badaniami i popularyzacją nauki.</p>
 				</div>
 			</div>
 			<div id="projects-grid" class="cards cards--three" aria-live="polite"></div>
 			<div class="section__actions section__actions--center">
-				<a class="btn btn--primary" href="/projects/">Pełna lista projektów</a>
+				<a class="btn btn--primary" href="/projects/" data-i18n="projects.all">Pełna lista projektów</a>
 			</div>
 		</section>
 
 		<section id="join" class="section section--accent" aria-labelledby="join-title">
 			<div class="glass card card--cta">
 				<div class="stack stack--lg">
-					<h2 id="join-title">Dołącz do MoAI</h2>
+					<h2 id="join-title" data-i18n="join.title">Dołącz do MoAI</h2>
 					<div class="join__summary">
-						<p class="muted">Zbuduj portfolio, wejdź do świata biznesu, poznaj ludzi i zdobywaj kompetencje przyszłości. Nauka to więcej niż studia...</p>
-						<a class="btn btn--primary" href="/thanks/">Rekrutacja</a>
+						<p class="muted" data-i18n="join.body">Zbuduj portfolio, wejdź do świata biznesu, poznaj ludzi i zdobywaj kompetencje przyszłości. Nauka to więcej niż studia...</p>
+						<a class="btn btn--primary" href="/thanks/" data-i18n="join.cta">Rekrutacja</a>
 					</div>
 				</div>
 			</div>
@@ -160,8 +176,8 @@
 		<section id="follow" class="section" aria-labelledby="follow-title">
 			<div class="section__header">
 				<div>
-					<h2 id="follow-title">Obserwuj nas</h2>
-					<p class="muted">Nie przegap eventów, warsztatów i aktualności.</p>
+					<h2 id="follow-title" data-i18n="follow.title">Obserwuj nas</h2>
+					<p class="muted" data-i18n="follow.body">Nie przegap eventów, warsztatów i aktualności.</p>
 				</div>
 			</div>
 			<div class="cards cards--social">
@@ -192,9 +208,9 @@
 		<section id="contact" class="section" aria-labelledby="contact-title">
 			<div class="glass card card--contact">
 				<div class="stack stack--lg">
-					<h2 id="contact-title">Chcesz współpracować?</h2>
+					<h2 id="contact-title" data-i18n="contact.title">Chcesz współpracować?</h2>
 					<div class="join__summary contact__summary">
-						<p class="muted">Masz pomysł? Chcesz umówić się na spotkanie lub odwiedzić nas na uczelni? Wyślij nam wiadomość - odpowiemy tak szybko, jak będzie to możliwe.</p>
+						<p class="muted" data-i18n="contact.body">Masz pomysł? Chcesz umówić się na spotkanie lub odwiedzić nas na uczelni? Wyślij nam wiadomość - odpowiemy tak szybko, jak będzie to możliwe.</p>
 						<a class="btn btn--primary" href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>
 					</div>
 				</div>
@@ -205,14 +221,15 @@
 	<footer class="footer">
 		<div class="footer__inner">
 			<span>MoAI © <span data-current-year>2026</span></span>
-			<a class="footer__link" href="assets/Statut_MoAI.pdf" target="_blank">Regulamin</a>
+			<a class="footer__link" href="assets/Statut_MoAI.pdf" target="_blank" data-i18n="footer.rules">Regulamin</a>
 			<a class="footer__link" href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>
 			<a class="footer__logo" href="https://wz.pollub.pl/" target="_blank" rel="noopener">
-				<img src="icons/logo_wz.webp" alt="Wydział Zarządzania Politechniki Lubelskiej" loading="lazy">
+				<img src="icons/logo_wz.webp" alt="Wydział Zarządzania Politechniki Lubelskiej" loading="lazy" data-i18n-alt="footer.wz">
 			</a>
 		</div>
 	</footer>
 
+	<script src="i18n.js" defer></script>
 	<script src="scripts.js" defer></script>
 	<script data-goatcounter="https://moai-pl.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>

@@ -108,7 +108,7 @@ const members = [
 		tags: ['UX/UI', 'Product', 'Accessibility']
 	},
 	{
-		name: 'Dołącz do nas',
+		name: 'Czekamy na Ciebie',
 		linkedin: '/thanks/',
 		tags: [],
 		invite: true
@@ -653,7 +653,7 @@ function renderMembers(targetId, {
 
 		const name = document.createElement('p');
 		name.className = 'member-card__name';
-		name.textContent = member.name;
+		name.textContent = member.invite ? MoAI.t('invite.name') : member.name;
 
 		body.appendChild(name);
 
@@ -663,7 +663,7 @@ function renderMembers(targetId, {
 			member.tags.forEach((tag) => {
 				const chip = document.createElement('span');
 				chip.className = 'tag';
-				chip.textContent = tag;
+				chip.textContent = MoAI.translateTag(tag);
 				tagsWrap.appendChild(chip);
 			});
 			body.appendChild(tagsWrap);
@@ -681,8 +681,8 @@ function renderMembers(targetId, {
 			card.classList.add('member-card--invite');
 			overlay.removeAttribute('target');
 			overlay.removeAttribute('rel');
-			overlay.ariaLabel = 'Dołącz do nas';
-			overlay.innerHTML = '<span>Dołącz do nas</span>';
+			overlay.ariaLabel = MoAI.t('invite.cta');
+			overlay.innerHTML = `<span>${MoAI.t('invite.cta')}</span>`;
 			media.append(createInviteCover(), overlay);
 		} else {
 			const img = document.createElement('img');
@@ -706,13 +706,13 @@ function renderMembers(targetId, {
 		body.className = 'member-card__body';
 		const title = document.createElement('p');
 		title.className = 'member-card__name';
-		title.textContent = 'Wszyscy członkowie';
+		title.textContent = MoAI.t('members.ctaTitle');
 		const copy = document.createElement('p');
 		copy.className = 'muted';
-		copy.textContent = 'Poznaj cały zespół i przejdź do profili LinkedIn.';
+		copy.textContent = MoAI.t('members.ctaCopy');
 		const btn = document.createElement('a');
 		btn.className = 'btn btn--primary';
-		btn.textContent = 'Cała drużyna';
+		btn.textContent = MoAI.t('members.ctaBtn');
 		btn.href = '/members/';
 		body.append(title, copy, btn);
 		cta.append(body);
@@ -749,42 +749,43 @@ function appendCardMedia(media, item) {
 	media.appendChild(cover);
 }
 
-function createProjectCard(project, { showTags = false, linkLabel = 'Zobacz', showCategory = true } = {}) {
+function createProjectCard(project, { showTags = false, linkLabel, showCategory = true, kind = 'project' } = {}) {
+	const item = MoAI.localizeEntry(project, kind);
 	const card = document.createElement('article');
 	card.className = 'project-card fade-in';
 
 	const media = document.createElement('div');
 	media.className = 'project-card__media';
-	appendCardMedia(media, project);
+	appendCardMedia(media, item);
 
 	const body = document.createElement('div');
 	body.className = 'project-card__body';
 
 	const hasDisplayCategory = showCategory
-		&& typeof project.category === 'string'
-		&& project.category.trim().toLowerCase() !== 'repo';
+		&& typeof item.category === 'string'
+		&& item.category.trim().toLowerCase() !== 'repo';
 
 	const title = document.createElement('h3');
 	title.className = 'project-card__title';
-	title.textContent = project.title;
+	title.textContent = item.title;
 
 	const desc = document.createElement('p');
 	desc.className = 'project-card__desc';
-	desc.textContent = project.description;
+	desc.textContent = item.description;
 
 	if (hasDisplayCategory) {
 		const meta = document.createElement('div');
 		meta.className = 'project-card__meta';
-		meta.textContent = project.category;
+		meta.textContent = item.category;
 		body.append(meta, title, desc);
 	} else {
 		body.append(title, desc);
 	}
 
-	if (showTags && project.tags?.length) {
+	if (showTags && item.tags?.length) {
 		const tagsWrap = document.createElement('div');
 		tagsWrap.className = 'tags project-card__tags';
-		project.tags.forEach((tag) => {
+		item.tags.forEach((tag) => {
 			const chip = document.createElement('span');
 			chip.className = 'tag';
 			chip.textContent = tag;
@@ -793,13 +794,13 @@ function createProjectCard(project, { showTags = false, linkLabel = 'Zobacz', sh
 		body.appendChild(tagsWrap);
 	}
 
-	if (project.github) {
+	if (item.github) {
 		const link = document.createElement('a');
 		link.className = 'btn btn--ghost project-card__cta';
-		link.href = project.github;
+		link.href = item.github;
 		link.target = '_blank';
 		link.rel = 'noopener';
-		link.textContent = project.github.replace('https://', '');
+		link.textContent = item.github.replace('https://', '');
 		body.appendChild(link);
 	}
 
@@ -826,12 +827,12 @@ function pickHomepageCards(data, count, random, requireImage = false) {
 	return [...shuffle(withImage), ...shuffle(withoutImage)].slice(0, count);
 }
 
-function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true, requireImage = false } = {}) {
+function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true, requireImage = false, kind = 'project' } = {}) {
 	const target = qs(`#${targetId}`);
 	if (!target || !data?.length) return;
 	const slice = pickHomepageCards(data, count, random, requireImage);
 	target.innerHTML = '';
-	slice.forEach((project) => target.appendChild(createProjectCard(project, { showTags, linkLabel, showCategory })));
+	slice.forEach((project) => target.appendChild(createProjectCard(project, { showTags, linkLabel, showCategory, kind })));
 }
 
 function renderListPage(targetId, data, heading = 'Lista', showMeta = true) {
@@ -1016,10 +1017,13 @@ function clearLocationHash() {
 
 function setupNavScrollAppearance() {
 	const nav = qs('.nav');
+	const shell = qs('.nav-shell');
 	if (!nav) return;
 
 	const update = () => {
-		nav.classList.toggle('is-scrolled', window.scrollY > 8);
+		const scrolled = window.scrollY > 8;
+		nav.classList.toggle('is-scrolled', scrolled);
+		shell?.classList.toggle('is-scrolled', scrolled);
 	};
 
 	update();
@@ -1093,17 +1097,11 @@ function setupIndexMembersViewportSync() {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-	const page = document.body.dataset.page;
-
-	handlePreloader();
-	updateFooterYear();
-
+function renderPageContent(page) {
 	if (page === 'index') {
 		renderIndexMembers();
-		setupIndexMembersViewportSync();
-		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true, requireImage: true });
-		renderProjects('events-grid', events, { count: 3, random: true, showCategory: true });
+		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true, requireImage: true, kind: 'project' });
+		renderProjects('events-grid', events, { count: 3, random: true, showCategory: true, kind: 'event' });
 	}
 
 	if (page === 'members') {
@@ -1111,11 +1109,29 @@ document.addEventListener('DOMContentLoaded', () => {
 	}
 
 	if (page === 'projects') {
-		renderProjects('projects-grid', projects, { showTags: true });
+		renderProjects('projects-grid', projects, { showTags: true, kind: 'project' });
 	}
 
 	if (page === 'events') {
-		renderProjects('projects-grid', events, { showTags: true, showCategory: true });
+		renderProjects('projects-grid', events, { showTags: true, showCategory: true, kind: 'event' });
+	}
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	const page = document.body.dataset.page;
+
+	handlePreloader();
+	updateFooterYear();
+	MoAI.init({
+		rerender: () => {
+			renderPageContent(page);
+			requestAnimationFrame(observeFadeIns);
+		}
+	});
+	renderPageContent(page);
+
+	if (page === 'index') {
+		setupIndexMembersViewportSync();
 	}
 
 	// Delay observer to ensure nodes are in DOM

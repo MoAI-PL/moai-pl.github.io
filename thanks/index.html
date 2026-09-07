@@ -27,10 +27,24 @@
   <link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
   <link rel="manifest" href="../icons/site.webmanifest">
   <link rel="stylesheet" href="../styles.css">
+  <script>
+    (function () {
+      var lang = 'en';
+      try {
+        var saved = localStorage.getItem('moai-lang');
+        if (saved === 'pl' || saved === 'en') lang = saved;
+        else if (Intl.DateTimeFormat().resolvedOptions().timeZone === 'Europe/Warsaw') lang = 'pl';
+      } catch (e) {
+        lang = 'pl';
+      }
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute('data-lang', lang);
+    })();
+  </script>
 </head>
 <body data-page="thanks">
   <div id="top"></div>
-  <div id="preloader" class="preloader" aria-label="Trwa ładowanie strony" role="status">
+  <div id="preloader" class="preloader" data-i18n-aria="preloader" aria-label="Trwa ładowanie strony" role="status">
     <div class="preloader__glass">
       <span class="preloader__dot">M</span>
       <span class="preloader__dot">o</span>
@@ -49,24 +63,26 @@
     <nav class="nav">
       <div class="nav__links">
         <a href="/" class="nav__link">MoAI</a>
-        <a href="/#events" class="nav__link">Wydarzenia</a>
-        <a href="/#projects" class="nav__link">Projekty</a>
-        <a href="/#join" class="nav__link">Dołącz</a>
-        <a href="/#contact" class="nav__link">Kontakt</a>
+        <a href="/#events" class="nav__link" data-i18n="nav.events">Wydarzenia</a>
+        <a href="/#projects" class="nav__link" data-i18n="nav.projects">Projekty</a>
+        <a href="/#join" class="nav__link" data-i18n="nav.join">Dołącz</a>
+        <a href="/#contact" class="nav__link" data-i18n="nav.contact">Kontakt</a>
+        <button type="button" class="nav__link lang-toggle lang-toggle--nav" data-lang-toggle aria-label="Switch to English">PL</button>
       </div>
     </nav>
+    <button type="button" class="lang-toggle lang-toggle--corner" data-lang-toggle aria-label="Switch to English">PL</button>
   </header>
 
   <main class="page">
     <section class="section" aria-labelledby="thanks-title">
       <div class="glass card card--intro">
         <div class="stack stack--lg stack--center">
-          <div class="pill">Dziękujemy za zainteresowanie</div>
-          <h1 id="thanks-title" class="display">Aktualnie nie prowadzimy rekrutacji</h1>
-          <p class="muted">Jeśli mimo tego chcesz z nami współpracować, napisz na <a href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>. Odpowiadamy możliwie szybko.</p>
+          <div class="pill" data-i18n="thanks.pill">Dziękujemy za zainteresowanie</div>
+          <h1 id="thanks-title" class="display" data-i18n="thanks.title">Aktualnie nie prowadzimy rekrutacji</h1>
+          <p class="muted" data-i18n-html="thanks.body">Jeśli mimo tego chcesz z nami współpracować, napisz na <a href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>. Odpowiadamy możliwie szybko.</p>
           <div class="stack stack--row stack--row-center">
-            <a class="btn btn--primary" href="mailto:moai@pollub.edu.pl">Napisz do nas</a>
-            <a class="btn btn--ghost" href="/">Wróć na stronę główną</a>
+            <a class="btn btn--primary" href="mailto:moai@pollub.edu.pl" data-i18n="thanks.write">Napisz do nas</a>
+            <a class="btn btn--ghost" href="/" data-i18n="thanks.home">Wróć na stronę główną</a>
           </div>
         </div>
       </div>
@@ -76,14 +92,15 @@
   <footer class="footer">
     <div class="footer__inner">
       <span>MoAI © <span data-current-year>2026</span></span>
-      <a class="footer__link" href="../assets/Statut_MoAI.pdf" target="_blank">Regulamin</a>
+      <a class="footer__link" href="../assets/Statut_MoAI.pdf" target="_blank" data-i18n="footer.rules">Regulamin</a>
       <a class="footer__link" href="mailto:moai@pollub.edu.pl">moai@pollub.edu.pl</a>
       <a class="footer__logo" href="https://wz.pollub.pl/" target="_blank" rel="noopener">
-        <img src="../icons/logo_wz.webp" alt="Wydział Zarządzania Politechniki Lubelskiej" loading="lazy">
+        <img src="../icons/logo_wz.webp" alt="Wydział Zarządzania Politechniki Lubelskiej" loading="lazy" data-i18n-alt="footer.wz">
       </a>
     </div>
   </footer>
 
+  <script src="../i18n.js" defer></script>
   <script src="../scripts.js" defer></script>
   <script data-goatcounter="https://moai-pl.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
