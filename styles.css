@@ -562,10 +562,8 @@ button.nav__link {
 	border: 0;
 	cursor: pointer;
 	font-family: inherit;
-	font-size: inherit;
-	font-weight: inherit;
-	letter-spacing: inherit;
-	line-height: inherit;
+	-webkit-appearance: none;
+	appearance: none;
 }
 
 .lang-toggle--nav {
@@ -1388,11 +1386,15 @@ button.nav__link {
 		gap: 0;
 	}
 
-	.nav__link {
+	.nav__link,
+	.nav button.nav__link {
 		flex: 0 1 auto;
 		padding: 0.5rem var(--nav-link-pad-x);
+		font-family: inherit;
 		font-size: 0.78rem;
 		font-weight: 500;
+		letter-spacing: normal;
+		line-height: inherit;
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
