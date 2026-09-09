@@ -816,8 +816,24 @@ function hasMainImage(item) {
 	return typeof item?.image === 'string' && item.image.trim() !== '';
 }
 
-function pickHomepageCards(data, count, random, requireImage = false) {
-	const pool = requireImage ? data.filter(hasMainImage) : data;
+const PINNED_PROJECTS = ['plant-nn', 'slower', 'promo-wz'];
+const PINNED_EVENTS = ['urban-lab', 'hacknation', 'sfb3'];
+
+function withPinnedFirst(data, pinnedIds = []) {
+	if (!pinnedIds.length) return data;
+	const pinSet = new Set(pinnedIds);
+	const pinned = pinnedIds
+		.map((id) => data.find((item) => item.id === id))
+		.filter(Boolean);
+	const rest = data.filter((item) => !pinSet.has(item.id));
+	return [...pinned, ...rest];
+}
+
+function pickHomepageCards(data, count, { random = false, requireImage = false, pinnedIds = [] } = {}) {
+	const ordered = withPinnedFirst(data, pinnedIds);
+	if (pinnedIds.length) return ordered.slice(0, count);
+
+	const pool = requireImage ? ordered.filter(hasMainImage) : ordered;
 	if (!random) return pool.slice(0, count);
 	if (requireImage) return shuffle(pool).slice(0, count);
 
@@ -831,10 +847,10 @@ function pickHomepageCards(data, count, random, requireImage = false) {
 	return [...shuffle(withImage), ...shuffle(withoutImage)].slice(0, count);
 }
 
-function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true, requireImage = false, kind = 'project' } = {}) {
+function renderProjects(targetId, data, { count = data.length, random = false, showTags = false, linkLabel, showCategory = true, requireImage = false, kind = 'project', pinnedIds = [] } = {}) {
 	const target = qs(`#${targetId}`);
 	if (!target || !data?.length) return;
-	const slice = pickHomepageCards(data, count, random, requireImage);
+	const slice = pickHomepageCards(data, count, { random, requireImage, pinnedIds });
 	target.innerHTML = '';
 	slice.forEach((project) => target.appendChild(createProjectCard(project, { showTags, linkLabel, showCategory, kind })));
 }
@@ -1104,8 +1120,8 @@ function setupIndexMembersViewportSync() {
 function renderPageContent(page) {
 	if (page === 'index') {
 		renderIndexMembers();
-		renderProjects('projects-grid', projects, { count: 3, random: true, showTags: true, requireImage: true, kind: 'project' });
-		renderProjects('events-grid', events, { count: 3, random: true, showCategory: true, kind: 'event' });
+		renderProjects('projects-grid', projects, { count: 3, pinnedIds: PINNED_PROJECTS, showTags: true, kind: 'project' });
+		renderProjects('events-grid', events, { count: 3, pinnedIds: PINNED_EVENTS, showCategory: true, kind: 'event' });
 	}
 
 	if (page === 'members') {
@@ -1113,11 +1129,11 @@ function renderPageContent(page) {
 	}
 
 	if (page === 'projects') {
-		renderProjects('projects-grid', projects, { showTags: true, kind: 'project' });
+		renderProjects('projects-grid', projects, { showTags: true, pinnedIds: PINNED_PROJECTS, kind: 'project' });
 	}
 
 	if (page === 'events') {
-		renderProjects('projects-grid', events, { showTags: true, showCategory: true, kind: 'event' });
+		renderProjects('projects-grid', events, { showTags: true, showCategory: true, pinnedIds: PINNED_EVENTS, kind: 'event' });
 	}
 }
 

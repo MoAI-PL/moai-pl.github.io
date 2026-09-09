@@ -70,14 +70,14 @@ const MoAI = (() => {
 			'preloader': 'Trwa ładowanie strony',
 			'noscript': 'Ta strona wymaga JavaScript do animacji i losowania projektów.',
 			'hero.title': 'Twój start <span class="hero-title__line">w tworzeniu</span> <span class="hero-title__line">technologii jutra</span>',
-			'hero.lead': 'Koło Naukowe Sztucznej Inteligencji MoAI <span class="hero-lead__line">na Politechnice Lubelskiej.</span>',
+			'hero.lead': 'Koło Naukowe <span class="hero-lead__line">Sztucznej Inteligencji MoAI</span> <span class="hero-lead__line">na Politechnice Lubelskiej.</span>',
 			'hero.join': 'Dołącz do MoAI',
 			'hero.write': 'Napisz do nas',
 			'who.title': 'Kim jesteśmy?',
 			'who.body': 'Cześć! Tu Zespół MoAI z Politechniki Lubelskiej. Jesteśmy pasjonatami Sztucznej Inteligencji w praktycznym wydaniu. Skupiamy się na aktywnym promowaniu umiejętności i wiedzy na temat AI. Zrzeszamy najlepszych studentów z czterech wydziałów Poltechniki Lubelskiej.',
 			'members.seeAll': 'Zobacz wszystkich',
 			'events.title': 'Wydarzenia',
-			'events.body': 'Bierzemy udział w konkursach, hackathonach, konferencjach naukowych, spotkaniach z biznesem, seminariach i imprezach uczelnianych. <br> Orgnizujemy własne wydarzenia zgodne z misją MoAI.',
+			'events.body': 'Bierzemy udział w konkursach, hackathonach, konferencjach naukowych, spotkaniach z biznesem, seminariach i imprezach uczelnianych. Orgnizujemy własne wydarzenia zgodne z misją MoAI.',
 			'events.all': 'Pełna lista wydarzeń',
 			'events.pageTitle': 'Wydarzenia',
 			'events.pageBody': 'Nie przestajemy się rozwijać - chętnie bierzemy udział w technologicznych, biznesowych i akademickich. Zobacz gdzie byliśmy:',
@@ -138,7 +138,7 @@ const MoAI = (() => {
 			'who.body': 'Hi — we’re the MoAI team at Lublin University of Technology. We’re passionate about putting AI into practice. We promote AI skills and knowledge, and bring together students from four faculties across the university.',
 			'members.seeAll': 'See all members',
 			'events.title': 'Events',
-			'events.body': 'We take part in competitions, hackathons, academic conferences, business meetings, seminars and campus events. <br> We also run our own events that match the MoAI mission.',
+			'events.body': 'We take part in competitions, hackathons, academic conferences, business meetings, seminars and campus events. We also run our own events that match the MoAI mission.',
 			'events.all': 'All events',
 			'events.pageTitle': 'Events',
 			'events.pageBody': 'We’re always learning — we show up at technology, business and academic events. Here’s where we’ve been:',
@@ -431,8 +431,16 @@ const MoAI = (() => {
 		return readSavedLang() || timezoneLang();
 	}
 
+	function glueShortWords(value) {
+		if (typeof value !== 'string' || value === '') return value;
+		return value.replace(/([^<]+)|(<\/?[^>]+>)/g, (part) => {
+			if (part.startsWith('<')) return part;
+			return part.replace(/(^|[\s\u00A0])([aiouwzAIOUWZ])\s+/g, '$1$2\u00A0');
+		});
+	}
+
 	function t(key) {
-		return strings[lang]?.[key] ?? strings.pl[key] ?? key;
+		return glueShortWords(strings[lang]?.[key] ?? strings.pl[key] ?? key);
 	}
 
 	function translateCategory(value) {
@@ -453,10 +461,10 @@ const MoAI = (() => {
 		const extra = lang === 'en' ? (pack[item.id] || {}) : {};
 		return {
 			...item,
-			title: extra.title || item.title,
-			description: extra.description || item.description,
-			alt: extra.alt || item.alt,
-			category: extra.category || translateCategory(item.category),
+			title: glueShortWords(extra.title || item.title),
+			description: glueShortWords(extra.description || item.description),
+			alt: glueShortWords(extra.alt || item.alt),
+			category: glueShortWords(extra.category || translateCategory(item.category)),
 			tags: (item.tags || []).map(translateTag)
 		};
 	}
