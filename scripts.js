@@ -1087,19 +1087,13 @@ function getIndexMembersLimit() {
 	return window.matchMedia('(max-width: 720px)').matches ? 8 : 12;
 }
 
-function isMobileMembersViewport() {
-	if (typeof window.matchMedia !== 'function') return false;
-	return window.matchMedia('(max-width: 720px)').matches;
-}
-
 function renderIndexMembers() {
-	const isMobileMembers = isMobileMembersViewport();
 	renderMembers('members-grid', {
 		limit: getIndexMembersLimit(),
 		includeCta: false,
 		randomize: true,
-		pinInviteLast: !isMobileMembers,
-		includeInvite: !isMobileMembers
+		pinInviteLast: true,
+		includeInvite: true
 	});
 }
 
