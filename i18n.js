@@ -193,17 +193,21 @@ const MoAI = (() => {
 			alt: 'Secure Enclave Wallets dashboard: crisis wallets and an offline transaction console.'
 		},
 		moodify: {
-			description: 'A recommendation model that turns a mood description and a chosen genre into a personalised playlist. Mood and genre go in; a set of tracks for the moment comes out.'
+			description: 'A recommendation model that turns a mood description and a chosen genre into a personalised playlist. Mood and genre go in; a set of tracks for the moment comes out.',
+			alt: 'Moodify app mockup: mood and genre selection with a personalised playlist.'
 		},
 		inticheck: {
-			description: 'A neural-network triage system for dermatology. It ranks skin-image cases by risk and always leaves the final clinical decision to a doctor.'
+			description: 'A neural-network triage system for dermatology. It ranks skin-image cases by risk and always leaves the final clinical decision to a doctor.',
+			alt: 'IntiCheck interface: dermatology triage from skin photos with a risk score.'
 		},
 		taxifleet: {
-			description: 'A platform for monitoring and analysing taxi-fleet drivers. It collects signals from every ride and flags unusual patterns before they show up in the books.'
+			description: 'A platform for monitoring and analysing taxi-fleet drivers. It collects signals from every ride and flags unusual patterns before they show up in the books.',
+			alt: 'TaxiFleet dashboard: monitoring and analysis of taxi-fleet drivers.'
 		},
 		'planet-twin': {
 			title: 'Digital twin of a planet',
-			description: 'The winning Hack4Sages project — a digital twin of exoplanet TRAPPIST-1e called ExoStress Twin. Using NASA data, it simulates climate and water-mass transport in real time, including stellar flares and their effect on biosignatures.'
+			description: 'The winning Hack4Sages project — a digital twin of exoplanet TRAPPIST-1e called ExoStress Twin. Using NASA data, it simulates climate and water-mass transport in real time, including stellar flares and their effect on biosignatures.',
+			alt: 'ExoStress Twin graphic: a digital twin of exoplanet TRAPPIST-1e on NASA data.'
 		},
 		'promo-wz': {
 			title: 'Promoting the Faculty of Management',
@@ -244,7 +248,8 @@ const MoAI = (() => {
 		},
 		'dynamic-ui': {
 			title: 'Dynamic user interface',
-			description: 'A case study of an AI-assisted dynamic interface, built on a live Comarch brief during the 3rd Student Business Festival. The UX/UI layer adapts to how people behave and guides them through the sales journey.'
+			description: 'A case study of an AI-assisted dynamic interface, built on a live Comarch brief during the 3rd Student Business Festival. The UX/UI layer adapts to how people behave and guides them through the sales journey.',
+			alt: 'Mockup of an AI-assisted dynamic user interface from the Comarch brief.'
 		},
 		julia: {
 			title: 'Julia — virtual patient assistant',
@@ -317,7 +322,8 @@ const MoAI = (() => {
 			alt: 'MoAI team on the Ensemble AI stage in Warsaw during the final presentation.'
 		},
 		hack4sages: {
-			description: 'We won international Hack4Sages among 200+ participants from six continents. Our digital twin of TRAPPIST-1e beat teams from Harvard and Cambridge, and in September we present it at the Origins Federation conference at ETH Zürich.'
+			description: 'We won international Hack4Sages among 200+ participants from six continents. Our digital twin of TRAPPIST-1e beat teams from Harvard and Cambridge, and in September we present it at the Origins Federation conference at ETH Zürich.',
+			alt: 'MoAI team at Hack4Sages with the digital twin of exoplanet TRAPPIST-1e.'
 		},
 		'brave-community': {
 			title: '2nd Brave Community meetup',

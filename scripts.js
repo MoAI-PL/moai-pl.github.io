@@ -157,7 +157,8 @@ const projects = [
 		title: 'Moodify',
 		category: 'marzec 2026',
 		description: 'Model rekomendacyjny, który zamienia opis nastroju i wybrany gatunek w spersonalizowaną playlistę. Mood i gatunek trafiają na wejście, na wyjściu — zestaw utworów dopasowany do chwili.',
-		cover: 'magenta',
+		image: 'images/projects/moodify-moai-pl.webp',
+		alt: 'Makieta aplikacji Moodify: wybór nastroju i gatunku oraz spersonalizowana playlista.',
 		tags: ['Muzyka', 'NLP', 'Recsys']
 	},
 	{
@@ -165,7 +166,8 @@ const projects = [
 		title: 'IntiCheck',
 		category: 'marzec 2026',
 		description: 'System triage\'u dermatologicznego oparty na sieciach neuronowych. Segreguje zgłoszenia ze zdjęć skóry według ryzyka, a finalną decyzję kliniczną zawsze zostawia lekarzowi.',
-		cover: 'rose',
+		image: 'images/projects/inticheck-moai-pl.webp',
+		alt: 'Interfejs IntiCheck: triage dermatologiczny na zdjęciach skóry z oceną ryzyka.',
 		tags: ['MedTech', 'Sieci neuronowe', 'Bezpieczeństwo']
 	},
 	{
@@ -173,7 +175,8 @@ const projects = [
 		title: 'TaxiFleet',
 		category: 'marzec 2026',
 		description: 'Platforma do monitoringu i analizy pracy kierowców floty taxi. Zbiera sygnały z każdego kursu i pokazuje odchylenia w zespole, zanim staną się widoczne w rozliczeniach.',
-		cover: 'gold',
+		image: 'images/projects/taxifleet-moai-pl.webp',
+		alt: 'Dashboard TaxiFleet: monitoring i analiza pracy kierowców floty taxi.',
 		tags: ['Mobility', 'Data', 'ML']
 	},
 	{
@@ -181,7 +184,8 @@ const projects = [
 		title: 'Cyfrowy bliźniak planety',
 		category: 'marzec 2026',
 		description: 'Zwycięski projekt hackathonu Hack4Sages — cyfrowy bliźniak egzoplanety TRAPPIST-1e o nazwie ExoStress Twin. Na danych NASA symuluje w czasie rzeczywistym klimat i transport masy wody, uwzględniając rozbłyski gwiezdne i ich wpływ na biosygnatury.',
-		cover: 'indigo',
+		image: 'images/projects/planet-twin-moai-pl.webp',
+		alt: 'Grafika ExoStress Twin: cyfrowy bliźniak egzoplanety TRAPPIST-1e na danych NASA.',
 		tags: ['Space', 'NASA', 'Symulacja']
 	},
 	{
@@ -261,7 +265,8 @@ const projects = [
 		title: 'Dynamiczny interfejs użytkownika',
 		category: 'czerwiec 2025',
 		description: 'Case study dynamicznego interfejsu wspomaganego przez AI, zrealizowane na żywym briefie Comarchu podczas 3. edycji SFB. Warstwa UX/UI dopasowuje się do zachowania użytkownika i prowadzi go przez ścieżkę sprzedaży.',
-		cover: 'wine',
+		image: 'images/projects/dynamic-ui-moai-pl.webp',
+		alt: 'Makieta dynamicznego interfejsu użytkownika wspomaganego przez AI, brief Comarch.',
 		tags: ['Marketing', 'AI', 'UX/UI', 'Sprzedaż']
 	},
 	{
@@ -407,7 +412,8 @@ const events = [
 		title: 'Hack4Sages',
 		category: 'marzec 2026',
 		description: 'Zwyciężyliśmy w międzynarodowym Hack4Sages wśród ponad 200 uczestników z 6 kontynentów. Nasz cyfrowy bliźniak planety TRAPPIST-1e wyprzedził zespoły z Harvardu i Cambridge, a we wrześniu prezentujemy go na konferencji Origins Federation w ETH Zürich.',
-		cover: 'ice',
+		image: 'images/events/hack4sages-2026-moai-pl.webp',
+		alt: 'Zespół MoAI na hackathonie Hack4Sages przy cyfrowym bliźniaku egzoplanety TRAPPIST-1e.',
 		tags: ['Hackathon', 'Space', 'Zwycięstwo']
 	},
 	{
