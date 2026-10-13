@@ -459,6 +459,13 @@ body[data-page="events"] .card--intro .display {
 	margin: 0;
 }
 
+/* The grid column already bounds this line; the 60ch cap made the longer
+   English copy drop its last word onto a line of its own. */
+#join .join__summary .muted {
+	max-width: none;
+	text-wrap: pretty;
+}
+
 #join .join__summary .btn,
 #contact .join__summary .btn {
 	margin-left: auto;
