@@ -959,8 +959,62 @@ function clampScrollTop(top) {
 	return Math.min(Math.max(0, top), maxTop);
 }
 
-function smoothScrollToPosition(top) {
-	window.scrollTo({ top: clampScrollTop(top), behavior: 'smooth' });
+let activeScrollAnimation = null;
+
+function easeInOutCubic(t) {
+	return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+function getScrollDuration(distance) {
+	// Quick for short hops, never sluggish for long ones.
+	const duration = Math.min(900, Math.max(450, 300 + distance * 0.25));
+	const reduceMotion = typeof window.matchMedia === 'function'
+		&& window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+	return reduceMotion ? Math.min(duration, 550) : duration;
+}
+
+// Animate the scroll ourselves instead of relying on the browser's native
+// smooth scrolling, which some browsers/OS settings silently turn into an
+// instant jump. `getTop` is re-read every frame so late layout shifts
+// (images loading, fonts swapping) still land on the intended spot.
+function smoothScrollToPosition(getTop) {
+	const resolveTop = typeof getTop === 'function' ? getTop : () => getTop;
+	const root = document.documentElement;
+
+	if (activeScrollAnimation) activeScrollAnimation.cancel();
+
+	const startTop = window.scrollY;
+	const duration = getScrollDuration(Math.abs(clampScrollTop(resolveTop()) - startTop));
+	const startTime = performance.now();
+	let frame = 0;
+
+	const userEvents = ['wheel', 'touchstart', 'keydown', 'mousedown'];
+	const finish = () => {
+		cancelAnimationFrame(frame);
+		userEvents.forEach((type) => window.removeEventListener(type, finish));
+		root.style.scrollBehavior = '';
+		if (activeScrollAnimation === animation) activeScrollAnimation = null;
+	};
+	const animation = { cancel: finish };
+	activeScrollAnimation = animation;
+
+	// The page sets `scroll-behavior: smooth` in CSS; switch it off while we
+	// drive the position frame by frame so each step applies immediately.
+	root.style.scrollBehavior = 'auto';
+	// Let the visitor take over at any moment (wheel, touch, keys, click).
+	userEvents.forEach((type) => window.addEventListener(type, finish, { passive: true }));
+
+	const step = (now) => {
+		const progress = Math.min(1, (now - startTime) / duration);
+		const targetTop = clampScrollTop(resolveTop());
+		window.scrollTo(0, startTop + (targetTop - startTop) * easeInOutCubic(progress));
+		if (progress < 1) {
+			frame = requestAnimationFrame(step);
+		} else {
+			finish();
+		}
+	};
+	frame = requestAnimationFrame(step);
 }
 
 function getNavMetrics() {
@@ -1016,11 +1070,9 @@ function scrollByHash(hash, { updateHistory = false } = {}) {
 		const section = getSectionFromHash(hash);
 		if (!section) return;
 
-		const scrollTop = gapAlignedNavHashes.has(hash)
+		smoothScrollToPosition(() => (gapAlignedNavHashes.has(hash)
 			? getGapAlignedSectionTop(section)
-			: getDefaultSectionTop(section);
-
-		smoothScrollToPosition(scrollTop);
+			: getDefaultSectionTop(section)));
 	}
 
 	if (updateHistory && location.hash !== hash) {
@@ -1137,6 +1189,19 @@ function renderPageContent(page) {
 	}
 }
 
+function setupEmailTracking() {
+	// Every mailto link (footer, contact button, "thanks" page, links inside
+	// translated copy) counts as one shared GoatCounter event.
+	const track = (event) => {
+		if (event.type === 'auxclick' && event.button !== 1) return;
+		const link = event.target.closest?.('a[href^="mailto:"]');
+		if (!link || typeof window.goatcounter?.count !== 'function') return;
+		window.goatcounter.count({ path: 'email', title: 'E-mail', event: true });
+	};
+	document.addEventListener('click', track, true);
+	document.addEventListener('auxclick', track, true);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	const page = document.body.dataset.page;
 
@@ -1157,6 +1222,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// Delay observer to ensure nodes are in DOM
 	requestAnimationFrame(observeFadeIns);
 	blockInteractions();
+	setupEmailTracking();
 	setPrettyUrl();
 	setupNavScrollAppearance();
 	setupNavScrollHandling(page);
