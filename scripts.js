@@ -291,6 +291,15 @@ const projects = [
 
 const events = [
 	{
+		id: 'hackyeah-2026',
+		title: 'HackYeah 2026',
+		category: 'październik 2026',
+		description: 'Wzięliśmy udział w HackYeah 2026 w TAURON Arenie Kraków — największym stacjonarnym hackathonie w Europie. Pracowaliśmy nad zadaniami z obronności i finansów bez pośredników, a w REENTRY CTF zdobyliśmy 38 z 39 flag i drugi wynik ex aequo wśród ponad 70 drużyn.',
+		image: 'images/events/hackathon-hackyeah-2026-moai-pl.webp',
+		alt: 'Zespół MoAI z tabliczką #HACKYEAH na trybunach TAURON Areny Kraków, w tle hala ze stanowiskami uczestników hackathonu.',
+		tags: ['Hackathon', 'CTF', 'Cybersecurity']
+	},
+	{
 		id: 'it-unplugged',
 		title: 'IT Unplugged',
 		category: 'czerwiec 2026',
@@ -552,6 +561,15 @@ const events = [
 		tags: ['Hackathon', 'AI', 'Finał']
 	},
 	{
+		id: 'pip',
+		title: 'Konferencja 105-lecia Państwowej Inspekcji Pracy',
+		category: 'październik 2024',
+		description: 'Wystąpiliśmy na konferencji 105-lecia Państwowej Inspekcji Pracy z referatem o AI na rynku pracy — o wyzwaniach regulacyjnych i szansach, jakie ta technologia otwiera przed pracownikami i instytucjami.',
+		image: 'images/events/konferencja-105-lecia-pip-2024-moai-pl.webp',
+		alt: 'Wystąpienie zespołu MoAI na konferencji 105-lecia Państwowej Inspekcji Pracy.',
+		tags: ['Konferencja', 'Prawo', 'Rynek pracy']
+	},
+	{
 		id: 'sfb2',
 		title: 'Studencki Festiwal Biznesu II',
 		category: 'maj 2024',
@@ -568,15 +586,6 @@ const events = [
 		image: 'images/events/xxxii-miedzynarodowe-sympozjum-naukowe-2024-moai-pl.webp',
 		alt: 'Aula XXXII Międzynarodowego Sympozjum Naukowego na Politechnice Lubelskiej, 15–17 maja 2024: ekran z tytułem AI – szansa czy zagrożenie?',
 		tags: ['Nauka', 'Prelekcja', 'Uczelnia']
-	},
-	{
-		id: 'pip',
-		title: 'Konferencja 105-lecia Państwowej Inspekcji Pracy',
-		category: 'październik 2024',
-		description: 'Wystąpiliśmy na konferencji 105-lecia Państwowej Inspekcji Pracy z referatem o AI na rynku pracy — o wyzwaniach regulacyjnych i szansach, jakie ta technologia otwiera przed pracownikami i instytucjami.',
-		image: 'images/events/konferencja-105-lecia-pip-2024-moai-pl.webp',
-		alt: 'Wystąpienie zespołu MoAI na konferencji 105-lecia Państwowej Inspekcji Pracy.',
-		tags: ['Konferencja', 'Prawo', 'Rynek pracy']
 	}
 ];
 

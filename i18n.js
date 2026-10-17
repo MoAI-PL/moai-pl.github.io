@@ -258,6 +258,10 @@ const MoAI = (() => {
 	};
 
 	const EVENT_EN = {
+		'hackyeah-2026': {
+			description: 'We took part in HackYeah 2026 at TAURON Arena Kraków — Europe’s largest in-person hackathon. We worked on the Defense and Finance Without Intermediaries tasks, and in the REENTRY CTF we captured 38 of 39 flags for the second-highest score ex aequo among 70+ teams.',
+			alt: 'MoAI team holding a #HACKYEAH sign in the stands of TAURON Arena Kraków, with the hackathon floor full of participant desks behind them.'
+		},
 		'it-unplugged': {
 			description: 'We went to the IT Unplugged conference for talks on AI, data engineering, system architecture, cybersecurity and professional wellbeing — and came back with new contacts in IT.',
 			alt: 'IT Unplugged 2026 panel: three people on stage in armchairs, blue lighting and the IT UNPLUGGED sign.'

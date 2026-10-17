@@ -230,3 +230,10 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Zdjęcie:** `images/events/it-unplugged-2026-moai-pl.webp`
 - **Opis:** Konferencja o AI, data engineering, architekturze, cyberbezpieczeństwie i wellbeing. Wymiana doświadczeń ze środowiskiem IT.
 
+
+## HackYeah 2026
+
+- **Data:** październik 2026
+- **Tagi:** Hackathon, CTF, Cybersecurity
+- **Zdjęcie:** `images/events/hackathon-hackyeah-2026-moai-pl.webp`
+- **Opis:** 12. edycja największego stacjonarnego hackathonu w Europie, TAURON Arena Kraków. Zadania: obronność, finanse bez pośredników i REENTRY CTF — 38 z 39 flag, drugi wynik ex aequo wśród 70+ drużyn.
