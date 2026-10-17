@@ -109,7 +109,7 @@ const members = [
 	},
 	{
 		name: 'Czekamy na Ciebie',
-		linkedin: '/thanks/',
+		linkedin: '/#join',
 		tags: [],
 		invite: true
 	}
@@ -691,6 +691,12 @@ function renderMembers(targetId, {
 			card.classList.add('member-card--invite');
 			overlay.removeAttribute('target');
 			overlay.removeAttribute('rel');
+			overlay.addEventListener('click', (event) => {
+				// On the homepage, glide to the join section like the nav links do.
+				if (!qs('#join')) return;
+				event.preventDefault();
+				scrollByHash('#join');
+			});
 			overlay.ariaLabel = MoAI.t('invite.cta');
 			overlay.innerHTML = `<span>${MoAI.t('invite.cta')}</span>`;
 			media.append(createInviteCover(), overlay);
