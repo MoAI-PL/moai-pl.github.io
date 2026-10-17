@@ -120,7 +120,7 @@ const projects = [
 		id: 'braidak',
 		title: 'brAIdak',
 		category: 'czerwiec 2026',
-		description: 'Zwycięski projekt asystenta AI dla Urzędu Miasta Lublin. Zero-cloud RAG na modelu Bielik, ChromaDB, funkcjonalność TTS i czytelna mapa POI — suwerenna AI na nieustrukturyzowanych danych miasta.',
+		description: 'Zwycięski projekt asystenta AI dla Urzędu Miasta Lublin. Zero-cloud RAG na modelu Bielik, ChromaDB, funkcjonalność TTS i czytelna mapa POI – suwerenna AI na nieustrukturyzowanych danych miasta.',
 		image: 'images/projects/braidak-moai-pl.webp',
 		alt: 'Grafika projektu brAIdak: asystent AI dla Urzędu Miasta Lublin.',
 		tags: ['GovTech', 'RAG', 'Bielik']
@@ -147,7 +147,7 @@ const projects = [
 		id: 'ledger',
 		title: 'Secure Enclave Wallets',
 		category: 'kwiecień 2026',
-		description: 'Projekt z hackathonu Civil42 2026: portfele pre-seedowane i konsola transakcji offline pod scenariusze kryzysowe oraz logistykę terenową — z trybem online, partycji sieci i awaryjnym.',
+		description: 'Projekt z hackathonu Civil42 2026: portfele pre-seedowane i konsola transakcji offline pod scenariusze kryzysowe oraz logistykę terenową – z trybem online, partycji sieci i awaryjnym.',
 		image: 'images/projects/ledger-moai-pl.webp',
 		alt: 'Dashboard Secure Enclave Wallets: portfele kryzysowe i konsola transakcji offline.',
 		tags: ['GovTech', 'Bezpieczeństwo', 'FinTech']
@@ -156,7 +156,7 @@ const projects = [
 		id: 'moodify',
 		title: 'Moodify',
 		category: 'marzec 2026',
-		description: 'Model rekomendacyjny, który zamienia opis nastroju i wybrany gatunek w spersonalizowaną playlistę. Mood i gatunek trafiają na wejście, na wyjściu — zestaw utworów dopasowany do chwili.',
+		description: 'Model rekomendacyjny, który zamienia opis nastroju i wybrany gatunek w spersonalizowaną playlistę. Mood i gatunek trafiają na wejście, na wyjściu – zestaw utworów dopasowany do chwili.',
 		image: 'images/projects/moodify-moai-pl.webp',
 		alt: 'Makieta aplikacji Moodify: wybór nastroju i gatunku oraz spersonalizowana playlista.',
 		tags: ['Muzyka', 'NLP', 'Recsys']
@@ -183,7 +183,7 @@ const projects = [
 		id: 'planet-twin',
 		title: 'Cyfrowy bliźniak planety',
 		category: 'marzec 2026',
-		description: 'Zwycięski projekt hackathonu Hack4Sages — cyfrowy bliźniak egzoplanety TRAPPIST-1e o nazwie ExoStress Twin. Na danych NASA symuluje w czasie rzeczywistym klimat i transport masy wody, uwzględniając rozbłyski gwiezdne i ich wpływ na biosygnatury.',
+		description: 'Zwycięski projekt hackathonu Hack4Sages – cyfrowy bliźniak egzoplanety TRAPPIST-1e o nazwie ExoStress Twin. Na danych NASA symuluje w czasie rzeczywistym klimat i transport masy wody, uwzględniając rozbłyski gwiezdne i ich wpływ na biosygnatury.',
 		image: 'images/projects/planet-twin-moai-pl.webp',
 		alt: 'Grafika ExoStress Twin: cyfrowy bliźniak egzoplanety TRAPPIST-1e na danych NASA.',
 		tags: ['Space', 'NASA', 'Symulacja']
@@ -210,7 +210,7 @@ const projects = [
 		id: 'ml-admin',
 		title: 'ML dla administracji publicznej',
 		category: 'grudzień 2025',
-		description: 'Legis 2.0 z HackNation: modele ML do analizowania aktów prawnych i pilnowania ich spójności, z warstwą dla urzędnika i obywatela — tłumaczenie przepisów na prosty język bez oddawania danych w obcą chmurę.',
+		description: 'Legis 2.0 z HackNation: modele ML do analizowania aktów prawnych i pilnowania ich spójności, z warstwą dla urzędnika i obywatela – tłumaczenie przepisów na prosty język bez oddawania danych w obcą chmurę.',
 		image: 'images/projects/legis-moai-pl.webp',
 		alt: 'Ekran logowania Legis 2.0: prawo, które Cię rozumie, wejście przez Węzeł Krajowy.',
 		tags: ['GovTech', 'NLP', 'Prawo']
@@ -246,7 +246,7 @@ const projects = [
 		id: 'cardioscan',
 		title: 'CardioScan',
 		category: 'listopad 2025',
-		description: 'Narzędzie do analizy szmerów serca na zbiorze CirCor DigiScope — model diagnostyczny z czułością i swoistością rzędu 90%.',
+		description: 'Narzędzie do analizy szmerów serca na zbiorze CirCor DigiScope – model diagnostyczny z czułością i swoistością rzędu 90%.',
 		image: 'images/projects/cardioscan-moai-pl.webp',
 		alt: 'Interfejs CardioScan: terminal diagnostyczny z przykładami przypadków osłuchowych.',
 		tags: ['MedTech', 'ML', 'Audio']
@@ -255,7 +255,7 @@ const projects = [
 		id: 'plant-nn',
 		title: 'Inteligentna uprawa roślin',
 		category: 'czerwiec 2025',
-		description: 'Model sieci neuronowej sterujący parametrami uprawy roślin. Zamiast ręcznego strojenia warunków wzrostu, sieć dobiera je samodzielnie na podstawie danych z uprawy — krok w stronę powtarzalnej, innowacyjnej hodowli.',
+		description: 'Model sieci neuronowej sterujący parametrami uprawy roślin. Zamiast ręcznego strojenia warunków wzrostu, sieć dobiera je samodzielnie na podstawie danych z uprawy – krok w stronę powtarzalnej, innowacyjnej hodowli.',
 		image: 'images/projects/plant-nn-moai-pl.webp',
 		alt: 'Kompozycja projektu inteligentnej uprawy: stanowisko z kodem i uprawa bazylii pod lampą LED.',
 		tags: ['Research', 'ML', 'AgriTech']
@@ -271,9 +271,9 @@ const projects = [
 	},
 	{
 		id: 'julia',
-		title: 'Julia — wirtualny asystent pacjenta',
+		title: 'Julia – wirtualny asystent pacjenta',
 		category: 'czerwiec 2025',
-		description: 'Julia — wirtualny asystent pacjenta i zwycięski projekt 3. edycji SFB, zrealizowany dla Luxmedu. Umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.',
+		description: 'Julia – wirtualny asystent pacjenta i zwycięski projekt 3. edycji SFB, zrealizowany dla Luxmedu. Umawia wizyty, tłumaczy procedury, przedstawia lekarzy i nawiguje po stronie centrum medycznego.',
 		image: 'images/projects/julia-moai-pl.webp',
 		alt: 'Grafika Julii, wirtualnego asystenta pacjenta zrealizowanego dla Luxmedu.',
 		tags: ['Chatbot', 'MedTech', 'NLP']
@@ -294,7 +294,7 @@ const events = [
 		id: 'hackyeah-2026',
 		title: 'HackYeah 2026',
 		category: 'październik 2026',
-		description: 'Wzięliśmy udział w HackYeah 2026 w TAURON Arenie Kraków — największym stacjonarnym hackathonie w Europie. Pracowaliśmy nad zadaniami z obronności i finansów bez pośredników, a w REENTRY CTF zdobyliśmy 38 z 39 flag i drugi wynik ex aequo wśród ponad 70 drużyn.',
+		description: 'Wzięliśmy udział w HackYeah 2026 w TAURON Arenie Kraków – największym stacjonarnym hackathonie w Europie. Pracowaliśmy nad zadaniami z obronności i finansów bez pośredników, a w REENTRY CTF zdobyliśmy 38 z 39 flag i drugi wynik ex aequo wśród ponad 70 drużyn.',
 		image: 'images/events/hackathon-hackyeah-2026-moai-pl.webp',
 		alt: 'Zespół MoAI z tabliczką #HACKYEAH na trybunach TAURON Areny Kraków, w tle hala ze stanowiskami uczestników hackathonu.',
 		tags: ['Hackathon', 'CTF', 'Cybersecurity']
@@ -303,7 +303,7 @@ const events = [
 		id: 'it-unplugged',
 		title: 'IT Unplugged',
 		category: 'czerwiec 2026',
-		description: 'Wzięliśmy udział w konferencji IT Unplugged, słuchając prelekcji o AI, inżynierii danych, architekturze systemów, cyberbezpieczeństwie i wellbeingu zawodowym — i wracając z nowymi kontaktami w branży IT.',
+		description: 'Wzięliśmy udział w konferencji IT Unplugged, słuchając prelekcji o AI, inżynierii danych, architekturze systemów, cyberbezpieczeństwie i wellbeingu zawodowym – i wracając z nowymi kontaktami w branży IT.',
 		image: 'images/events/it-unplugged-2026-moai-pl.webp',
 		alt: 'Panel IT Unplugged 2026: trzy osoby na scenie w fotelach, niebieskie oświetlenie i napis IT UNPLUGGED.',
 		tags: ['Konferencja', 'IT', 'Networking']
@@ -312,16 +312,16 @@ const events = [
 		id: 'urban-lab',
 		title: 'Urban Lab Challenge',
 		category: 'czerwiec 2026',
-		description: 'Zajęliśmy 1. miejsce i zdobyliśmy nagrodę główną Urzędu Miasta Lublin. Zbudowaliśmy „brAIdak” — agenta AI na architekturze zero-cloud RAG z modelem Bielik, z głosową dostępnością i mapą punktów POI.',
+		description: 'Zajęliśmy 1. miejsce i zdobyliśmy nagrodę główną Urzędu Miasta Lublin. Zbudowaliśmy „brAIdak” – agenta AI na architekturze zero-cloud RAG z modelem Bielik, z głosową dostępnością i mapą punktów POI.',
 		image: 'images/events/urban-lab-challenge-2026-moai-pl.webp',
-		alt: 'Zespół MoAI z dyplomem za 1. miejsce w Urban Lab Challenge — Lublin City of Energy.',
+		alt: 'Zespół MoAI z dyplomem za 1. miejsce w Urban Lab Challenge – Lublin City of Energy.',
 		tags: ['Hackathon', 'GovTech', 'Zwycięstwo']
 	},
 	{
 		id: 'sfb4',
 		title: 'Studencki Festiwal Biznesu IV',
 		category: 'maj 2026',
-		description: 'Trzy zespoły MoAI wzięły udział w IV edycji SFB, pracując z briefami Starostwa, CEWAR i UniCredit. Trzeci rok z rzędu wygraliśmy — tym razem projektem „Banking Innovation” dla UniCredit.',
+		description: 'Trzy zespoły MoAI wzięły udział w IV edycji SFB, pracując z briefami Starostwa, CEWAR i UniCredit. Trzeci rok z rzędu wygraliśmy – tym razem projektem „Banking Innovation” dla UniCredit.',
 		image: 'images/events/studencki-festiwal-biznesu-iv-2026-moai-pl.webp',
 		alt: 'Zespół MoAI i organizatorzy na scenie IV edycji Studenckiego Festiwalu Biznesu z czekiem nagrody 8000 zł.',
 		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
@@ -402,14 +402,14 @@ const events = [
 		id: 'pollubmy-marketing',
 		title: 'Pollubmy Marketing',
 		category: 'marzec 2026',
-		description: 'Wystąpiliśmy na konferencji Pollubmy Marketing z prelekcją o upstream modelingu z rodziny metod inferencji kauzalnej — jak modele ML pomagają agencjom trafiać w potrzeby biznesowe i ograniczają koszt kampanii.',
+		description: 'Wystąpiliśmy na konferencji Pollubmy Marketing z prelekcją o upstream modelingu z rodziny metod inferencji kauzalnej – jak modele ML pomagają agencjom trafiać w potrzeby biznesowe i ograniczają koszt kampanii.',
 		image: 'images/events/iv-konferencja-pollubmy-marketing-2026-moai-pl.webp',
 		alt: 'Aula IV Konferencji Naukowej Marketing Okiem Młodych Naukowców: publiczność i ekran z tytułem wydarzenia.',
 		tags: ['Konferencja', 'Marketing', 'Causal ML']
 	},
 	{
 		id: 'ensemble-warsaw',
-		title: 'Ensemble AI — Warszawa',
+		title: 'Ensemble AI – Warszawa',
 		category: 'marzec 2026',
 		description: 'Rozwiązaliśmy wszystkie zadania hackathonu Ensemble AI w Warszawie i zajęliśmy 6. miejsce na blisko 50 zespołów, awansując do etapu prezentacji finałowych. Tematy obejmowały ML w diagnostyce medycznej, biologię molekularną i bezpieczeństwo dużych modeli językowych.',
 		image: 'images/events/ensemble-ai-warszawa-2026-moai-pl.webp',
@@ -483,7 +483,7 @@ const events = [
 		id: 'cassini',
 		title: 'Hackathon CASSINI',
 		category: 'listopad 2025',
-		description: 'Siedmioosobowy zespół MoAI spędził trzy dni na hackathonie CASSINI we Wrocławiu, szukając zastosowań danych satelitarnych ESA. Zbudowaliśmy aplikację redefiniującą koncepcję slow travellingu — spersonalizowane trasy wzmocnione danymi prosto z orbity.',
+		description: 'Siedmioosobowy zespół MoAI spędził trzy dni na hackathonie CASSINI we Wrocławiu, szukając zastosowań danych satelitarnych ESA. Zbudowaliśmy aplikację redefiniującą koncepcję slow travellingu – spersonalizowane trasy wzmocnione danymi prosto z orbity.',
 		image: 'images/events/hackathon-cassini-2025-moai-pl.webp',
 		alt: 'Zespół MoAI na hackathonie CASSINI we Wrocławiu.',
 		tags: ['Hackathon', 'Space', 'ESA']
@@ -492,7 +492,7 @@ const events = [
 		id: 'targi-kol',
 		title: 'IV Targi Kół Naukowych PL',
 		category: 'październik 2025',
-		description: 'Na IV Targach Kół Naukowych PL pokazywaliśmy modele generujące światy gier wideo oraz Stable Diffusion do tworzenia obrazów — promując AI i ML wśród studentów i uczniów szkół ponadpodstawowych.',
+		description: 'Na IV Targach Kół Naukowych PL pokazywaliśmy modele generujące światy gier wideo oraz Stable Diffusion do tworzenia obrazów – promując AI i ML wśród studentów i uczniów szkół ponadpodstawowych.',
 		image: 'images/events/iv-targi-kol-naukowych-pl-2025-moai-pl.webp',
 		alt: 'Stoisko MoAI na IV Targach Kół Naukowych Politechniki Lubelskiej, październik 2025.',
 		tags: ['Uczelnia', 'ML', 'Pokazy']
@@ -501,7 +501,7 @@ const events = [
 		id: 'warsztaty-matematyczne',
 		title: 'Warsztaty matematyczne dla nowych studentów',
 		category: 'październik 2025',
-		description: 'Zorganizowaliśmy warsztaty matematyczne dla nowych studentów — wspólnie przypomnieliśmy podstawy, żeby łatwiej wystartować na uczelni i przygotować się do pierwszych kolokwiów.',
+		description: 'Zorganizowaliśmy warsztaty matematyczne dla nowych studentów – wspólnie przypomnieliśmy podstawy, żeby łatwiej wystartować na uczelni i przygotować się do pierwszych kolokwiów.',
 		image: 'images/events/warsztaty-matematyczne-dla-nowych-studentow-2025-moai-pl.webp',
 		alt: 'Warsztaty matematyczne MoAI: studenci przy ławkach, prowadzący przy zielonej tablicy.',
 		tags: ['Warsztaty', 'Matematyka', 'Uczelnia']
@@ -510,7 +510,7 @@ const events = [
 		id: 'sfb3',
 		title: 'Studencki Festiwal Biznesu III',
 		category: 'czerwiec 2025',
-		description: 'Znów wygraliśmy Studencki Festiwal Biznesu — jeden zespół zaprezentował chatbota Julię dla Luxmedu, a drugi równolegle pracował na żywym briefie Comarchu nad dynamicznym interfejsem wspomaganym AI.',
+		description: 'Znów wygraliśmy Studencki Festiwal Biznesu – jeden zespół zaprezentował chatbota Julię dla Luxmedu, a drugi równolegle pracował na żywym briefie Comarchu nad dynamicznym interfejsem wspomaganym AI.',
 		image: 'images/events/studencki-festiwal-biznesu-iii-2025-moai-pl.webp',
 		alt: 'Zespół MoAI na III edycji Studenckiego Festiwalu Biznesu, na tle napisu Festiwal Biznesu.',
 		tags: ['Biznes', 'Pitch', 'Zwycięstwo']
@@ -546,14 +546,14 @@ const events = [
 		id: 'dni-otwarte-2025',
 		title: 'Dni Otwarte Politechniki Lubelskiej 2025',
 		category: 'kwiecień 2025',
-		description: 'Postawiliśmy stoisko na Dniach Otwartych PL — pokazywaliśmy nasze projekty, rozmawialiśmy z kandydatami i zapraszaliśmy do koła.',
+		description: 'Postawiliśmy stoisko na Dniach Otwartych PL – pokazywaliśmy nasze projekty, rozmawialiśmy z kandydatami i zapraszaliśmy do koła.',
 		image: 'images/events/dni-otwarte-politechniki-lubelskiej-2025-moai-pl.webp',
 		alt: 'Korytarz Politechniki Lubelskiej podczas Dni Otwartych 2025, stoisko i rozmowy z kandydatami.',
 		tags: ['Rekrutacja', 'Uczelnia', 'Pokazy']
 	},
 	{
 		id: 'ensemble-krakow',
-		title: 'Ensemble AI — Kraków',
+		title: 'Ensemble AI – Kraków',
 		category: 'marzec 2025',
 		description: 'Awansowaliśmy do finału Ensemble AI w Krakowie, zajmując 4. miejsce w rankingu na zadaniach przygotowanych przez CISPA Helmholtz Center.',
 		image: 'images/events/ensemble-ai-krakow-2025-moai-pl.webp',
@@ -564,7 +564,7 @@ const events = [
 		id: 'pip',
 		title: 'Konferencja 105-lecia Państwowej Inspekcji Pracy',
 		category: 'październik 2024',
-		description: 'Wystąpiliśmy na konferencji 105-lecia Państwowej Inspekcji Pracy z referatem o AI na rynku pracy — o wyzwaniach regulacyjnych i szansach, jakie ta technologia otwiera przed pracownikami i instytucjami.',
+		description: 'Wystąpiliśmy na konferencji 105-lecia Państwowej Inspekcji Pracy z referatem o AI na rynku pracy – o wyzwaniach regulacyjnych i szansach, jakie ta technologia otwiera przed pracownikami i instytucjami.',
 		image: 'images/events/konferencja-105-lecia-pip-2024-moai-pl.webp',
 		alt: 'Wystąpienie zespołu MoAI na konferencji 105-lecia Państwowej Inspekcji Pracy.',
 		tags: ['Konferencja', 'Prawo', 'Rynek pracy']
@@ -573,7 +573,7 @@ const events = [
 		id: 'sfb2',
 		title: 'Studencki Festiwal Biznesu II',
 		category: 'maj 2024',
-		description: 'Zdobyliśmy 1. miejsce w II edycji Studenckiego Festiwalu Biznesu z aplikacją fitness OnHelo — pierwszy duży sukces MoAI na scenie biznesowej.',
+		description: 'Zdobyliśmy 1. miejsce w II edycji Studenckiego Festiwalu Biznesu z aplikacją fitness OnHelo – pierwszy duży sukces MoAI na scenie biznesowej.',
 		image: 'images/events/studencki-festiwal-biznesu-ii-2024-moai-pl.webp',
 		alt: 'Zespół MoAI z czekiem 5000 zł na II edycji Studenckiego Festiwalu Biznesu, 24 maja 2024.',
 		tags: ['Biznes', 'Pitch', 'Współpraca']

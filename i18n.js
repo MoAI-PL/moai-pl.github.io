@@ -53,11 +53,11 @@ const MoAI = (() => {
 		pl: {
 			'meta.index.title': 'MoAI – Koło Naukowe Sztucznej Inteligencji',
 			'meta.index.desc': 'MoAI Politechnika Lubelska – Koło Naukowe Sztucznej Inteligencji. Zajmujemy się sztuczną inteligencją, uczeniem maszynowym, programowaniem, sieciami komputerowymi i cyberbezpieczeństwem – dołącz do nas!',
-			'meta.events.title': 'MoAI - Wydarzenia',
+			'meta.events.title': 'MoAI – Wydarzenia',
 			'meta.events.desc': 'Wydarzenia MoAI Politechnika Lubelska: konkursy, hackathony, konferencje naukowe i warsztaty organizowane przez Koło Naukowe Sztucznej Inteligencji.',
-			'meta.projects.title': 'MoAI - Projekty',
+			'meta.projects.title': 'MoAI – Projekty',
 			'meta.projects.desc': 'Projekty MoAI Politechnika Lubelska: sztuczna inteligencja, uczenie maszynowe, programowanie, sieci komputerowe i cyberbezpieczeństwo.',
-			'meta.members.title': 'MoAI - Członkowie',
+			'meta.members.title': 'MoAI – Członkowie',
 			'meta.members.desc': 'Poznaj członków MoAI Politechnika Lubelska – studentów tworzących Koło Naukowe Sztucznej Inteligencji.',
 			'meta.thanks.title': 'MoAI – Dziękujemy',
 			'meta.thanks.desc': 'MoAI Politechnika Lubelska – dziękujemy za zainteresowanie. Sprawdź status rekrutacji i skontaktuj się z nami.',
@@ -80,7 +80,7 @@ const MoAI = (() => {
 			'events.body': 'Bierzemy udział w konkursach, hackathonach, konferencjach naukowych, spotkaniach z biznesem, seminariach i imprezach uczelnianych. Orgnizujemy własne wydarzenia zgodne z misją MoAI.',
 			'events.all': 'Pełna lista wydarzeń',
 			'events.pageTitle': 'Wydarzenia',
-			'events.pageBody': 'Nie przestajemy się rozwijać - chętnie bierzemy udział w technologicznych, biznesowych i akademickich. Zobacz gdzie byliśmy:',
+			'events.pageBody': 'Nie przestajemy się rozwijać – chętnie bierzemy udział w technologicznych, biznesowych i akademickich. Zobacz gdzie byliśmy:',
 			'projects.title': 'Projekty',
 			'projects.body': 'Zajmujemy się sztuczną inteligencją, uczeniem maszynowym, programowaniem, sieciami komputerowymi, cyberbezpieczeństwem, projektami biznesowymi, marketingiem oraz badaniami i popularyzacją nauki.',
 			'projects.all': 'Pełna lista projektów',
@@ -92,7 +92,7 @@ const MoAI = (() => {
 			'follow.title': 'Obserwuj nas',
 			'follow.body': 'Nie przegap eventów, warsztatów i aktualności.',
 			'contact.title': 'Chcesz współpracować?',
-			'contact.body': 'Masz pomysł? Chcesz umówić się na spotkanie lub odwiedzić nas na uczelni? Wyślij nam wiadomość - odpowiemy tak szybko, jak będzie to możliwe.',
+			'contact.body': 'Masz pomysł? Chcesz umówić się na spotkanie lub odwiedzić nas na uczelni? Wyślij nam wiadomość – odpowiemy tak szybko, jak będzie to możliwe.',
 			'footer.rules': 'Regulamin',
 			'footer.wz': 'Wydział Zarządzania Politechniki Lubelskiej',
 			'invite.name': 'Czekamy na Ciebie',
@@ -114,14 +114,14 @@ const MoAI = (() => {
 		en: {
 			'meta.index.title': 'MoAI – AI Student Research Club',
 			'meta.index.desc': 'MoAI at Lublin University of Technology is a student research club for artificial intelligence, machine learning, programming, computer networks and cybersecurity. Join us!',
-			'meta.events.title': 'MoAI - Events',
+			'meta.events.title': 'MoAI – Events',
 			'meta.events.desc': 'MoAI events at Lublin University of Technology: competitions, hackathons, academic conferences and workshops by the AI student research club.',
-			'meta.projects.title': 'MoAI - Projects',
+			'meta.projects.title': 'MoAI – Projects',
 			'meta.projects.desc': 'MoAI projects at Lublin University of Technology: artificial intelligence, machine learning, programming, computer networks and cybersecurity.',
-			'meta.members.title': 'MoAI - Members',
-			'meta.members.desc': 'Meet the MoAI team at Lublin University of Technology — students behind the AI research club.',
+			'meta.members.title': 'MoAI – Members',
+			'meta.members.desc': 'Meet the MoAI team at Lublin University of Technology – students behind the AI research club.',
 			'meta.thanks.title': 'MoAI – Thank you',
-			'meta.thanks.desc': 'MoAI at Lublin University of Technology — thank you for your interest. Check recruitment and get in touch.',
+			'meta.thanks.desc': 'MoAI at Lublin University of Technology – thank you for your interest. Check recruitment and get in touch.',
 			'nav.events': 'Events',
 			'nav.projects': 'Projects',
 			'nav.join': 'Join',
@@ -135,25 +135,25 @@ const MoAI = (() => {
 			'hero.join': 'Join MoAI',
 			'hero.write': 'Get in touch',
 			'who.title': 'Who we are',
-			'who.body': 'Hi — we’re the MoAI team at Lublin University of Technology. We’re passionate about putting AI into practice. We promote AI skills and knowledge, and bring together students from four faculties across the university.',
+			'who.body': 'Hi – we’re the MoAI team at Lublin University of Technology. We’re passionate about putting AI into practice. We promote AI skills and knowledge, and bring together students from four faculties across the university.',
 			'members.seeAll': 'See all members',
 			'events.title': 'Events',
 			'events.body': 'We take part in competitions, hackathons, academic conferences, business meetings, seminars and campus events. We also run our own events that match the MoAI mission.',
 			'events.all': 'All events',
 			'events.pageTitle': 'Events',
-			'events.pageBody': 'We’re always learning — we show up at technology, business and academic events. Here’s where we’ve been:',
+			'events.pageBody': 'We’re always learning – we show up at technology, business and academic events. Here’s where we’ve been:',
 			'projects.title': 'Projects',
 			'projects.body': 'We work on artificial intelligence, machine learning, programming, computer networks, cybersecurity, business projects, marketing, research and science outreach.',
 			'projects.all': 'All projects',
 			'projects.pageTitle': 'Selected projects',
 			'projects.pageBody': 'We learn by building. Our interdisciplinary team loves picking up new skills and solving new problems. Here’s some of our work:',
 			'join.title': 'Join MoAI',
-			'join.body': 'Want to work with us? Join the MoAI student research club — we are waiting for you.',
+			'join.body': 'Want to work with us? Join the MoAI student research club – we are waiting for you.',
 			'join.cta': 'Fill in the recruitment form',
 			'follow.title': 'Follow us',
 			'follow.body': 'Don’t miss our events, workshops and updates.',
 			'contact.title': 'Want to work together?',
-			'contact.body': 'Got an idea? Want to set up a meeting or visit us on campus? Send us a message — we’ll reply as soon as we can.',
+			'contact.body': 'Got an idea? Want to set up a meeting or visit us on campus? Send us a message – we’ll reply as soon as we can.',
 			'footer.rules': 'Statute',
 			'footer.wz': 'Faculty of Management, Lublin University of Technology',
 			'invite.name': 'We’re waiting <span class="member-card__name-break">for you</span>',
@@ -176,7 +176,7 @@ const MoAI = (() => {
 
 	const PROJECT_EN = {
 		braidak: {
-			description: 'The winning AI assistant for the City of Lublin. Zero-cloud RAG on the Bielik model, ChromaDB, text-to-speech and a clear map of points of interest — local AI that runs on the city’s unstructured data.',
+			description: 'The winning AI assistant for the City of Lublin. Zero-cloud RAG on the Bielik model, ChromaDB, text-to-speech and a clear map of points of interest – local AI that runs on the city’s unstructured data.',
 			alt: 'brAIdak project graphic: an AI assistant for the City of Lublin.'
 		},
 		'banking-innovation': {
@@ -189,7 +189,7 @@ const MoAI = (() => {
 			alt: 'LubShield graphic: a geospatial decision dashboard for the Marshal of the Lublin Voivodeship.'
 		},
 		ledger: {
-			description: 'A Civil42 2026 hackathon project: pre-seeded wallets and an offline transaction console for crisis work and field logistics — with online, partitioned-network and emergency modes.',
+			description: 'A Civil42 2026 hackathon project: pre-seeded wallets and an offline transaction console for crisis work and field logistics – with online, partitioned-network and emergency modes.',
 			alt: 'Secure Enclave Wallets dashboard: crisis wallets and an offline transaction console.'
 		},
 		moodify: {
@@ -203,7 +203,7 @@ const MoAI = (() => {
 		},
 		'planet-twin': {
 			title: 'Digital twin of a planet',
-			description: 'The winning Hack4Sages project — a digital twin of exoplanet TRAPPIST-1e called ExoStress Twin. Using NASA data, it simulates climate and water-mass transport in real time, including stellar flares and their effect on biosignatures.'
+			description: 'The winning Hack4Sages project – a digital twin of exoplanet TRAPPIST-1e called ExoStress Twin. Using NASA data, it simulates climate and water-mass transport in real time, including stellar flares and their effect on biosignatures.'
 		},
 		'promo-wz': {
 			title: 'Promoting the Faculty of Management',
@@ -216,7 +216,7 @@ const MoAI = (() => {
 		},
 		'ml-admin': {
 			title: 'ML for public administration',
-			description: 'Legis 2.0 from HackNation: machine-learning models that analyse legal acts and keep them consistent, with tools for officials and citizens — plain-language law without sending data to a foreign cloud.',
+			description: 'Legis 2.0 from HackNation: machine-learning models that analyse legal acts and keep them consistent, with tools for officials and citizens – plain-language law without sending data to a foreign cloud.',
 			alt: 'Legis 2.0 login screen: law that understands you, sign-in via Poland’s National Node.'
 		},
 		'esa-agri': {
@@ -234,12 +234,12 @@ const MoAI = (() => {
 			alt: 'codeGreen plugin demo in PyCharm: code efficiency and carbon-footprint analysis.'
 		},
 		cardioscan: {
-			description: 'A heart-murmur analysis tool trained on the CirCor DigiScope dataset — a diagnostic model with sensitivity and specificity around 90%.',
+			description: 'A heart-murmur analysis tool trained on the CirCor DigiScope dataset – a diagnostic model with sensitivity and specificity around 90%.',
 			alt: 'CardioScan interface: a diagnostic terminal with auscultation case examples.'
 		},
 		'plant-nn': {
 			title: 'Intelligent plant cultivation',
-			description: 'A neural network that controls plant-growth parameters. Instead of tuning conditions by hand, the network sets them from cultivation data — a step toward repeatable, innovative growing.',
+			description: 'A neural network that controls plant-growth parameters. Instead of tuning conditions by hand, the network sets them from cultivation data – a step toward repeatable, innovative growing.',
 			alt: 'Smart-cultivation setup: a coding station and basil under an LED lamp.'
 		},
 		'dynamic-ui': {
@@ -247,7 +247,7 @@ const MoAI = (() => {
 			description: 'A case study of an AI-assisted dynamic interface, built on a live Comarch brief during the 3rd Student Business Festival. The UX/UI layer adapts to how people behave and guides them through the sales journey.'
 		},
 		julia: {
-			title: 'Julia — virtual patient assistant',
+			title: 'Julia – virtual patient assistant',
 			description: 'Julia is a virtual patient assistant and the winning project of the 3rd Student Business Festival, built for Luxmed. It books appointments, explains procedures, introduces doctors and helps people find their way around the clinic website.',
 			alt: 'Graphic of Julia, a virtual patient assistant built for Luxmed.'
 		},
@@ -259,20 +259,20 @@ const MoAI = (() => {
 
 	const EVENT_EN = {
 		'hackyeah-2026': {
-			description: 'We took part in HackYeah 2026 at TAURON Arena Kraków — Europe’s largest in-person hackathon. We worked on the Defense and Finance Without Intermediaries tasks, and in the REENTRY CTF we captured 38 of 39 flags for the second-highest score ex aequo among 70+ teams.',
+			description: 'We took part in HackYeah 2026 at TAURON Arena Kraków – Europe’s largest in-person hackathon. We worked on the Defense and Finance Without Intermediaries tasks, and in the REENTRY CTF we captured 38 of 39 flags for the second-highest score ex aequo among 70+ teams.',
 			alt: 'MoAI team holding a #HACKYEAH sign in the stands of TAURON Arena Kraków, with the hackathon floor full of participant desks behind them.'
 		},
 		'it-unplugged': {
-			description: 'We went to the IT Unplugged conference for talks on AI, data engineering, system architecture, cybersecurity and professional wellbeing — and came back with new contacts in IT.',
+			description: 'We went to the IT Unplugged conference for talks on AI, data engineering, system architecture, cybersecurity and professional wellbeing – and came back with new contacts in IT.',
 			alt: 'IT Unplugged 2026 panel: three people on stage in armchairs, blue lighting and the IT UNPLUGGED sign.'
 		},
 		'urban-lab': {
-			description: 'We took 1st place and the City of Lublin grand prize. We built “brAIdak” — a zero-cloud RAG agent on Bielik, with voice access and a map of points of interest.',
-			alt: 'MoAI team with a 1st-place diploma at Urban Lab Challenge — Lublin City of Energy.'
+			description: 'We took 1st place and the City of Lublin grand prize. We built “brAIdak” – a zero-cloud RAG agent on Bielik, with voice access and a map of points of interest.',
+			alt: 'MoAI team with a 1st-place diploma at Urban Lab Challenge – Lublin City of Energy.'
 		},
 		sfb4: {
 			title: '4th Student Business Festival',
-			description: 'Three MoAI teams joined the 4th Student Business Festival, working on briefs from the county office, CEWAR and UniCredit. We won for the third year in a row — this time with “Banking Innovation” for UniCredit.',
+			description: 'Three MoAI teams joined the 4th Student Business Festival, working on briefs from the county office, CEWAR and UniCredit. We won for the third year in a row – this time with “Banking Innovation” for UniCredit.',
 			alt: 'MoAI team and organisers on stage at the 4th Student Business Festival with a PLN 8,000 prize cheque.'
 		},
 		'hackology-2': {
@@ -312,11 +312,11 @@ const MoAI = (() => {
 			alt: 'Hall during the Inter-faculty Research Seminar: audience and a speaker by the screen.'
 		},
 		'pollubmy-marketing': {
-			description: 'We spoke at Pollubmy Marketing about upstream modelling from the causal-inference family — how machine-learning models help agencies meet business needs and cut campaign costs.',
+			description: 'We spoke at Pollubmy Marketing about upstream modelling from the causal-inference family – how machine-learning models help agencies meet business needs and cut campaign costs.',
 			alt: 'Auditorium at the 4th Young Researchers’ Marketing Conference: audience and a screen with the event title.'
 		},
 		'ensemble-warsaw': {
-			title: 'Ensemble AI — Warsaw',
+			title: 'Ensemble AI – Warsaw',
 			description: 'We solved every Ensemble AI hackathon task in Warsaw and finished 6th out of nearly 50 teams, reaching the final presentations. The brief covered ML in medical diagnostics, molecular biology and LLM security.',
 			alt: 'MoAI team on the Ensemble AI stage in Warsaw during the final presentation.'
 		},
@@ -352,22 +352,22 @@ const MoAI = (() => {
 			alt: 'MoAI team with diplomas and bags on the BHL hackathon final stage.'
 		},
 		cassini: {
-			description: 'A seven-person MoAI team spent three days at the CASSINI hackathon in Wrocław, looking for uses of ESA satellite data. We built an app that rethinks slow travel — personalised routes powered by data straight from orbit.',
+			description: 'A seven-person MoAI team spent three days at the CASSINI hackathon in Wrocław, looking for uses of ESA satellite data. We built an app that rethinks slow travel – personalised routes powered by data straight from orbit.',
 			alt: 'MoAI team at the CASSINI hackathon in Wrocław.'
 		},
 		'targi-kol': {
 			title: '4th LUT Student Research Club Fair',
-			description: 'At the 4th LUT Student Research Club Fair we showed models that generate video-game worlds and Stable Diffusion for images — promoting AI and ML among students and secondary-school pupils.',
+			description: 'At the 4th LUT Student Research Club Fair we showed models that generate video-game worlds and Stable Diffusion for images – promoting AI and ML among students and secondary-school pupils.',
 			alt: 'MoAI stand at the 4th Student Research Club Fair of Lublin University of Technology, October 2025.'
 		},
 		'warsztaty-matematyczne': {
 			title: 'Maths workshop for new students',
-			description: 'We ran a maths workshop for new students — together we revised the basics to make the start of university easier and to prepare for the first tests.',
+			description: 'We ran a maths workshop for new students – together we revised the basics to make the start of university easier and to prepare for the first tests.',
 			alt: 'MoAI maths workshop: students at desks, a tutor at a green blackboard.'
 		},
 		sfb3: {
 			title: '3rd Student Business Festival',
-			description: 'We won the Student Business Festival again — one team presented the Julia chatbot for Luxmed, while another worked in parallel on a live Comarch brief for an AI-assisted dynamic interface.',
+			description: 'We won the Student Business Festival again – one team presented the Julia chatbot for Luxmed, while another worked in parallel on a live Comarch brief for an AI-assisted dynamic interface.',
 			alt: 'MoAI team at the 3rd Student Business Festival, in front of the Festiwal Biznesu sign.'
 		},
 		ghostday: {
@@ -384,17 +384,17 @@ const MoAI = (() => {
 		},
 		'dni-otwarte-2025': {
 			title: 'Open Days at Lublin University of Technology 2025',
-			description: 'We set up a stand at LUT Open Days — showing our projects, talking to applicants and inviting them to the club.',
+			description: 'We set up a stand at LUT Open Days – showing our projects, talking to applicants and inviting them to the club.',
 			alt: 'LUT corridor during Open Days 2025, a stand and conversations with applicants.'
 		},
 		'ensemble-krakow': {
-			title: 'Ensemble AI — Kraków',
+			title: 'Ensemble AI – Kraków',
 			description: 'We reached the Ensemble AI final in Kraków, finishing 4th on tasks prepared by the CISPA Helmholtz Center.',
 			alt: 'MoAI team at the international Ensemble AI hackathon in Kraków.'
 		},
 		sfb2: {
 			title: '2nd Student Business Festival',
-			description: 'We took 1st place at the 2nd Student Business Festival with the OnHelo fitness app — MoAI’s first major win on the business stage.',
+			description: 'We took 1st place at the 2nd Student Business Festival with the OnHelo fitness app – MoAI’s first major win on the business stage.',
 			alt: 'MoAI team with a PLN 5,000 cheque at the 2nd Student Business Festival, 24 May 2024.'
 		},
 		'sympozjum-xxxii': {
@@ -404,7 +404,7 @@ const MoAI = (() => {
 		},
 		pip: {
 			title: 'National Labour Inspectorate 105th-anniversary conference',
-			description: 'We spoke at the National Labour Inspectorate’s 105th-anniversary conference about AI in the labour market — the regulatory challenges and the opportunities this technology opens for workers and institutions.',
+			description: 'We spoke at the National Labour Inspectorate’s 105th-anniversary conference about AI in the labour market – the regulatory challenges and the opportunities this technology opens for workers and institutions.',
 			alt: 'MoAI team speaking at the National Labour Inspectorate’s 105th-anniversary conference.'
 		}
 	};

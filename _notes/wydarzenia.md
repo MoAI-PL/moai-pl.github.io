@@ -1,4 +1,4 @@
-# Wydarzenia — treść na stronę
+# Wydarzenia – treść na stronę
 
 Źródła: sprawozdanie 2025 oraz aktywności 2025/26. Wydarzenia organizowane i odwiedzone bez rozróżnienia. Data: miesiąc i rok (gdy sprawozdanie nie podaje miesiąca, zostaje sam rok).
 
@@ -34,7 +34,7 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Zdjęcie:** `images/events/hackathon-spaceshield-2025-moai-pl.webp`
 - **Opis:** Finał SpaceShield w Stalowej Woli. Analityka, symulacje i tempo konkursowe na styku technologii i zastosowań kosmicznych.
 
-## Ensemble AI — Kraków
+## Ensemble AI – Kraków
 
 - **Data:** marzec 2025
 - **Tagi:** Hackathon, AI, Finał
@@ -130,9 +130,9 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Data:** marzec 2026
 - **Tagi:** Hackathon, Space, Zwycięstwo
 - **Placeholder:** brak
-- **Opis:** 1. miejsce w międzynarodowym Hack4Sages. Aplikacja na danych NASA oceniająca potencjał planety do podtrzymania życia — przed zespołami z Harvardu i Cambridge.
+- **Opis:** 1. miejsce w międzynarodowym Hack4Sages. Aplikacja na danych NASA oceniająca potencjał planety do podtrzymania życia – przed zespołami z Harvardu i Cambridge.
 
-## Ensemble AI — Warszawa
+## Ensemble AI – Warszawa
 
 - **Data:** marzec 2026
 - **Tagi:** Hackathon, MedTech, LLM
@@ -186,7 +186,7 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Data:** kwiecień 2026
 - **Tagi:** LLM, Google Cloud, RAG
 - **Zdjęcie:** `images/events/warsztaty-bielik-ai-google-2026-moai-pl.webp`
-- **Opis:** Warsztaty Google for Developers i SpeakLeash o polskim modelu Bielik. LLM w Google Cloud, BigQuery i orkiestracja RAG — poprowadzone przez członka MoAI.
+- **Opis:** Warsztaty Google for Developers i SpeakLeash o polskim modelu Bielik. LLM w Google Cloud, BigQuery i orkiestracja RAG – poprowadzone przez członka MoAI.
 
 ## Erasmus StartUp Projects
 
@@ -214,7 +214,7 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Data:** maj 2026
 - **Tagi:** Biznes, Pitch, Zwycięstwo
 - **Zdjęcie:** `images/events/studencki-festiwal-biznesu-iv-2026-moai-pl.webp`
-- **Opis:** Trzeci rok z rzędu 1. miejsce MoAI. Trzy zespoły z briefami Starostwa, CEWAR i UniCredit — nagroda główna za wykrywanie zagrożeń i kierowane powiadomienia dla klientów banku.
+- **Opis:** Trzeci rok z rzędu 1. miejsce MoAI. Trzy zespoły z briefami Starostwa, CEWAR i UniCredit – nagroda główna za wykrywanie zagrożeń i kierowane powiadomienia dla klientów banku.
 
 ## Urban Lab Challenge
 
@@ -236,4 +236,4 @@ Dopasowanie do obecnych ścieżek zdjęć w `scripts.js` jest przy każdym wpisi
 - **Data:** październik 2026
 - **Tagi:** Hackathon, CTF, Cybersecurity
 - **Zdjęcie:** `images/events/hackathon-hackyeah-2026-moai-pl.webp`
-- **Opis:** 12. edycja największego stacjonarnego hackathonu w Europie, TAURON Arena Kraków. Zadania: obronność, finanse bez pośredników i REENTRY CTF — 38 z 39 flag, drugi wynik ex aequo wśród 70+ drużyn.
+- **Opis:** 12. edycja największego stacjonarnego hackathonu w Europie, TAURON Arena Kraków. Zadania: obronność, finanse bez pośredników i REENTRY CTF – 38 z 39 flag, drugi wynik ex aequo wśród 70+ drużyn.

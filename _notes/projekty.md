@@ -1,10 +1,10 @@
-# Projekty — treść na stronę
+# Projekty – treść na stronę
 
 Źródła: sprawozdanie 2025 oraz aktywności 2025/26. Projekt = konkretny rezultat (prototyp, system, case), także jeśli powstał na wydarzeniu. Festiwal czy hackathon zostają w wydarzeniach; tu jest to, co z nich wynieśliśmy.
 
 Bez linków do repozytoriów. Data: miesiąc i rok.
 
-Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`, `event-toolkit`, `partner-portal`, `outreach-site`) nie mają pokrycia w sprawozdaniach — do wymiany na poniższą listę.
+Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`, `event-toolkit`, `partner-portal`, `outreach-site`) nie mają pokrycia w sprawozdaniach – do wymiany na poniższą listę.
 
 ---
 
@@ -15,7 +15,7 @@ Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`,
 - **Powiązane wydarzenie:** Studencki Festiwal Biznesu II
 - **Opis:** Aplikacja fitness z elementami medtech, która wygrała 2. edycję Studenckiego Festiwalu Biznesu. Modele uczenia maszynowego wspierają poprawne wykonywanie ćwiczeń i zmniejszają ryzyko błędnej techniki.
 
-## Julia — wirtualny asystent pacjenta
+## Julia – wirtualny asystent pacjenta
 
 - **Data:** czerwiec 2025
 - **Tagi:** Chatbot, MedTech, NLP
@@ -34,7 +34,7 @@ Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`,
 - **Data:** czerwiec 2025
 - **Tagi:** Research, ML, AgriTech
 - **Powiązane wydarzenie:** brak
-- **Opis:** Projekt badawczy sprzed wakacji: sieci neuronowe sterują parametrami uprawy roślin. Celem jest innowacyjna, powtarzalna hodowla — model dobiera warunki wzrostu zamiast ręcznego strojenia.
+- **Opis:** Projekt badawczy sprzed wakacji: sieci neuronowe sterują parametrami uprawy roślin. Celem jest innowacyjna, powtarzalna hodowla – model dobiera warunki wzrostu zamiast ręcznego strojenia.
 
 ## Monitor CO₂ w JetBrains
 
@@ -111,4 +111,4 @@ Obecne placeholdery w `scripts.js` (`ai-lab`, `bizops-dashboard`, `study-buddy`,
 - **Data:** czerwiec 2026
 - **Tagi:** GovTech, RAG, Bielik
 - **Powiązane wydarzenie:** Urban Lab Challenge
-- **Opis:** Zwycięski ekosystem dla UM Lublin. Zero-cloud RAG na Bieliku i ChromaDB, głosowa dostępność i mapa POI — suwerenna AI na nieustrukturyzowanych danych miasta.
+- **Opis:** Zwycięski ekosystem dla UM Lublin. Zero-cloud RAG na Bieliku i ChromaDB, głosowa dostępność i mapa POI – suwerenna AI na nieustrukturyzowanych danych miasta.
